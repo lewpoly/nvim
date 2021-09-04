@@ -1,6 +1,7 @@
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme aurora')
 
 -- Available Schemes
+
 -- aurora
 -- dracula
 -- gruvbox

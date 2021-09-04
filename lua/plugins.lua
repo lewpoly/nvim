@@ -7,6 +7,7 @@ require('packer').startup(function()
   use 'nvim-telescope/telescope-media-files.nvim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
+  use 'BurntSushi/ripgrep'
 
   -- Completion
   use 'hrsh7th/vim-vsnip'
@@ -16,6 +17,7 @@ require('packer').startup(function()
   -- Color
   use 'norcalli/nvim-colorizer.lua'
   use 'christianchiarulli/nvcode-color-schemes.vim'
+  -- use 'LunarVim/Colorschemes'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -35,8 +37,8 @@ require('packer').startup(function()
   -- Dashboard
   use 'glepnir/dashboard-nvim'
 
-  -- Kommentary
-  use 'b3nj5m1n/kommentary'
+  -- Comment
+  use 'terrortylor/nvim-comment'
 
 
 end)

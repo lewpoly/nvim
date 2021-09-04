@@ -18,8 +18,8 @@ keymap('v', '<', '<gv', opts)
 keymap('v', '>', '>gv', opts)
 
 -- V-Mode Move Selected Line/Text
-keymap('x', 'K', ':move \'<-2<CR>gv-gv\'', opts)
-keymap('x', 'J', ':move \'<+1<CR>gv-gv\'', opts)
+keymap('v', 'K', ':move \'<-2<CR>gv-gv\'', opts)
+keymap('v', 'J', ':move \'<+1<CR>gv-gv\'', opts)
 
 -- Tabs
 keymap('n', '<TAB>', ':bnext<CR>', opts)
@@ -28,6 +28,7 @@ keymap('n', '<c-w>', ':bd<CR>', opts)
 
 --NvimTree
 keymap('n', '<Leader>e', ':NvimTreeOpen<CR>', opts)
+keymap('n', '<Leader>q', ':NvimTreeClose<CR>', opts)
 
 -- Telescope
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
@@ -35,3 +36,9 @@ keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 keymap('n', '<leader>fd', ':Telescope oldfiles<CR>', opts)
+keymap('n', '<leader>fc', ':Telescope colorscheme<CR>', opts)
+keymap('n', '<leader>fp', "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", opts)
+
+-- Comment
+keymap('n', '<leader>/', ':CommentToggle<CR>', opts)
+keymap('v', '<leader>/', ':CommentToggle<CR>', opts)
