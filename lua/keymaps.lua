@@ -36,6 +36,7 @@ keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 keymap('n', '<leader>fd', ':Telescope oldfiles<CR>', opts)
+keymap('n', '<leader>fm', ':Telescope media_files<CR>', opts)
 keymap('n', '<leader>fc', ':Telescope colorscheme<CR>', opts)
 keymap('n', '<leader>fp', "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>", opts)
 
