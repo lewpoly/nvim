@@ -13,16 +13,18 @@ require('packer').startup(function()
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/nvim-compe'
   use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
   use 'christianchiarulli/nvcode-color-schemes.vim'
   -- use 'LunarVim/Colorschemes'
+  -- use 'LunarVim/onedarker.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'norcalli/snippets.nvim'
-  use { 'nvim-treesitter/nvim-treesitter', run = 'TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Tree
   use 'kyazdani42/nvim-tree.lua'
