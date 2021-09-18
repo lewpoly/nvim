@@ -10,10 +10,18 @@ require('packer').startup(function()
   use 'BurntSushi/ripgrep'
 
   -- Completion
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/nvim-compe'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+
+  -- Cmp
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'kdheepak/cmp-latex-symbols'
+  use 'hrsh7th/cmp-path'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
@@ -23,7 +31,7 @@ require('packer').startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'norcalli/snippets.nvim'
+  use 'onsails/lspkind-nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Tree

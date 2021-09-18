@@ -22,7 +22,7 @@ keymap('v', 'K', ':move \'<-2<CR>gv-gv\'', opts)
 keymap('v', 'J', ':move \'<+1<CR>gv-gv\'', opts)
 
 -- Tabs
-keymap('n', '<TAB>', ':bnext<CR>', opts)
+    keymap('n', '<TAB>', ':bnext<CR>', opts)
 keymap('n', '<S-TAB>', ':bprevious<CR>', opts)
 keymap('n', '<c-w>', ':bd<CR>', opts)
 
@@ -31,7 +31,7 @@ keymap('n', '<Leader>e', ':NvimTreeOpen<CR>', opts)
 keymap('n', '<Leader>q', ':NvimTreeClose<CR>', opts)
 
 -- Telescope
-keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
+    keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
@@ -43,3 +43,10 @@ keymap('n', '<leader>fp', "<cmd>lua require('telescope.builtin.internal').colors
 -- Comment
 keymap('n', '<leader>/', ':CommentToggle<CR>', opts)
 keymap('v', '<leader>/', ':CommentToggle<CR>', opts)
+
+keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+keymap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)

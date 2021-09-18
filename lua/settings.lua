@@ -4,6 +4,7 @@ vim.o.autoindent = true
 vim.o.background = "dark"
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 2
+vim.o.completeopt = "menuone,noselect"
 vim.o.cursorline = true
 vim.o.expandtab = true
 vim.o.fileencoding = "utf-8"
@@ -27,5 +28,3 @@ vim.o.title = true
 vim.o.undofile = true
 vim.o.wrap = false
 vim.o.formatoptions = vim.o.formatoptions:gsub('o', '')
-
-vim.o.statusline='%f  %y%m%r%h%w%=[%l,%v]      [%L,%p%%] %n'
