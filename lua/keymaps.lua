@@ -1,5 +1,3 @@
-
-
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }
 
@@ -22,7 +20,7 @@ keymap('v', 'K', ':move \'<-2<CR>gv-gv\'', opts)
 keymap('v', 'J', ':move \'<+1<CR>gv-gv\'', opts)
 
 -- Tabs
-    keymap('n', '<TAB>', ':bnext<CR>', opts)
+keymap('n', '<TAB>', ':bnext<CR>', opts)
 keymap('n', '<S-TAB>', ':bprevious<CR>', opts)
 keymap('n', '<c-w>', ':bd<CR>', opts)
 
