@@ -10,10 +10,6 @@ require('packer').startup(function()
   use 'BurntSushi/ripgrep'
 
   -- Completion
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-
-  -- Cmp
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -22,6 +18,9 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'kdheepak/cmp-latex-symbols'
   use 'hrsh7th/cmp-path'
+  use 'windwp/nvim-autopairs'
+  use "blackCauldron7/surround.nvim"
+  use 'windwp/nvim-ts-autotag'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
@@ -32,11 +31,19 @@ require('packer').startup(function()
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind-nvim'
+  use 'folke/lsp-colors.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
+
+  -- Formatting
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Tree
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
+
+  -- ToggleTerm
+  use {"akinsho/toggleterm.nvim"}
 
   -- Lualine
   use 'hoob3rt/lualine.nvim'
@@ -49,6 +56,5 @@ require('packer').startup(function()
 
   -- Comment
   use 'terrortylor/nvim-comment'
-
 
 end)

@@ -2,6 +2,24 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+-- Hover Diagnostic
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+
+-- Hide Diagnostic Message
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        virtual_text = false
+    }
+)
+
+-- Devicons in Gutter
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+
+for type, icon in pairs(signs) do
+  local hl = "LspDiagnosticsSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
 -- HTML
 require'lspconfig'.html.setup {
   capabilities = capabilities,
@@ -12,10 +30,17 @@ require'lspconfig'.cssls.setup {
 }
 
 -- Python
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.pyright.setup{
+  capabilities = capabilities,
+}
 
 -- Lua
 USER = vim.fn.expand('$USER')
+
+-- tsserver
+require'lspconfig'.tsserver.setup{
+  capabilities = capabilities,
+}
 
 local sumneko_root_path = ""
 local sumneko_binary = ""
@@ -60,3 +85,16 @@ require'lspconfig'.ccls.setup {
     };
     capabilities = capabilities
 }
+
+-- EFM
+-- require "lspconfig".efm.setup {
+--     init_options = {documentFormatting = true},
+--     settings = {
+--         rootMarkers = {".git/"},
+--         languages = {
+--             lua = {
+--                 {formatCommand = "lua-format -i", formatStdin = true}
+--             }
+--         }
+--     }
+-- }

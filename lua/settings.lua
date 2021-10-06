@@ -25,6 +25,7 @@ vim.o.swapfile = false
 vim.o.tabstop = 2
 vim.o.termguicolors = true
 vim.o.title = true
+vim.o.updatetime = 250
 vim.o.undofile = true
 vim.o.wrap = false
 vim.o.formatoptions = vim.o.formatoptions:gsub('o', '')

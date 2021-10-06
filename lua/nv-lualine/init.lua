@@ -1,5 +1,5 @@
 local function clock()
-  return " " .. os.date "%H:%M"
+  return " " .. os.date "%I:%M"
 end
 
 local function lsp_progress()

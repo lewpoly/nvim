@@ -16,3 +16,6 @@ require('nv-dashboard')
 require('nv-tmf')
 require('nv-autotag')
 require('nv-autopairs')
+require('nv-trouble')
+require"surround".setup {mappings_style = "sandwich"}
+require('nv-toggleterm')
