@@ -34,13 +34,13 @@ require'lspconfig'.pyright.setup{
   capabilities = capabilities,
 }
 
--- Lua
-USER = vim.fn.expand('$USER')
-
 -- tsserver
 require'lspconfig'.tsserver.setup{
   capabilities = capabilities,
 }
+
+-- Lua
+USER = vim.fn.expand('$USER')
 
 local sumneko_root_path = ""
 local sumneko_binary = ""
