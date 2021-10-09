@@ -39,8 +39,11 @@ require('packer').startup(function()
   use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Tree
-  use 'kyazdani42/nvim-tree.lua'
-  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function() require'nvim-tree'.setup {} end
+}
 
   -- ToggleTerm
   use {"akinsho/toggleterm.nvim"}
