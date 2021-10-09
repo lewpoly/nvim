@@ -1,5 +1,6 @@
 -- nvim-cmp setup
 local cmp = require 'cmp'
+local tabnine = require('cmp_tabnine.config')
 -- local luasnip = require 'luasnip'
 cmp.setup {
   snippet = {
@@ -33,12 +34,14 @@ cmp.setup {
       end
     end
   },
+
   documentation = {
     border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   },
   sources = {
     { name = 'nvim_lsp' },
     { name = 'nvim_lua' },
+    { name = 'cmp_tabnine' },
     { name = 'luasnip' },
     { name = 'buffer' },
     { name = 'path' },
@@ -53,6 +56,7 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
+        cmp_tabnine = "[TN]",
         luasnip = "[LuaSnip]",
         buffer = "[Buffer]",
         path = "[Path]",
@@ -62,3 +66,10 @@ cmp.setup {
     end,
   },
 }
+tabnine:setup({
+        max_lines = 1000;
+        max_num_results = 20;
+        sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+})
