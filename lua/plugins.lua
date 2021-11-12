@@ -22,6 +22,7 @@ require('packer').startup(function()
   use 'windwp/nvim-autopairs'
   use "blackCauldron7/surround.nvim"
   use 'windwp/nvim-ts-autotag'
+  use 'rafamadriz/friendly-snippets'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
@@ -50,7 +51,7 @@ require('packer').startup(function()
   use {"akinsho/toggleterm.nvim"}
 
   -- Lualine
-  use 'hoob3rt/lualine.nvim'
+  use 'nvim-lualine/lualine.nvim'
 
   -- Bufferline
   use 'akinsho/bufferline.nvim'
