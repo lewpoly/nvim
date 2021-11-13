@@ -1,4 +1,4 @@
-require('packer').startup(function()
+require('packer').startup(function(use)
 
   use 'wbthomason/packer.nvim'
 
@@ -10,6 +10,7 @@ require('packer').startup(function()
   use 'BurntSushi/ripgrep'
 
   -- Completion
+  use 'rafamadriz/friendly-snippets'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -22,7 +23,6 @@ require('packer').startup(function()
   use 'windwp/nvim-autopairs'
   use "blackCauldron7/surround.nvim"
   use 'windwp/nvim-ts-autotag'
-  use 'rafamadriz/friendly-snippets'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
@@ -38,7 +38,13 @@ require('packer').startup(function()
   use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
 
   -- Formatting
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use({ "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require("null-ls").config({})
+        require("lspconfig")["null-ls"].setup({})
+    end,
+    requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"}
+    })
 
   -- Tree
   use {

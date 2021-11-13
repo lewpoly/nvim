@@ -60,3 +60,6 @@ keymap('t', '<C-h>', [[<C-\><C-n><C-W>h]], opts)
 keymap('t', '<C-j>', [[<C-\><C-n><C-W>j]], opts)
 keymap('t', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
 keymap('t', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
+
+-- Formatting
+keymap('n', '<leader>fo', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)

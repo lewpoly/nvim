@@ -1,6 +1,14 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+local null_ls = require("null-ls")
+
+local sources = {
+    null_ls.builtins.formatting.prettierd.with({
+        filetypes = { "html", "cssls", "sumneko_lua", "tsserver", "pyright" },
+    }),
+}
+null_ls.config({ sources = sources })
 
 -- Hover Diagnostic
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]

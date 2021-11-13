@@ -6,6 +6,12 @@ end
 local cmp = require 'cmp'
 local tabnine = require('cmp_tabnine.config')
 local luasnip = require 'luasnip'
+    luasnip.config.set_config {
+        history = true,
+        updateevents = "TextChanged,TextChangedI"
+    }
+
+    require("luasnip/loaders/from_vscode").lazy_load()
 cmp.setup {
   snippet = {
     expand = function(args)
