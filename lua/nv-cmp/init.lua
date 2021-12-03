@@ -4,6 +4,34 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 local cmp = require 'cmp'
+-- local lspkind = require('lspkind')
+local cmp_kinds = {
+  Text = '  ',
+  Method = '  ',
+  Function = '  ',
+  Constructor = '  ',
+  Field = '  ',
+  Variable = '  ',
+  Class = '  ',
+  Interface = '  ',
+  Module = '  ',
+  Property = '  ',
+  Unit = '  ',
+  Value = '  ',
+  Enum = '  ',
+  Keyword = '  ',
+  Snippet = '  ',
+  Color = '  ',
+  File = '  ',
+  Reference = '  ',
+  Folder = '  ',
+  EnumMember = '  ',
+  Constant = '  ',
+  Struct = '  ',
+  Event = '  ',
+  Operator = '  ',
+  TypeParameter = '  ',
+}
 local tabnine = require('cmp_tabnine.config')
 local luasnip = require 'luasnip'
     luasnip.config.set_config {
@@ -65,24 +93,24 @@ cmp.setup {
     { name = 'latex_symbols' },
   },
   formatting = {
-    format = function(entry, vim_item)
-      -- fancy icons and a name of kind
-      vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
-
-      -- set a name for each source
-      vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-        nvim_lua = "[Lua]",
-        cmp_tabnine = "[TN]",
-        luasnip = "[LuaSnip]",
-        buffer = "[Buffer]",
-        path = "[Path]",
-        latex_symbols = "[Latex]",
-      })[entry.source.name]
+    format = function(_, vim_item)
+      vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. vim_item.kind
       return vim_item
     end,
-  },
-}
+      with_text = true,
+     menu = ({
+       buffer = "[Buffer]",
+       nvim_lsp = "[LSP]",
+       luasnip = "[LuaSnip]",
+       nvim_lua = "[Lua]",
+       latex_symbols = "[Latex]",
+       cmp_tabnine = "[TN]",
+       path = "[Path]",
+   })
+},
+  }
+
+
 tabnine:setup({
         max_lines = 1000;
         max_num_results = 20;

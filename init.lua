@@ -19,3 +19,4 @@ require('nv-autopairs')
 require('nv-trouble')
 require"surround".setup {mappings_style = "sandwich"}
 require('nv-toggleterm')
+require('nv-gitsigns')

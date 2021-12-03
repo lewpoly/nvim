@@ -2,6 +2,13 @@ require('packer').startup(function(use)
 
   use 'wbthomason/packer.nvim'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'onsails/lspkind-nvim'
+  use 'folke/lsp-colors.nvim'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
+
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
@@ -25,17 +32,15 @@ require('packer').startup(function(use)
   use 'windwp/nvim-ts-autotag'
 
   -- Color
+  use 'tomasiser/vim-code-dark'
   use 'norcalli/nvim-colorizer.lua'
   use 'christianchiarulli/nvcode-color-schemes.vim'
+  use 'shaunsingh/nord.nvim'
+  use 'marko-cerovac/material.nvim'
+  use 'rmehri01/onenord.nvim'
+  use 'EdenEast/nightfox.nvim'
   -- use 'LunarVim/Colorschemes'
   -- use 'LunarVim/onedarker.nvim'
-
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'onsails/lspkind-nvim'
-  use 'folke/lsp-colors.nvim'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
 
   -- Formatting
   use({ "jose-elias-alvarez/null-ls.nvim",
@@ -52,6 +57,14 @@ require('packer').startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require'nvim-tree'.setup {} end
 }
+  -- Git
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+     tag = 'release' -- To use the latest release
+  }
 
   -- ToggleTerm
   use {"akinsho/toggleterm.nvim"}
