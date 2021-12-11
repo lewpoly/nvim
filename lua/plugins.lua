@@ -32,14 +32,14 @@ require('packer').startup(function(use)
   use 'windwp/nvim-ts-autotag'
 
   -- Color
-  use 'tomasiser/vim-code-dark'
   use 'norcalli/nvim-colorizer.lua'
-  use 'christianchiarulli/nvcode-color-schemes.vim'
+  -- use 'christianchiarulli/nvcode-color-schemes.vim'
   use 'shaunsingh/nord.nvim'
   use 'marko-cerovac/material.nvim'
   use 'rmehri01/onenord.nvim'
   use 'EdenEast/nightfox.nvim'
-  -- use 'LunarVim/Colorschemes'
+  use 'lewpoly/Colorschemes'
+  use 'Shatur/neovim-ayu'
   -- use 'LunarVim/onedarker.nvim'
 
   -- Formatting
