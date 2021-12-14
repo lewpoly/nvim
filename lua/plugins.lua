@@ -34,6 +34,7 @@ require('packer').startup(function(use)
   -- Color
   use 'norcalli/nvim-colorizer.lua'
   -- use 'christianchiarulli/nvcode-color-schemes.vim'
+  use 'Mofiqul/vscode.nvim'
   use 'shaunsingh/nord.nvim'
   use 'marko-cerovac/material.nvim'
   use 'rmehri01/onenord.nvim'
