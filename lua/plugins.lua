@@ -40,16 +40,17 @@ require('packer').startup(function(use)
   use 'EdenEast/nightfox.nvim'
   use 'lewpoly/Colorschemes'
   use 'Shatur/neovim-ayu'
+  use 'sainnhe/gruvbox-material'
   -- use 'LunarVim/onedarker.nvim'
 
   -- Formatting
-  use({ "jose-elias-alvarez/null-ls.nvim",
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
     config = function()
-        require("null-ls").config({})
-        require("lspconfig")["null-ls"].setup({})
+        require("null-ls").setup()
     end,
-    requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"}
-    })
+    requires = { "nvim-lua/plenary.nvim" },
+})
 
   -- Tree
   use {
