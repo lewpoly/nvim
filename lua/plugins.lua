@@ -41,7 +41,6 @@ require('packer').startup(function(use)
   use 'EdenEast/nightfox.nvim'
   use 'lewpoly/Colorschemes'
   use 'Shatur/neovim-ayu'
-  use 'sainnhe/gruvbox-material'
   -- use 'LunarVim/onedarker.nvim'
 
   -- Formatting

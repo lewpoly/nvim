@@ -3,7 +3,7 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Hover Diagnostic
-vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]])
+-- vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]])
 
 -- Hide Diagnostic Message
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

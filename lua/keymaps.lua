@@ -45,12 +45,13 @@ keymap('v', '<leader>/', ':CommentToggle<CR>', opts)
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+keymap('n', '<leader>h', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 keymap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 
 -- Toggle Diagnostic
-keymap('n', '<leader>tt', ':TroubleToggle<CR>', opts)
+keymap('n', '<leader>d', ':TroubleToggle<CR>', opts)
 
 -- ToggleTerm
 keymap('n', '<leader>t', ':ToggleTerm<CR>', opts)
