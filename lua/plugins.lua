@@ -1,3 +1,19 @@
+
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- Have packer use a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
+
 require('packer').startup(function(use)
 
   use 'wbthomason/packer.nvim'
@@ -34,14 +50,10 @@ require('packer').startup(function(use)
   -- Color
   use 'norcalli/nvim-colorizer.lua'
   -- use 'christianchiarulli/nvcode-color-schemes.vim'
-  use 'Mofiqul/vscode.nvim'
-  use 'shaunsingh/nord.nvim'
-  use 'marko-cerovac/material.nvim'
   use 'rmehri01/onenord.nvim'
   use 'EdenEast/nightfox.nvim'
-  use 'lewpoly/Colorschemes'
+  use 'LunarVim/Colorschemes'
   use 'Shatur/neovim-ayu'
-  -- use 'LunarVim/onedarker.nvim'
 
   -- Formatting
   use({
