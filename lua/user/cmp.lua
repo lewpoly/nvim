@@ -81,7 +81,7 @@ cmp.setup({
 	},
 
 	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	},
 	sources = {
 		{ name = "nvim_lsp" },
@@ -99,12 +99,12 @@ cmp.setup({
 		end,
 		with_text = true,
 		menu = {
-			buffer = "[Buffer]",
 			nvim_lsp = "[LSP]",
 			luasnip = "[LuaSnip]",
 			nvim_lua = "[Lua]",
 			latex_symbols = "[Latex]",
 			cmp_tabnine = "[TN]",
+			buffer = "[Buffer]",
 			path = "[Path]",
 		},
 	},
