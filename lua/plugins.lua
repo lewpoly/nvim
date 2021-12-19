@@ -25,7 +25,12 @@ require("packer").startup(function(use)
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-media-files.nvim")
+	use({
+    "nvim-telescope/telescope-media-files.nvim",
+    config = function()
+      require('telescope').load_extension('media_files')
+    end,
+  })
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("BurntSushi/ripgrep")
