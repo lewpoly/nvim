@@ -1,4 +1,4 @@
-vim.cmd('colorscheme ayu-mirage')
+vim.cmd('colorscheme aquarium')
 -- vim.cmd('highlight! CmpItemAbbrDeprecated guibg=NONE gui=strikethrough guifg=#808080')
 -- vim.cmd('highlight! CmpItemAbbrMatch guibg=NONE guifg=#569CD6')
 -- vim.cmd('highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#569CD6')

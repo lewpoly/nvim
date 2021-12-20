@@ -55,14 +55,17 @@ require("packer").startup(function(use)
 		end,
 	})
 
-	-- Color
+	-- Colorizer
 	use({
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("colorizer").setup()
 		end,
 	})
+
+  -- Colorschemes
 	-- use 'christianchiarulli/nvcode-color-schemes.vim'
+  use("frenzyexists/aquarium-vim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("LunarVim/Colorschemes")
