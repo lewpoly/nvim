@@ -18,19 +18,18 @@ require("packer").startup(function(use)
 
 	-- LSP
 	use("neovim/nvim-lspconfig")
+	use("williamboman/nvim-lsp-installer")
 	use("onsails/lspkind-nvim")
 	use("folke/lsp-colors.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
+	use("folke/trouble.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use({
-    "nvim-telescope/telescope-media-files.nvim",
-    config = function()
-      require('telescope').load_extension('media_files')
-    end,
-  })
+		"nvim-telescope/telescope-media-files.nvim",
+		config = function() end,
+	})
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("BurntSushi/ripgrep")
@@ -63,13 +62,14 @@ require("packer").startup(function(use)
 		end,
 	})
 
-  -- Colorschemes
+	-- Colorschemes
 	-- use 'christianchiarulli/nvcode-color-schemes.vim'
-  use("frenzyexists/aquarium-vim")
+	use("frenzyexists/aquarium-vim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("LunarVim/Colorschemes")
 	use("Shatur/neovim-ayu")
+  use("savq/melange")
 
 	-- Formatting
 	use({

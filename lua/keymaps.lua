@@ -47,13 +47,13 @@ keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 
 -- LSP
-keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-keymap("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+-- keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+-- keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+-- keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+-- keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+-- keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+-- keymap("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+-- keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 -- Toggle Diagnostic
 keymap("n", "<leader>d", ":TroubleToggle<CR>", opts)
