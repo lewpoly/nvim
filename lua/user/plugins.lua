@@ -22,6 +22,7 @@ require("packer").startup(function(use)
 	use("onsails/lspkind-nvim")
 	use("folke/lsp-colors.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use({"p00f/nvim-ts-rainbow"})
 	use("folke/trouble.nvim")
 
 	-- Telescope
@@ -64,7 +65,8 @@ require("packer").startup(function(use)
 
 	-- Colorschemes
 	-- use 'christianchiarulli/nvcode-color-schemes.vim'
-	use("frenzyexists/aquarium-vim")
+  use("marko-cerovac/material.nvim")
+  use("rebelot/kanagawa.nvim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("LunarVim/Colorschemes")
@@ -96,6 +98,8 @@ require("packer").startup(function(use)
 		},
 		tag = "release", -- To use the latest release
 	})
+
+  use ("lewis6991/impatient.nvim")
 
 	-- ToggleTerm
 	use({ "akinsho/toggleterm.nvim" })

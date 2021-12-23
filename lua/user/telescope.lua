@@ -1,4 +1,11 @@
-require("telescope").setup({
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+
+telescope.load_extension "media_files"
+
+telescope.setup {
 	extensions = {
 		media_files = {
 			-- filetypes whitelist
@@ -37,7 +44,7 @@ require("telescope").setup({
 		generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
 		winblend = 0,
 		border = {},
-		borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		-- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 		color_devicons = true,
 		use_less = true,
 		path_display = {},
@@ -49,4 +56,4 @@ require("telescope").setup({
 		-- Developer configurations: Not meant for general override
 		buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
 	},
-})
+}

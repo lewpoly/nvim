@@ -3,7 +3,6 @@ if not status_ok then
 	return
 end
 
-require("lualine").setup()
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
@@ -65,10 +64,10 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { mode },
-		lualine_b = { branch, diff, diagnostics },
+		lualine_b = { branch, diagnostics },
 		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { "encoding", filetype },
+		lualine_x = { diff, "encoding", filetype },
 		lualine_y = { location },
 		lualine_z = { progress },
 	},
