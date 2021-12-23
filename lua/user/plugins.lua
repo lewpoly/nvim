@@ -19,6 +19,7 @@ require("packer").startup(function(use)
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
+  use("simrat39/rust-tools.nvim")
 	use("onsails/lspkind-nvim")
 	use("folke/lsp-colors.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -48,12 +49,7 @@ require("packer").startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
-	use({
-		"blackCauldron7/surround.nvim",
-		config = function()
-			require("surround").setup({ mappings_style = "sandwich" })
-		end,
-	})
+	use("blackCauldron7/surround.nvim")
 
 	-- Colorizer
 	use({

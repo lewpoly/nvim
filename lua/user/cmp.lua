@@ -112,6 +112,10 @@ cmp.setup({
 			path = "[Path]",
 		},
 	},
+  experimental ={
+    ghost_text = true,
+    native_menu = false,
+  }
 })
 
 tabnine:setup({
