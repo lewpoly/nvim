@@ -105,6 +105,7 @@ require("packer").startup(function(use)
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
+  use("moll/vim-bbye")
 
 	-- Dashboard
 	use("glepnir/dashboard-nvim")
