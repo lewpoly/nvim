@@ -9,7 +9,9 @@ require("kanagawa").setup({
 	specialReturn = false, -- special highlight for the return keyword
 	specialException = false, -- special highlight for exception handling keywords
 	transparent = false, -- do not set background color
-	colors = {},
+	colors = {
+    bg = "#232731"
+  },
 	overrides = {},
 })
 
