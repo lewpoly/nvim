@@ -10,7 +10,10 @@ require("kanagawa").setup({
 	specialException = false, -- special highlight for exception handling keywords
 	transparent = false, -- do not set background color
 	colors = {
-    bg = "#232731"
+    bg = "#232731",
+    surimiOrange = "#ebcb8b",
+    springGreen = "#d08770",
+    sakuraPink = "#b5cea8"
   },
 	overrides = {},
 })
