@@ -19,11 +19,11 @@ require("packer").startup(function(use)
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
-  use("simrat39/rust-tools.nvim")
+	use("simrat39/rust-tools.nvim")
 	use("onsails/lspkind-nvim")
 	use("folke/lsp-colors.nvim")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use({"p00f/nvim-ts-rainbow"})
+	use({ "p00f/nvim-ts-rainbow" })
 	use("folke/trouble.nvim")
 
 	-- Telescope
@@ -62,13 +62,13 @@ require("packer").startup(function(use)
 
 	-- Colorschemes
 	-- use 'christianchiarulli/nvcode-color-schemes.vim'
-  use("marko-cerovac/material.nvim")
-  use("lewpoly/kanagawa.nvim")
+	use("marko-cerovac/material.nvim")
+	use("lewpoly/kanagawa.nvim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
-	use("LunarVim/Colorschemes")
+	use("LunarVim/darkplus.nvim")
 	use("Shatur/neovim-ayu")
-  use("savq/melange")
+	use("savq/melange")
 
 	-- Formatting
 	use({
@@ -96,7 +96,7 @@ require("packer").startup(function(use)
 		tag = "release", -- To use the latest release
 	})
 
-  use ("lewis6991/impatient.nvim")
+	use("lewis6991/impatient.nvim")
 
 	-- ToggleTerm
 	use({ "akinsho/toggleterm.nvim" })
@@ -106,7 +106,7 @@ require("packer").startup(function(use)
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
-  use("moll/vim-bbye")
+	use("moll/vim-bbye")
 
 	-- Dashboard
 	use("glepnir/dashboard-nvim")
@@ -118,4 +118,5 @@ require("packer").startup(function(use)
 			require("nvim_comment").setup()
 		end,
 	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 end)
