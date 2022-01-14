@@ -50,6 +50,7 @@ require("packer").startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	use("blackCauldron7/surround.nvim")
+  use("tpope/vim-surround")
 
 	-- Colorizer
 	use({
