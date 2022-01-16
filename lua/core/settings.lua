@@ -10,6 +10,7 @@ vim.o.cursorline = true
 vim.o.expandtab = true
 vim.o.fileencoding = "utf-8"
 vim.o.hidden = true
+vim.o.hlsearch = true
 vim.o.mouse = "a"
 vim.o.numberwidth = 4
 vim.o.scrolloff = 8
@@ -31,5 +32,5 @@ vim.o.updatetime = 250
 vim.o.undofile = true
 vim.o.wrap = false
 vim.o.writebackup = false
-vim.o.formatoptions = vim.o.formatoptions:gsub("o", "")
 vim.opt.shortmess:append("c")
+vim.o.guifont = "monospace:h17"

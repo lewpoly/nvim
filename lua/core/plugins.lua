@@ -25,6 +25,8 @@ require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "p00f/nvim-ts-rainbow" })
 	use("folke/trouble.nvim")
+  use("antoinemadec/FixCursorHold.nvim")
+  use("lukas-reineke/indent-blankline.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -71,22 +73,12 @@ require("packer").startup(function(use)
 	use("savq/melange")
 
 	-- Formatting
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		config = function()
-			require("null-ls").setup()
-		end,
-		requires = { "nvim-lua/plenary.nvim" },
-	})
+	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Tree
-	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = function()
-			require("nvim-tree").setup({})
-		end,
-	})
+	use("kyazdani42/nvim-tree.lua")
+  use("kyazdani42/nvim-web-devicons")
+
 	-- Git
 	use({
 		"lewis6991/gitsigns.nvim",
