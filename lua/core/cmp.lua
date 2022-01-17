@@ -8,33 +8,32 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
 end
--- local lspkind = require('lspkind')
-local cmp_kinds = {
-	Text = "  ",
-	Method = "  ",
-	Function = "  ",
-	Constructor = "  ",
-	Field = "  ",
-	Variable = "  ",
-	Class = "  ",
-	Interface = "  ",
-	Module = "  ",
-	Property = "  ",
-	Unit = "  ",
-	Value = "  ",
-	Enum = "  ",
-	Keyword = "  ",
-	Snippet = "  ",
-	Color = "  ",
-	File = "  ",
-	Reference = "  ",
-	Folder = "  ",
-	EnumMember = "  ",
-	Constant = "  ",
-	Struct = "  ",
-	Event = "  ",
-	Operator = "  ",
-	TypeParameter = "  ",
+local kind_icons = {
+	Text = "",
+	Method = "m",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "",
+	Interface = "",
+	Module = "",
+	Property = "",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
+	Event = "",
+	Operator = "",
+	TypeParameter = "",
 }
 local tabnine = require("cmp_tabnine.config")
 local luasnip = require("luasnip")
@@ -47,7 +46,7 @@ require("luasnip/loaders/from_vscode").lazy_load()
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 	mapping = {
@@ -84,8 +83,23 @@ cmp.setup({
 		end, { "i", "s" }),
 	},
 
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	formatting = {
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			-- Kind icons
+			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+			vim_item.menu = ({
+				nvim_lsp = "[LSP]",
+				luasnip = "[LuaSnip]",
+				nvim_lua = "[Lua]",
+				latex_symbols = "[Latex]",
+				cmp_tabnine = "[TN]",
+				buffer = "[Buffer]",
+				path = "[Path]",
+			})[entry.source.name]
+			return vim_item
+		end,
 	},
 	sources = {
 		{ name = "nvim_lsp" },
@@ -96,28 +110,18 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "latex_symbols" },
 	},
-	formatting = {
-		format = function(_, vim_item)
-			vim_item.kind = (cmp_kinds[vim_item.kind] or "") .. vim_item.kind
-			return vim_item
-		end,
-		with_text = true,
-		menu = {
-			nvim_lsp = "[LSP]",
-			luasnip = "[LuaSnip]",
-			nvim_lua = "[Lua]",
-			latex_symbols = "[Latex]",
-			cmp_tabnine = "[TN]",
-			buffer = "[Buffer]",
-			path = "[Path]",
-		},
+	confirm_opts = {
+		behavior = cmp.ConfirmBehavior.Replace,
+		select = false,
+	},
+	documentation = {
+		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	},
 	experimental = {
 		ghost_text = true,
 		native_menu = false,
 	},
 })
-
 tabnine:setup({
 	max_lines = 1000,
 	max_num_results = 20,
