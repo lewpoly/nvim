@@ -68,7 +68,7 @@ require("packer").startup(function(use)
 	use("lewpoly/kanagawa.nvim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
-	use("LunarVim/darkplus.nvim")
+	use("lewpoly/darkplus.nvim")
 	use("Shatur/neovim-ayu")
 	use("savq/melange")
 
