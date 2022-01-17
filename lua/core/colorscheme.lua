@@ -98,4 +98,4 @@ require("kanagawa").setup({
 	transparent = false, -- do not set background color
 })
 
-vim.cmd("colorscheme darkplus")
+vim.cmd("colorscheme aurora")

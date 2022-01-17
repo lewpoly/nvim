@@ -63,7 +63,7 @@ require("packer").startup(function(use)
 	})
 
 	-- Colorschemes
-	-- use 'christianchiarulli/nvcode-color-schemes.vim'
+	use 'lewpoly/nvcode-color-schemes.vim'
 	use("marko-cerovac/material.nvim")
 	use("lewpoly/kanagawa.nvim")
 	use("rmehri01/onenord.nvim")
