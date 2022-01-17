@@ -35,11 +35,11 @@ gitsigns.setup {
 
     -- Text objects
     ['o ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>',
-    ['x ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>'
+    ['x ih'] = ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>',
   },
   watch_gitdir = {
     interval = 1000,
-    follow_files = true
+    follow_files = true,
   },
   attach_to_untracked = true,
   current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
@@ -50,7 +50,7 @@ gitsigns.setup {
     ignore_whitespace = false,
   },
   current_line_blame_formatter_opts = {
-    relative_time = false
+    relative_time = false,
   },
   sign_priority = 6,
   update_debounce = 100,
@@ -62,9 +62,9 @@ gitsigns.setup {
     style = 'minimal',
     relative = 'cursor',
     row = 0,
-    col = 1
+    col = 1,
   },
   yadm = {
-    enable = false
+    enable = false,
   },
 }
