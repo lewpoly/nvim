@@ -58,22 +58,15 @@ require("packer").startup(function(use)
 	use("tpope/vim-surround")
 
 	-- Colorizer
-	use({
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	})
+	use("norcalli/nvim-colorizer.lua")
 
 	-- Colorschemes
-	use 'lewpoly/nvcode-color-schemes.vim'
-	use("marko-cerovac/material.nvim")
-	use("lewpoly/kanagawa.nvim")
+	-- use 'lewpoly/nvcode-color-schemes.vim'
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
-	use("lewpoly/darkplus.nvim")
+	use("lewpoly/gruvplus.nvim")
 	use("Shatur/neovim-ayu")
-	use("savq/melange")
+  use("LunarVim/darkplus.nvim")
 
 	-- Formatting
 	use("jose-elias-alvarez/null-ls.nvim")
