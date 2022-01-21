@@ -58,12 +58,7 @@ require("packer").startup(function(use)
 	use("tpope/vim-surround")
 
 	-- Colorizer
-	use({
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	})
+	use("norcalli/nvim-colorizer.lua")
 
 	-- Colorschemes
 	use 'lewpoly/nvcode-color-schemes.vim'
