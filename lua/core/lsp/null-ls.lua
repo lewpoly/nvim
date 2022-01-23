@@ -12,10 +12,11 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({
-      disabled_filetypes = { "html", "css" },
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-    formatting.eslint_d,
-    formatting.prettierd,
+			disabled_filetypes = { "html", "css" },
+			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+		}),
+		formatting.eslint_d,
+		formatting.prettierd.with({ disabled_filetypes = { "html" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		-- diagnostics.flake8
