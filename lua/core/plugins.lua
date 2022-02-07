@@ -59,8 +59,23 @@ require("packer").startup(function(use)
 	use("tpope/vim-surround")
 
 	-- Colorizer
-	use("norcalli/nvim-colorizer.lua")
-
+	-- use("norcalli/nvim-colorizer.lua")
+	use({
+		"RRethy/vim-hexokinase",
+		run = "make hexokinase",
+		config = function()
+			vim.g.Hexokinase_highlighters = { "virtual" }
+			vim.g.Hexokinase_optInPatterns = {
+				"full_hex",
+				"rgb",
+				"rgba",
+				"hsl",
+				"hsla",
+        "triple_hex",
+        "coulour_names",
+			}
+		end,
+	})
 	-- Colorschemes
 	-- use 'lewpoly/nvcode-color-schemes.vim'
 	use("rmehri01/onenord.nvim")
