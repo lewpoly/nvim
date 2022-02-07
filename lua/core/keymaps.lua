@@ -22,7 +22,7 @@ keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
 -- Tabs
 keymap("n", "<TAB>", ":bnext<CR>", opts)
 keymap("n", "<S-TAB>", ":bprevious<CR>", opts)
-keymap("n", "<c-w>", ":bd<CR>", opts)
+-- keymap("n", "<c-w>", ":bd<CR>", opts)
 
 -- NvimTree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
