@@ -72,7 +72,7 @@ require("packer").startup(function(use)
 				"hsl",
 				"hsla",
         "triple_hex",
-        "coulour_names",
+        "colour_names",
 			}
 		end,
 	})
