@@ -71,8 +71,8 @@ require("packer").startup(function(use)
 				"rgba",
 				"hsl",
 				"hsla",
-        "triple_hex",
-        "colour_names",
+				"triple_hex",
+				"colour_names",
 			}
 		end,
 	})
