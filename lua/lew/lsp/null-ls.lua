@@ -14,7 +14,7 @@ null_ls.setup({
 		formatting.prettierd,
 		formatting.prettier.with({
 			disabled_filetypes = { "html", "css" },
-			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+			extra_args = { "--single-quote", "--jsx-single-quote" },
 		}),
 		formatting.eslint_d,
 		formatting.black.with({ extra_args = { "--fast" } }),
