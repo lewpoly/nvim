@@ -55,11 +55,11 @@ require("packer").startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
-	use("blackCauldron7/surround.nvim")
+	-- use("blackCauldron7/surround.nvim")
 	use("tpope/vim-surround")
 
 	-- Colorizer
-	-- use("norcalli/nvim-colorizer.lua")
+	use("norcalli/nvim-colorizer.lua")
 	use({
 		"RRethy/vim-hexokinase",
 		run = "make hexokinase",
@@ -78,6 +78,7 @@ require("packer").startup(function(use)
 	})
 	-- Colorschemes
 	-- use 'lewpoly/nvcode-color-schemes.vim'
+	use("ellisonleao/gruvbox.nvim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("lewpoly/gruvplus.nvim")

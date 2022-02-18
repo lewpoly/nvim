@@ -12,14 +12,14 @@ local diagnostics = {
 	sources = { "nvim_diagnostic" },
 	sections = { "error", "warn" },
 	symbols = { error = " ", warn = " " },
-	colored = true,
+	colored = false,
 	update_in_insert = true,
 	always_visible = false,
 }
 
 local diff = {
 	"diff",
-	colored = true,
+	colored = false,
 	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
 	cond = hide_in_width,
 }

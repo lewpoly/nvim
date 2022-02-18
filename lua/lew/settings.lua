@@ -30,7 +30,7 @@ vim.o.termguicolors = true
 vim.o.title = true
 vim.o.updatetime = 250
 vim.o.undofile = true
-vim.o.wrap = false
+vim.o.wrap = true
 vim.o.writebackup = false
 vim.opt.shortmess:append("c")
 vim.o.guifont = "monospace:h17"
