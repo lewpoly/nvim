@@ -59,7 +59,7 @@ require("packer").startup(function(use)
 	use("tpope/vim-surround")
 
 	-- Colorizer
-	use("norcalli/nvim-colorizer.lua")
+	-- use("norcalli/nvim-colorizer.lua")
 	use({
 		"RRethy/vim-hexokinase",
 		run = "make hexokinase",
@@ -77,12 +77,12 @@ require("packer").startup(function(use)
 		end,
 	})
 	-- Colorschemes
-	-- use 'lewpoly/nvcode-color-schemes.vim'
-	use("ellisonleao/gruvbox.nvim")
+	use("luisiacc/gruvbox-baby")
+	-- use("lewpoly/nvcode-color-schemes.vim")
+	use("navarasu/onedark.nvim")
 	use("rmehri01/onenord.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("lewpoly/gruvplus.nvim")
-	use("Shatur/neovim-ayu")
 	use("LunarVim/darkplus.nvim")
 
 	-- Formatting
