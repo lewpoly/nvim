@@ -90,13 +90,13 @@ cmp.setup({
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
-				nvim_lsp = "[LSP]",
-				luasnip = "[LuaSnip]",
-				nvim_lua = "[Lua]",
-				latex_symbols = "[Latex]",
-				cmp_tabnine = "[TN]",
-				buffer = "[Buffer]",
-				path = "[Path]",
+				nvim_lsp = "[lsp]",
+				luasnip = "[snip]",
+				nvim_lua = "[lua]",
+				latex_symbols = "[ltx]",
+				cmp_tabnine = "[tn]",
+				buffer = "[buf]",
+				path = "[path]",
 			})[entry.source.name]
 			return vim_item
 		end,

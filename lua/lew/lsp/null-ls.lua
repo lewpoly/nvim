@@ -11,20 +11,20 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = true,
 	sources = {
-		-- formatting.deno_fmt,
-		formatting.prettierd.with({
-			env = {
-				string.format(
-					"PRETTIERD_LOCAL_CONFIG",
-					vim.fn.expand("~/.config/nvim/lua/lew/lsp/settings/.prettierrc.js")
-				),
-			},
+-- 		-- formatting.deno_fmt,
+-- 		formatting.prettierd.with({
+-- 			env = {
+-- 				string.format(
+-- 					"PRETTIERD_LOCAL_CONFIG",
+-- 					vim.fn.expand("~/.config/nvim/lua/lew/lsp/settings/.prettierrc.js")
+-- 				),
+-- 			},
+-- 		}),
+		formatting.prettierd,
+		formatting.prettier.with({
+			disabled_filetypes = { "html", "css" },
+			extra_args = { "--single-quote", "--jsx-single-quote" },
 		}),
-
-		-- formatting.prettier.with({
-		-- 	disabled_filetypes = { "html", "css" },
-		-- 	extra_args = { "--single-quote", "--jsx-single-quote" },
-		-- }),
 		-- formatting.eslint_d,
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
