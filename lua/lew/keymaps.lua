@@ -69,3 +69,6 @@ keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 
 -- Formatting
 keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+-- Run JS
+keymap("n", "<leader>js", ":w !node<CR>", opts)
