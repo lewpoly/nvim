@@ -60,7 +60,7 @@ local filename = {
 	symbols = {
 		modified = "",
 		readonly = "",
-		unnamed = "",
+		unnamed = "[No Name]",
 	},
 }
 
