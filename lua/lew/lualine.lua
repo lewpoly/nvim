@@ -53,6 +53,17 @@ local progress = {
 	padding = 1,
 }
 
+local filename = {
+	"filename",
+	path = 1,
+  shorting_target = 40,
+  symbols = {
+    modified = '',
+    readonly = '',
+    unnamed = '',
+  }
+}
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -61,14 +72,14 @@ lualine.setup({
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
-    globalstatus = true
+		globalstatus = true,
 	},
 	sections = {
 		lualine_a = { mode },
 		lualine_b = { branch, diagnostics },
-		lualine_c = {},
+		lualine_c = { filename},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, "encoding", filetype },
+		lualine_x = { diff, filetype },
 		lualine_y = { location },
 		lualine_z = { progress },
 	},
