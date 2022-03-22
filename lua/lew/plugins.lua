@@ -86,12 +86,16 @@ require("packer").startup(function(use)
 		end,
 	})
 	-- Colorschemes
-	use("luisiacc/gruvbox-baby")
-	-- use("lewpoly/nvcode-color-schemes.vim")
 	use("navarasu/onedark.nvim")
 	use("rmehri01/onenord.nvim")
 	use("lewpoly/gruvplus.nvim")
+	use("lewpoly/nvcode-color-schemes.vim")
 	use("LunarVim/darkplus.nvim")
+	use("rebelot/kanagawa.nvim")
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+	})
 
 	-- Formatting
 	use("jose-elias-alvarez/null-ls.nvim")

@@ -71,7 +71,7 @@ keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
 -- Run JS
-keymap("n", "<leader>js", ":w !node<CR>", opts)
+keymap("n", "<leader>jj", ":w !node<CR>", opts)
 
 -- Vim Repeat
 keymap('n', '<Plug>MyWonderfulMap', ":lua require'My_module'.my_function()<CR>", opts)

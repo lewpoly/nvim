@@ -14,7 +14,7 @@ local diagnostics = {
 	symbols = { error = " ", warn = " " },
 	colored = false,
 	update_in_insert = true,
-	always_visible = false,
+	always_visible = true,
 }
 
 local diff = {
@@ -68,23 +68,18 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
+		component_separators = "|",
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "Outline" },
 		always_divide_middle = true,
-		-- globalstatus = true,
+		globalstatus = true,
 	},
 	sections = {
-		lualine_a = { mode },
-		lualine_b = { branch, diagnostics },
-		lualine_c = {
-			function()
-				return "%="
-			end,
-			filename,
-		},
+		lualine_a = { branch, diagnostics },
+		lualine_b = {},
+		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, filetype },
+		lualine_x = { filetype, diff },
 		lualine_y = { location },
 		lualine_z = { progress },
 	},
