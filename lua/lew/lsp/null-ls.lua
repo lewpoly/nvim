@@ -4,30 +4,26 @@ if not null_ls_status_ok then
 end
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
-local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
-local diagnostics = null_ls.builtins.diagnostics
+-- local diagnostics = null_ls.builtins.diagnostics
+local formatting = null_ls.builtins.formatting
 
 null_ls.setup({
 	debug = true,
 	sources = {
--- 		-- formatting.deno_fmt,
--- 		formatting.prettierd.with({
--- 			env = {
--- 				string.format(
--- 					"PRETTIERD_LOCAL_CONFIG",
--- 					vim.fn.expand("~/.config/nvim/lua/lew/lsp/settings/.prettierrc.js")
--- 				),
--- 			},
--- 		}),
+		-- formatting.prettierd.with({
+		-- 	env = {
+		-- 		PRETTIERD_DEFAULT_CONFIG = "~/.config/nvim/.prettierrc",
+		-- 	},
+		-- }),
 		formatting.prettierd,
 		formatting.prettier.with({
 			disabled_filetypes = { "html", "css" },
 			extra_args = { "--single-quote", "--jsx-single-quote" },
 		}),
 		-- formatting.eslint_d,
-		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
 		-- diagnostics.flake8
+		formatting.black.with({ extra_args = { "--fast" } }),
 	},
 })

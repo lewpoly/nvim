@@ -8,33 +8,10 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
 end
-local kind_icons = {
-	Text = "",
-	Method = "m",
-	Function = "",
-	Constructor = "",
-	Field = "",
-	Variable = "",
-	Class = "",
-	Interface = "",
-	Module = "",
-	Property = "",
-	Unit = "",
-	Value = "",
-	Enum = "",
-	Keyword = "",
-	Snippet = "",
-	Color = "",
-	File = "",
-	Reference = "",
-	Folder = "",
-	EnumMember = "",
-	Constant = "",
-	Struct = "",
-	Event = "",
-	Operator = "",
-	TypeParameter = "",
-}
+
+local icons = require("lew.icons")
+local kind_icons = icons.kind
+
 local tabnine = require("cmp_tabnine.config")
 local luasnip = require("luasnip")
 luasnip.config.set_config({
@@ -88,15 +65,23 @@ cmp.setup({
 		format = function(entry, vim_item)
 			-- Kind icons
 			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+
+			if entry.source.name == "cmp_tabnine" then
+				-- if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+				-- menu = entry.completion_item.data.detail .. " " .. menu
+				-- end
+				vim_item.kind = icons.misc.Robot
+			end
+
 			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
-				nvim_lsp = "[lsp]",
-				luasnip = "[snip]",
-				nvim_lua = "[lua]",
-				latex_symbols = "[ltx]",
-				cmp_tabnine = "[tn]",
-				buffer = "[buf]",
-				path = "[path]",
+				nvim_lsp = "",
+				luasnip = "",
+				nvim_lua = "",
+				latex_symbols = "",
+				-- cmp_tabnine = "",
+				buffer = "",
+				path = "",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -104,9 +89,9 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
-		{ name = "cmp_tabnine" },
 		{ name = "luasnip" },
 		{ name = "buffer" },
+		{ name = "cmp_tabnine" },
 		{ name = "path" },
 		{ name = "latex_symbols" },
 	},
