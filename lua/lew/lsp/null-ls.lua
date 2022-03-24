@@ -12,8 +12,10 @@ null_ls.setup({
 	debug = true,
 	sources = {
 		formatting.prettierd.with({
+			formatCommand = "prettierd ${INPUT}",
+			formatStdin = true,
 			env = {
-				PRETTIERD_DEFAULT_CONFIG = "home/lew/.config/nvim/.prettierrc.json",
+				PRETTIERD_DEFAULT_CONFIG = "home/lew/.config/nvim/.prettierrc",
 			},
 		}),
 		-- formatting.prettierd,
