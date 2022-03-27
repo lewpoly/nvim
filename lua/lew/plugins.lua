@@ -114,7 +114,7 @@ require("packer").startup(function(use)
 	-- Colorschemes
 	use("navarasu/onedark.nvim")
 	use("rmehri01/onenord.nvim")
-	use("lewpoly/gruvplus.nvim")
+	use("lewpoly/sherbet.nvim")
 	use("lewpoly/nvcode-color-schemes.vim")
 	use("LunarVim/darkplus.nvim")
 	use("rebelot/kanagawa.nvim")
