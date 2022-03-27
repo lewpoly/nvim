@@ -63,8 +63,11 @@ catppuccin.setup({
 		symbols_outline = true,
 	},
 })
+require("leaf").setup({
+    theme = "dark", -- default, alternatives: "dark", "lighter", "darker", "lightest", "darkest"
+})
 -- vim.g.transparent_background = true
-vim.cmd("colorscheme gruvplus")
+vim.cmd("colorscheme sherbet")
 -- vim.cmd("hi NormalNC guibg=NONE")
 -- vim.cmd("hi Normal guibg=none ctermbg=none")
 -- vim.cmd("hi LineNr guibg=none ctermbg=none")
