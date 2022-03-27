@@ -82,11 +82,11 @@ require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
 	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-emoji")
 	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
-	use("kdheepak/cmp-latex-symbols")
-	use("hrsh7th/cmp-path")
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 	-- use("blackCauldron7/surround.nvim")
@@ -107,7 +107,7 @@ require("packer").startup(function(use)
 				"hsl",
 				"hsla",
 				"triple_hex",
-				"colour_names",
+				-- "colour_names",
 			}
 		end,
 	})
