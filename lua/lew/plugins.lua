@@ -112,8 +112,8 @@ require("packer").startup(function(use)
 		end,
 	})
 	-- Colorschemes
-  use("sainnhe/sonokai")
-  use("daschw/leaf.nvim")
+	use("sainnhe/sonokai")
+	use("daschw/leaf.nvim")
 	use("navarasu/onedark.nvim")
 	use("rmehri01/onenord.nvim")
 	use("lewpoly/sherbet.nvim")
@@ -144,7 +144,8 @@ require("packer").startup(function(use)
 	-- Miscellaneous
 	use("lewis6991/impatient.nvim")
 	use("karb94/neoscroll.nvim")
-  use"RRethy/vim-illuminate"
+	use("RRethy/vim-illuminate")
+	use("unblevable/quick-scope")
 
 	-- ToggleTerm
 	use({ "akinsho/toggleterm.nvim" })
