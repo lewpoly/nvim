@@ -11,20 +11,13 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = true,
 	sources = {
-		-- formatting.prettierd.with({
-		-- 	formatStdin = true,
-		-- 	env = {
-		-- 		PRETTIERD_DEFAULT_CONFIG = "/home/lew/.config/nvim/.prettierrc.json",
-		-- 	},
-		-- }),
 		formatting.prettierd,
-		formatting.prettier.with({
-			disabled_filetypes = { "html", "css" },
-			extra_args = { "--single-quote", "--jsx-single-quote" },
-		}),
+		-- formatting.prettier.with({
+		-- 	disabled_filetypes = { "html", "css" },
+		-- 	extra_args = { "--single-quote", "--jsx-single-quote" },
+		-- }),
 		-- formatting.eslint_d,
 		formatting.stylua,
-		-- diagnostics.flake8
 		formatting.black.with({ extra_args = { "--fast" } }),
 	},
 })
