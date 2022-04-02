@@ -11,6 +11,12 @@ keymap("n", "<c-h>", "<c-w>h", opts)
 keymap("n", "<c-k>", "<c-w>k", opts)
 keymap("n", "<c-l>", "<c-w>l", opts)
 
+-- Resize with arrows
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
 -- Visual Mode Tabbing
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
