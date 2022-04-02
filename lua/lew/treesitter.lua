@@ -15,7 +15,7 @@ configs.setup({
 	autopairs = {
 		enable = true,
 	},
-	indent = { enable = true, disable = { "yaml", "css", "python" } },
+	indent = { enable = true, disable = { "css", "python" } },
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
