@@ -81,3 +81,9 @@ keymap("n", "<leader>jj", ":w !node<CR>", opts)
 
 -- Vim Repeat
 keymap('n', '<Plug>MyWonderfulMap', ":lua require'My_module'.my_function()<CR>", opts)
+
+-- Remove Highlight
+keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
+
+-- Treesitter
+keymap("n", "<F4>", "<cmd>TSHighlightCapturesUnderCursor<cr>", opts)
