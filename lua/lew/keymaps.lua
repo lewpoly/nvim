@@ -26,9 +26,11 @@ keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Tabs
-keymap("n", "<TAB>", ":bnext<CR>", opts)
-keymap("n", "<S-TAB>", ":bprevious<CR>", opts)
--- keymap("n", "<c-w>", ":bd<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- JABS
+keymap("n", "<TAB>", "<cmd>JABSOpen<cr>", { noremap = true, silent = true, nowait = true })
 
 -- NvimTree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
@@ -80,7 +82,7 @@ keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 keymap("n", "<leader>jj", ":w !node<CR>", opts)
 
 -- Vim Repeat
-keymap('n', '<Plug>MyWonderfulMap', ":lua require'My_module'.my_function()<CR>", opts)
+keymap("n", "<Plug>MyWonderfulMap", ":lua require'My_module'.my_function()<CR>", opts)
 
 -- Remove Highlight
 keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
