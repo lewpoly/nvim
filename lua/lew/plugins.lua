@@ -44,6 +44,8 @@ require("packer").startup(function(use)
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
+	use("ray-x/lsp_signature.nvim")
+	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
 	use("simrat39/rust-tools.nvim")
 	use("onsails/lspkind-nvim")
 	use("folke/lsp-colors.nvim")
@@ -67,13 +69,15 @@ require("packer").startup(function(use)
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
+	use("nvim-telescope/telescope-file-browser.nvim")
+	use("nvim-telescope/telescope-ui-select.nvim")
+	use("nvim-lua/popup.nvim")
+	use("nvim-lua/plenary.nvim")
+	use("BurntSushi/ripgrep")
 	use({
 		"nvim-telescope/telescope-media-files.nvim",
 		config = function() end,
 	})
-	use("nvim-lua/popup.nvim")
-	use("nvim-lua/plenary.nvim")
-	use("BurntSushi/ripgrep")
 
 	-- Completion
 	use("rafamadriz/friendly-snippets")
@@ -128,8 +132,9 @@ require("packer").startup(function(use)
 	-- Formatting
 	use("jose-elias-alvarez/null-ls.nvim")
 
-	-- Tree
+	-- File Exploration
 	use("kyazdani42/nvim-tree.lua")
+	-- use("tamago324/lir.nvim")
 	use("kyazdani42/nvim-web-devicons")
 
 	-- Git
@@ -170,6 +175,7 @@ require("packer").startup(function(use)
 			require("nvim_comment").setup()
 		end,
 	})
+	use("folke/todo-comments.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Automatically set up your configuration after cloning packer.nvim

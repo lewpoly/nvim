@@ -34,6 +34,9 @@ vim.g.nvim_tree_icons = {
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
+	-- update_to_buf_dir = {
+	-- 	enable = false,
+	-- },
 	-- disable_netrw = true,
 	-- hijack_netrw = true,
 	-- open_on_setup = false,

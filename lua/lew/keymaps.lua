@@ -35,13 +35,19 @@ keymap("n", "<TAB>", "<cmd>JABSOpen<cr>", { noremap = true, silent = true, nowai
 -- NvimTree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
+-- Lir
+-- keymap("n", "-", ":lua require'lir.float'.toggle()<cr>", opts)
+
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>ft", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
+keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
+-- keymap("n", "<leader>ca", ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", opts)
 -- keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", opts)
 keymap(
 	"n",
@@ -55,6 +61,7 @@ keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 
 -- LSP
+-- keymap("n", "<leader>ca", ":CodeActionMenu<CR>", opts)
 -- keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 -- keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 -- keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -85,7 +92,7 @@ keymap("n", "<leader>jj", ":w !node<CR>", opts)
 keymap("n", "<Plug>MyWonderfulMap", ":lua require'My_module'.my_function()<CR>", opts)
 
 -- Remove Highlight
-keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
+keymap("n", "<leader>nh", "<cmd>nohlsearch<cr>", opts)
 
 -- Treesitter
 keymap("n", "<F4>", "<cmd>TSHighlightCapturesUnderCursor<cr>", opts)

@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 require "lew.lsp.lsp-installer"
+require "lew.lsp.lsp-signature"
 require("lew.lsp.handlers").setup()
 require "lew.lsp.null-ls"
 require "lew.lsp.tsserver"
