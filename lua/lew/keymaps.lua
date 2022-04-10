@@ -76,6 +76,9 @@ keymap("n", "<leader>d", ":TroubleToggle<CR>", opts)
 -- PackerSync
 keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
 
+-- SymbolsOutline
+keymap("n", "<leader>s", ":SymbolsOutline<CR>", opts)
+
 -- ToggleTerm
 keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
