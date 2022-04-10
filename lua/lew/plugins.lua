@@ -116,6 +116,7 @@ require("packer").startup(function(use)
 		end,
 	})
 	-- Colorschemes
+	use("rose-pine/neovim")
 	use("sainnhe/sonokai")
 	use("daschw/leaf.nvim")
 	use("navarasu/onedark.nvim")
