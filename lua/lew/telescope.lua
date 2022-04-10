@@ -123,5 +123,5 @@ telescope.setup({
 
 -- telescope.load_extension "ui-select"
 telescope.load_extension("file_browser")
-require("telescope").load_extension("ui-select")
+telescope.load_extension("ui-select")
 require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor())
