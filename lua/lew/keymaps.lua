@@ -47,13 +47,14 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
+keymap("n", "<leader>cc", "<cmd>Telescope command_center<CR>", opts)
 -- keymap("n", "<leader>ca", ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", opts)
 -- keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", opts)
 keymap(
-	"n",
-	"<leader>fc",
-	"<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
-	opts
+  "n",
+  "<leader>fc",
+  "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
+  opts
 )
 
 -- Comment
