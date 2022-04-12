@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-	-- NOTE: deprecated - ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {
@@ -27,18 +27,18 @@ configs.setup({
 	rainbow = {
 		enable = true,
 		-- colors = {
-			-- "#cca700",
-			-- "#d16d9e",
-			-- "#4fc1ff",
-			-- "#dcd7ba",
-			-- "#d16969",
-			-- "#a3be8c",
-			-- "Orchid",
-			-- "DodgerBlue",
-			-- "Gold",
-			-- 	"Cornsilk",
-			-- 	"Salmon",
-			-- 	"LawnGreen",
+		-- "#cca700",
+		-- "#d16d9e",
+		-- "#4fc1ff",
+		-- "#dcd7ba",
+		-- "#d16969",
+		-- "#a3be8c",
+		-- "Orchid",
+		-- "DodgerBlue",
+		-- "Gold",
+		-- 	"Cornsilk",
+		-- 	"Salmon",
+		-- 	"LawnGreen",
 		-- },
 		disable = { "html" },
 	},
