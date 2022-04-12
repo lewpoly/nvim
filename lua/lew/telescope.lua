@@ -114,15 +114,14 @@ telescope.setup({
 		},
 		["ui-select"] = {
 			require("telescope.themes").get_dropdown({
-				previewer = false,
+				previewer = true,
 				-- even more opts
 			}),
 		},
 	},
 })
 
--- telescope.load_extension "ui-select"
 telescope.load_extension("file_browser")
 telescope.load_extension("ui-select")
-telescope.load_extension('command_center')
-require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor())
+telescope.load_extension("command_center")
+require("telescope.builtin").lsp_code_actions(require("telescope.themes").get_cursor())
