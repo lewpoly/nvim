@@ -89,14 +89,14 @@ command_center.add({
 	},
 
 	-- Comments --
-	{
-		description = "Comment Toggle",
-		command = "CommentToggle",
-		keybindings = {
-			{ "n", "<leader>/", noremap },
-			{ "v", "<leader>/", noremap },
-		},
-	},
+	-- {
+		-- description = "Comment Toggle",
+		-- command = "CommentToggle",
+		-- keybindings = {
+			-- { "n", "<leader>/", noremap },
+			-- { "v", "<leader>/", noremap },
+		-- },
+	-- },
 
 	-- ToggeTerm --
 	{
