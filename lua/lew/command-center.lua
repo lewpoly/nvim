@@ -51,11 +51,6 @@ command_center.add({
 		keybindings = { "n", "<leader>fp", noremap },
 	},
 	{
-		description = "Command Center",
-		command = "Telescope command_center",
-		keybindings = { "n", "<leader>cc", noremap },
-	},
-	{
 		description = "Colorscheme Select",
 		command = "lua require('telescope.builtin.internal').colorscheme({enable_preview = true})",
 		keybindings = { "n", "<leader>fc", noremap },
