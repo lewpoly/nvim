@@ -156,6 +156,7 @@ require("packer").startup(function(use)
 	use("RRethy/vim-illuminate")
 	use("unblevable/quick-scope")
 	use("matbme/JABS.nvim")
+  use("nacro90/numb.nvim")
 
 	-- ToggleTerm
 	use({ "akinsho/toggleterm.nvim" })
