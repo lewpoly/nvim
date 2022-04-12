@@ -9,6 +9,11 @@ vim.o.conceallevel = 0
 vim.o.cursorline = true
 vim.o.expandtab = true
 vim.o.fileencoding = "utf-8"
+vim.o.foldtext =
+	[[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+vim.opt.fillchars = "fold: "
+vim.opt.foldnestmax = 3
+vim.opt.foldminlines = 1
 vim.o.hidden = true
 vim.o.hlsearch = true
 vim.o.mouse = "a"
