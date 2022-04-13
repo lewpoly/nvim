@@ -24,7 +24,7 @@ M.setup = function()
 		underline = true,
 		severity_sort = true,
 		float = {
-			focusable = false,
+			focusable = true,
 			style = "minimal",
 			border = "rounded",
 			source = "always",
@@ -54,22 +54,6 @@ local function lsp_highlight_document(client)
 	end
 end
 
--- local function lsp_highlight_document(client)
--- 	-- Set autocommands conditional on server_capabilities
--- 	if client.resolved_capabilities.document_highlight then
--- 		vim.api.nvim_exec(
--- 			[[
---       augroup lsp_document_highlight
---         autocmd! * <buffer>
---         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
---         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
---       augroup END
---     ]],
--- 			false
--- 		)
--- 	end
--- end
-
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -89,7 +73,7 @@ local function lsp_keymaps(bufnr)
 		bufnr,
 		"n",
 		"gl",
-		'<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
+		'<cmd>lua vim.diagnostic.open_float()<CR>',
 		opts
 	)
 end
