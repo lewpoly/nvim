@@ -30,7 +30,7 @@ keymap("n", "<S-l>", ":bnext<CR>", noremap)
 keymap("n", "<S-h>", ":bprevious<CR>", noremap)
 
 -- JABS
-keymap("n", "<TAB>", "<cmd>JABSOpen<cr>", { noremap = true, silent = true, nowait = true })
+-- keymap("n", "<TAB>", "<cmd>JABSOpen<cr>", { noremap = true, silent = true, nowait = true })
 
 -- NvimTree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", noremap)
@@ -43,7 +43,7 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", noremap)
 keymap("n", "<leader>f.", ":Telescope find_files hidden=true<CR>", noremap)
 keymap("n", "<leader>fb", ":Telescope file_browser<CR>", noremap)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", noremap)
-keymap("n", "<leader>ft", ":Telescope buffers<CR>", noremap)
+keymap("n", "<TAB>", ":Telescope buffers<CR>", noremap)
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", noremap)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", noremap)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", noremap)
