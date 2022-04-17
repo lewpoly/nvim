@@ -32,10 +32,10 @@ vim.o.updatetime = 250
 vim.o.undofile = true
 vim.o.wrap = true
 vim.o.writebackup = false
-vim.opt.shortmess:append("c")
+vim.opt.shortmess:append "c"
 vim.o.guifont = "monospace:h17"
 vim.opt.fillchars = "fold: "
 vim.opt.foldnestmax = 3
 vim.opt.foldminlines = 1
 vim.o.foldtext =
-	[[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+  [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
