@@ -152,6 +152,7 @@ require("packer").startup(function(use)
   use "matbme/JABS.nvim"
   use "nacro90/numb.nvim"
   use "rcarriga/nvim-notify"
+  use "phaazon/hop.nvim"
 
   -- ToggleTerm
   use { "akinsho/toggleterm.nvim" }
