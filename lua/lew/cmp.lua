@@ -103,6 +103,11 @@ cmp.setup {
     -- documentation = "native",
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      scrollbar = "║",
+    },
+    completion = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      scrollbar = "║",
     },
   },
   experimental = {
