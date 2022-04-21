@@ -50,8 +50,7 @@ keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", noremap)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", noremap)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", noremap)
 -- keymap("n", "<leader>cc", "<cmd>Telescope command_center<CR>", noremap)
-keymap("n", "<leader>ca", ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", noremap)
--- keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", noremap)
+keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", noremap)
 keymap(
   "n",
   "<leader>fc",
