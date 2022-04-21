@@ -12,7 +12,7 @@ telescope.setup {
 
     prompt_prefix = " ",
     -- prompt_prefix = icons.ui.Telescope .. ": ",
-    selection_caret = " ",
+    selection_caret = " ",
     path_display = { "smart" },
 
     mappings = {
