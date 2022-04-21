@@ -39,6 +39,7 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", noremap)
 -- keymap("n", "-", ":lua require'lir.float'.toggle()<cr>", noremap)
 
 -- Telescope
+keymap("n", "<leader>km", ":Telescope keymaps<CR>", noremap)
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", noremap)
 keymap("n", "<leader>f.", ":Telescope find_files hidden=true<CR>", noremap)
 keymap("n", "<leader>fb", ":Telescope file_browser<CR>", noremap)
@@ -48,7 +49,7 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", noremap)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", noremap)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", noremap)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", noremap)
-keymap("n", "<leader>cc", "<cmd>Telescope command_center<CR>", noremap)
+-- keymap("n", "<leader>cc", "<cmd>Telescope command_center<CR>", noremap)
 keymap("n", "<leader>ca", ":lua require'telescope.builtin'.lsp_code_actions{}<CR>", noremap)
 -- keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", noremap)
 keymap(
