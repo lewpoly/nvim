@@ -10,7 +10,7 @@ telescope.load_extension "media_files"
 telescope.setup {
   defaults = {
 
-    prompt_prefix = " ",
+    prompt_prefix = " ",
     -- prompt_prefix = icons.ui.Telescope .. " ",
     selection_caret = " ",
     path_display = { "smart" },
@@ -55,6 +55,7 @@ telescope.setup {
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
+        ["<c-d>"] = require("telescope.actions").delete_buffer,
 
         ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
         ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
@@ -72,8 +73,8 @@ telescope.setup {
         ["gg"] = actions.move_to_top,
         ["G"] = actions.move_to_bottom,
 
-        ["<C-u>"] = actions.preview_scrolling_up,
-        ["<C-d>"] = actions.preview_scrolling_down,
+        -- ["<C-u>"] = actions.preview_scrolling_up,
+        -- ["<C-d>"] = actions.preview_scrolling_down,
 
         ["<PageUp>"] = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
@@ -83,13 +84,10 @@ telescope.setup {
     },
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+    buffers = {
+      theme = "cursor",
+      previewer = false,
+    },
   },
   extensions = {
     media_files = {
@@ -115,15 +113,15 @@ telescope.setup {
     },
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {
-        previewer = true,
+        -- previewer = true,
         -- even more opts
       },
     },
   },
 }
 
+require("telescope").load_extension "ui-select"
+require("telescope.builtin").lsp_code_actions(require("telescope.themes").get_cursor())
 require("telescope").load_extension "fzf"
 telescope.load_extension "file_browser"
-telescope.load_extension "ui-select"
 -- telescope.load_extension("command_center")
-require("telescope.builtin").lsp_code_actions(require("telescope.themes").get_cursor())
