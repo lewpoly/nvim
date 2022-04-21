@@ -5,13 +5,14 @@ end
 
 local actions = require "telescope.actions"
 telescope.load_extension "media_files"
-local icons = require "lew.icons"
+-- local icons = require "lew.icons"
 
 telescope.setup {
   defaults = {
 
-    prompt_prefix = icons.ui.Telescope .. " ",
-    selection_caret = " ",
+    prompt_prefix = " ",
+    -- prompt_prefix = icons.ui.Telescope .. " ",
+    selection_caret = " ",
     path_display = { "smart" },
 
     mappings = {
@@ -100,7 +101,7 @@ telescope.setup {
     file_browser = {
       -- theme = "ivy",
       -- require("telescope.themes").get_dropdown {
-      --   previewer = false,
+      -- previewer = true,
       --   -- even more opts
       -- },
       mappings = {
@@ -121,6 +122,7 @@ telescope.setup {
   },
 }
 
+require("telescope").load_extension "fzf"
 telescope.load_extension "file_browser"
 telescope.load_extension "ui-select"
 -- telescope.load_extension("command_center")
