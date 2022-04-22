@@ -41,6 +41,7 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", noremap)
 -- Telescope
 keymap("n", "<leader>km", ":Telescope keymaps<CR>", noremap)
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", noremap)
+keymap("n", "<leader>fn", ":Telescope notify theme=dropdown<CR>", noremap)
 keymap("n", "<leader>f.", ":Telescope find_files hidden=true<CR>", noremap)
 keymap("n", "<leader>fb", ":Telescope file_browser<CR>", noremap)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", noremap)
