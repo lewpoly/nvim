@@ -66,6 +66,7 @@ require("packer").startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/typescript.nvim"
+  use "windwp/nvim-ts-autotag"
   -- use("SmiteshP/nvim-gps")
 
   -- Telescope
