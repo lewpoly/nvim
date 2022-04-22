@@ -65,7 +65,7 @@ require("packer").startup(function(use)
   use "antoinemadec/FixCursorHold.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "tamago324/nlsp-settings.nvim"
-  use "jose-elias-alvarez/nvim-lsp-ts-utils"
+  use "jose-elias-alvarez/typescript.nvim"
   -- use("SmiteshP/nvim-gps")
 
   -- Telescope
@@ -95,7 +95,6 @@ require("packer").startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "saadparwaiz1/cmp_luasnip"
   use "windwp/nvim-autopairs"
-  use "windwp/nvim-ts-autotag"
   -- use("blackCauldron7/surround.nvim")
   use "tpope/vim-surround"
   use "tpope/vim-repeat"

@@ -18,7 +18,6 @@ require "lew.project"
 require "lew.alpha"
 -- require("lew.surround")
 require "lew.autopairs"
-require "lew.autotag"
 require "lew.trouble"
 require "lew.toggleterm"
 require "lew.gitsigns"
