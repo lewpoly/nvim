@@ -120,6 +120,7 @@ require("packer").startup(function(use)
     end,
   }
   -- Colorschemes
+  use "jacoborus/tender.vim"
   use "rose-pine/neovim"
   use "sainnhe/sonokai"
   -- use("daschw/leaf.nvim")
