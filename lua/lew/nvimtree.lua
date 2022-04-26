@@ -85,7 +85,8 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = true,
+    -- NOTE: deprecated
+    -- auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
@@ -101,15 +102,16 @@ nvim_tree.setup {
   -- 	cmd = "trash",
   -- 	require_confirm = true,
   -- },
-  quit_on_open = 0,
-  git_hl = 1,
+  -- NOTE: deprecated
+  -- NOTE: deprecated
+  -- git_hl = 1,
   -- disable_window_picker = 0,
   -- root_folder_modifier = ":t",
-  show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows = 1,
-    tree_width = 30,
-  },
+  -- show_icons = {
+  --   git = 1,
+  --   folders = 1,
+  --   files = 1,
+  --   folder_arrows = 1,
+  --   tree_width = 30,
+  -- },
 }
