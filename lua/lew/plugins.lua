@@ -69,6 +69,13 @@ require("packer").startup(function(use)
   use "windwp/nvim-ts-autotag"
   -- use("SmiteshP/nvim-gps")
 
+  -- Markdown
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+  }
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"
@@ -102,12 +109,12 @@ require("packer").startup(function(use)
   use "tpope/vim-speeddating"
 
   -- Colorizer
-  -- use("norcalli/nvim-colorizer.lua")
+  -- use "norcalli/nvim-colorizer.lua"
   use {
     "RRethy/vim-hexokinase",
     run = "make hexokinase",
     config = function()
-      vim.g.Hexokinase_highlighters = { "virtual" }
+      vim.g.Hexokinase_highlighters = { "backgroundfull" }
       vim.g.Hexokinase_optInPatterns = {
         "full_hex",
         "rgb",
@@ -127,7 +134,7 @@ require("packer").startup(function(use)
   use "navarasu/onedark.nvim"
   use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
-  use("lewpoly/nvcode-color-schemes.vim")
+  use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
   -- use("rebelot/kanagawa.nvim")
   use {
