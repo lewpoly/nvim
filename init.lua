@@ -2,7 +2,7 @@ require "lew.plugins"
 require "lew.keymaps"
 require "lew.settings"
 require "lew.colorscheme"
--- require("lew.colorizer")
+-- require "lew.colorizer"
 require "lew.nvim-comment"
 require "lew.lsp"
 require "lew.cmp"
