@@ -45,7 +45,7 @@ M.setup = function()
 end
 
 local function lsp_highlight_document(client)
-  if client.resolved_capabilities.document_highlight then
+  if client.server_capabilities.documentHighlightProvider then
     local status_ok, illuminate = pcall(require, "illuminate")
     if not status_ok then
       return
@@ -68,17 +68,14 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format {async = true}' ]]
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
   if client.name == "tsserver" or client.name == "html" or client.name == "jsonls" or client.name == "sumneko_lua" then
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
-  -- if client.name == "deno_fmt" then
-  -- 	client.resolved_capabilities.document_formatting = false
-  -- end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
