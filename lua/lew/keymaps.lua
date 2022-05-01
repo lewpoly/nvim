@@ -92,6 +92,8 @@ keymap("t", "<C-k>", [[<C-\><C-n><C-W>k]], noremap)
 keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], noremap)
 
 -- Formatting
+-- keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", noremap)
+-- for dev
 keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", noremap)
 
 -- Run JS
