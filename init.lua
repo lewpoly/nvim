@@ -34,4 +34,5 @@ require "lew.renamer"
 require "lew.numb"
 require "lew.notify"
 require "lew.hop"
+require "lew.dap"
 -- require("lew.lir")

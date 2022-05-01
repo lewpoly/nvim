@@ -163,6 +163,12 @@ require("packer").startup(function(use)
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
 
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "rcarriga/nvim-dap-ui"
+  use "Pocco81/dap-buddy.nvim"
+
   -- ToggleTerm
   use { "akinsho/toggleterm.nvim" }
 
