@@ -18,12 +18,12 @@ null_ls.setup {
     -- 	disabled_filetypes = { "html", "css" },
     -- 	extra_args = { "--single-quote", "--jsx-single-quote" },
     -- }),
-    code_actions.eslint_d.with({
-      prefer_local = "node_modules/.bin"
-    }),
-    diagnostics.eslint_d.with({
-      prefer_local = "node_modules/.bin"
-    }),
+    code_actions.eslint_d.with {
+      prefer_local = "node_modules/.bin",
+    },
+    diagnostics.eslint_d.with {
+      prefer_local = "node_modules/.bin",
+    },
     -- diagnostics.eslint_d,
     formatting.stylua,
     formatting.black.with { extra_args = { "--fast" } },
