@@ -45,13 +45,13 @@ M.setup = function()
 end
 
 local function lsp_highlight_document(client)
-  if client.server_capabilities.documentHighlightProvider then
+  -- if client.server_capabilities.documentHighlightProvider then
     local status_ok, illuminate = pcall(require, "illuminate")
     if not status_ok then
       return
     end
     illuminate.on_attach(client)
-  end
+  -- end
 end
 
 local function lsp_keymaps(bufnr)
@@ -73,9 +73,9 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  if client.name == "tsserver" or client.name == "html" or client.name == "jsonls" or client.name == "sumneko_lua" then
-    client.server_capabilities.document_formatting = false
-  end
+  -- if client.name == "tsserver" or client.name == "html" or client.name == "jsonls" or client.name == "sumneko_lua" then
+  --   client.server_capabilities.document_formatting = false
+  -- end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
