@@ -1,5 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
-local noremap = { noremap = true }
+local noremap = { noremap = true, silent = true }
 
 -- Leader
 vim.g.mapleader = " "
@@ -97,7 +97,7 @@ keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], noremap)
 keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", noremap)
 
 -- Run JS
-keymap("n", "<leader>jj", ":w !node<CR>", noremap)
+keymap("n", "<leader>jj", "<cmd>w !node<cr>", noremap)
 
 -- Vim Repeat
 keymap("n", "<Plug>MyWonderfulMap", ":lua require'My_module'.my_function()<CR>", noremap)
