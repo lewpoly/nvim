@@ -68,6 +68,7 @@ vim.cmd "colorscheme sherbet"
 -- vim.cmd("hi NormalNC guibg=NONE")
 -- vim.cmd("hi Normal guibg=none ctermbg=none")
 -- vim.cmd("hi NvimTreeNormal guibg=none ctermbg=none")
+-- vim.cmd("hi NvimTreeVertSplit guibg=none ctermbg=none")
 -- vim.cmd("hi VertSplit ctermfg=1 guibg=none ctermbg=none")
 -- vim.cmd("hi LineNr guibg=none ctermbg=none")
 -- vim.cmd("hi Folded guibg=none ctermbg=none")
@@ -77,6 +78,5 @@ vim.cmd "colorscheme sherbet"
 -- vim.cmd("hi SignColumn guibg=none ctermbg=none")
 -- vim.cmd("hi StatusLine guibg=none ctermbg=none")
 -- vim.cmd("hi EndOfBuffer guibg=none ctermbg=none")
--- -- vim.cmd("hi nvim_tree guibg=none ctermbg=none")
 -- vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
 -- vim.cmd "hi LineNr guibg=NONE ctermbg=NONE"
