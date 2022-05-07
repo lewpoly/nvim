@@ -13,6 +13,7 @@ vim.o.hidden = true
 vim.o.hlsearch = true
 vim.o.mouse = "a"
 vim.o.numberwidth = 4
+-- vim.o.pumblend = 20
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 vim.o.shiftwidth = 2
