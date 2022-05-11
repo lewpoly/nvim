@@ -65,7 +65,7 @@ require("packer").startup(function(use)
   use "antoinemadec/FixCursorHold.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "tamago324/nlsp-settings.nvim"
-  use "jose-elias-alvarez/typescript.nvim"
+  -- use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
   -- use("SmiteshP/nvim-gps")
 
@@ -81,7 +81,6 @@ require("packer").startup(function(use)
   use "nvim-telescope/telescope-file-browser.nvim"
   use "nvim-telescope/telescope-ui-select.nvim"
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-  -- use("FeiyouG/command_center.nvim")
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "BurntSushi/ripgrep"
@@ -127,7 +126,6 @@ require("packer").startup(function(use)
     end,
   }
   -- Colorschemes
-  use "jacoborus/tender.vim"
   use "rose-pine/neovim"
   use "sainnhe/sonokai"
   -- use("daschw/leaf.nvim")
