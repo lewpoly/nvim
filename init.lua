@@ -35,4 +35,5 @@ require "lew.numb"
 require "lew.notify"
 require "lew.hop"
 require "lew.dap"
+require "lew.catpuccin"
 -- require("lew.lir")

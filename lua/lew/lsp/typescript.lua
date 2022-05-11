@@ -3,6 +3,6 @@ require("typescript").setup({
     disable_formatting = false, -- disable tsserver's formatting capabilities
     debug = true, -- enable debug logging for commands
     server = { -- pass options to lspconfig's setup method
-        on_attach = ...,
+        -- on_attach = ...,
     },
 })
