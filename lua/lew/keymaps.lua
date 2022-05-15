@@ -83,7 +83,7 @@ keymap("n", "<leader>ps", ":PackerSync<CR>", noremap)
 keymap("n", "<leader>s", ":SymbolsOutline<CR>", noremap)
 
 -- ToggleTerm
-keymap("n", "<leader>t", ":ToggleTerm<CR>", noremap)
+keymap("n", "<leader>t", ":ToggleTerm dir='%:p:h'<CR>", noremap)
 keymap("t", "<esc>", [[<C-\><C-n>]], noremap)
 keymap("t", "jk", [[<C-\><C-n>]], noremap)
 keymap("t", "<C-h>", [[<C-\><C-n><C-W>h]], noremap)
