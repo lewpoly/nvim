@@ -40,3 +40,4 @@ vim.opt.foldnestmax = 3
 vim.opt.foldminlines = 1
 vim.o.foldtext =
   [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+-- vim.opt.winbar = "%f"
