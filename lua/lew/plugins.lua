@@ -159,7 +159,7 @@ require("packer").startup(function(use)
   use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
   use "unblevable/quick-scope"
-  use "matbme/JABS.nvim"
+  use "christianchiarulli/JABS.nvim"
   use "nacro90/numb.nvim"
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"

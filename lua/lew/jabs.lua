@@ -10,13 +10,13 @@ jabs.setup {
   position = "center", -- center, corner
   width = 50,
   height = 10,
-  border = "single", -- none, single, double, rounded, solid, shadow, (or an array or chars)
+  border = "rounded", -- none, single, double, rounded, solid, shadow, (or an array or chars)
 
   -- Options for preview window
-  preview_position = "left", -- top, bottom, left, right
+  preview_position = "top", -- top, bottom, left, right
   preview = {
-    width = 40,
-    height = 30,
+    width = 70,
+    height = 20,
     border = "rounded", -- none, single, double, rounded, solid, shadow, (or an array or chars)
   },
 
