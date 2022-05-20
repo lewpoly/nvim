@@ -90,7 +90,7 @@ lualine.setup {
   },
   sections = {
     lualine_a = { branch, diagnostics },
-    lualine_b = {},
+    lualine_b = { filename },
     -- lualine_b = {
     -- 	{ nvim_gps, cond = hide_in_width },
     -- },
