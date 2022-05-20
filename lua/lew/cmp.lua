@@ -101,7 +101,7 @@ cmp.setup {
     -- documentation = "native",
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      scrollbar = "║",
+      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
     },
     completion = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
