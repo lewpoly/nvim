@@ -65,9 +65,9 @@ require("packer").startup(function(use)
   use "antoinemadec/FixCursorHold.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "tamago324/nlsp-settings.nvim"
-  -- use "jose-elias-alvarez/typescript.nvim"
+  use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
-  -- use("SmiteshP/nvim-gps")
+  use { "christianchiarulli/nvim-gps", branch = "text_hl" }
 
   -- Markdown
   use {
@@ -163,6 +163,7 @@ require("packer").startup(function(use)
   use "nacro90/numb.nvim"
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
+  use { "ghillb/cybu.nvim", branch = "v1.x" }
 
   -- DAP
   use "mfussenegger/nvim-dap"
