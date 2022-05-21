@@ -82,7 +82,7 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = "auto",
-    component_separators = "",
+    component_separators = "  ",
     section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard", "Outline" },
     always_divide_middle = true,
@@ -90,15 +90,15 @@ lualine.setup {
   },
   sections = {
     lualine_a = { branch, diagnostics },
-    lualine_b = { filename },
+    lualine_b = {},
     -- lualine_b = {
     -- 	{ nvim_gps, cond = hide_in_width },
     -- },
     lualine_c = {},
     -- lualine_x = { "encoding", "fileformat", "filetype" },
-    lualine_x = { filetype, diff },
-    lualine_y = { location },
-    lualine_z = { progress },
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = { diff, filetype, location, progress },
   },
   inactive_sections = {
     lualine_a = {},
