@@ -45,6 +45,10 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
+  filters = {
+    custom = { ".git" },
+    exclude = { ".gitignore" },
+  },
   -- auto_close = true,
   -- open_on_tab = false,
   -- hijack_cursor = false,
@@ -54,9 +58,9 @@ nvim_tree.setup {
   -- 	auto_open = true,
   -- },
   diagnostics = {
-    enable = false,
+    enable = true,
     icons = {
-      hint = "",
+      hint = "",
       info = "",
       warning = "",
       error = "",
@@ -85,8 +89,6 @@ nvim_tree.setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    -- NOTE: deprecated
-    -- auto_resize = true,
     mappings = {
       custom_only = false,
       list = {
@@ -102,7 +104,6 @@ nvim_tree.setup {
   -- 	cmd = "trash",
   -- 	require_confirm = true,
   -- },
-  -- NOTE: deprecated
   -- NOTE: deprecated
   -- git_hl = 1,
   -- disable_window_picker = 0,
