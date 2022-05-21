@@ -18,7 +18,7 @@ vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 vim.o.shiftwidth = 2
 vim.o.showmode = false
-vim.o.showtabline = 2
+vim.o.showtabline = 0
 vim.o.signcolumn = "yes"
 vim.o.smartcase = true
 vim.o.smartindent = true
@@ -34,7 +34,6 @@ vim.o.undofile = true
 vim.o.wrap = true
 vim.o.writebackup = false
 vim.opt.shortmess:append "c"
-vim.o.guifont = "monospace:h17"
 vim.opt.fillchars = "fold: "
 vim.opt.foldnestmax = 3
 vim.opt.foldminlines = 1
