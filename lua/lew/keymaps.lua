@@ -26,8 +26,8 @@ keymap("v", "J", ":move '>+1<CR>gv-gv", noremap)
 keymap("v", "K", ":move '<-2<CR>gv-gv", noremap)
 
 -- Tabs
-keymap("n", "<S-l>", ":bnext<CR>", noremap)
-keymap("n", "<S-h>", ":bprevious<CR>", noremap)
+-- keymap("n", "<S-l>", ":bnext<CR>", noremap)
+-- keymap("n", "<S-h>", ":bprevious<CR>", noremap)
 
 -- JABS
 -- keymap("n", "<TAB>", "<cmd>JABSOpen<cr>", { noremap = true, silent = true, nowait = true })
@@ -59,19 +59,16 @@ keymap(
   noremap
 )
 
+-- Toggle Tabline
+keymap("n", "<leader>b", "<cmd>lua require('lew.functions').toggle_tabline()<cr>", noremap)
+
+-- cybu
+keymap("n", "<S-l>", ":CybuNext<CR>", noremap)
+keymap("n", "<S-h>", ":CybuPrev<CR>", noremap)
+
 -- Comment
 keymap("n", "<leader>/", ":CommentToggle<CR>", noremap)
 keymap("v", "<leader>/", ":CommentToggle<CR>", noremap)
-
--- LSP
--- keymap("n", "<leader>ca", ":CodeActionMenu<CR>", noremap)
--- keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", noremap)
--- keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", noremap)
--- keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", noremap)
--- keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", noremap)
--- keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", noremap)
--- keymap("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", noremap)
--- keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", noremap)
 
 -- Toggle Diagnostic
 keymap("n", "<leader>d", ":TroubleToggle<CR>", noremap)
@@ -91,9 +88,6 @@ keymap("t", "<C-j>", [[<C-\><C-n><C-W>j]], noremap)
 keymap("t", "<C-k>", [[<C-\><C-n><C-W>k]], noremap)
 keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], noremap)
 
--- Formatting
--- keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", noremap)
--- for dev
 keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", noremap)
 
 -- Run JS
