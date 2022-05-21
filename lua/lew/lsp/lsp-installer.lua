@@ -64,6 +64,11 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
   end
 
+  if server == "tsserver" then
+    local tsserver_opts = require "lew.lsp.settings.typescript"
+    opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
+  end
+
   -- if server == "tsserver" then
   --   local tsserver_opts = require "lew.lsp.typescript"
   --   opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
