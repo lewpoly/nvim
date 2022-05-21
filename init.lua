@@ -38,5 +38,6 @@ require "lew.catpuccin"
 require "lew.winbar"
 require "lew.cybu"
 require "lew.functions"
+require "lew.webdev-icons"
 -- require("lew.lir")
 require "lew.settings"
