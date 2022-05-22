@@ -6,7 +6,7 @@ end
 cybu.setup {
   position = {
     relative_to = "win", -- win, editor, cursor
-    anchor = "topcenter", -- topleft, topcenter, topright,
+    anchor = "topright", -- topleft, topcenter, topright,
     -- centerleft, center, centerright,
     -- bottomleft, bottomcenter, bottomright
     vertical_offset = 0, -- vertical offset from anchor in lines
@@ -31,7 +31,7 @@ cybu.setup {
       background = "Normal", -- used for the window background
     },
   },
-  display_time = 1500, -- time the cybu window is displayed
+  display_time = 2000, -- time the cybu window is displayed
   exclude = { -- filetypes, cybu will not be active
     "NvimTree",
     "toggleterm",
