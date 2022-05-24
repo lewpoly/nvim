@@ -5,7 +5,7 @@ end
 
 local servers = {
   "cssls",
-  "cssmodules_ls",
+  -- "cssmodules_ls",
   "emmet_ls",
   "html",
   "clangd",
