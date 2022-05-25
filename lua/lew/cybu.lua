@@ -32,7 +32,7 @@ cybu.setup {
       background = "Normal", -- used for the window background
     },
   },
-  display_time = 2000, -- time the cybu window is displayed
+  display_time = 2500, -- time the cybu window is displayed
   exclude = { -- filetypes, cybu will not be active
     "NvimTree",
     "toggleterm",
