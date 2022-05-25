@@ -1,37 +1,38 @@
 local M = {}
 
-local status_gps_ok, gps = pcall(require, "nvim-gps")
-if not status_gps_ok then
-  return
-end
+M.winbar_filetype_exclude = {
+  "help",
+  "startify",
+  "dashboard",
+  "packer",
+  "neogitstatus",
+  "NvimTree",
+  "Trouble",
+  "alpha",
+  "lir",
+  "Outline",
+  "spectre_panel",
+  "toggleterm",
+}
 
 local get_filename = function()
   local filename = vim.fn.expand "%:t"
-  local extension = ""
-  local file_icon = ""
-  local file_icon_color = ""
-  local default_file_icon = ""
-  local default_file_icon_color = ""
+  local extension = vim.fn.expand "%:e"
   local f = require "lew.functions"
 
   if not f.isempty(filename) then
-    extension = vim.fn.expand "%:e"
-
-    local default = false
-
-    if f.isempty(extension) then
-      extension = ""
-      default = true
-    end
-
-    file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(filename, extension, { default = default })
+    local file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(
+      filename,
+      extension,
+      { default = true }
+    )
 
     local hl_group = "FileIconColor" .. extension
 
     vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color })
-    if file_icon == nil then
-      file_icon = default_file_icon
-      file_icon_color = default_file_icon_color
+    if f.isempty(file_icon) then
+      file_icon = ""
+      file_icon_color = ""
     end
 
     return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. "%#LineNr#" .. filename .. "%*"
@@ -39,50 +40,32 @@ local get_filename = function()
 end
 
 local get_gps = function()
-  local f = require "lew.functions"
+  local status_gps_ok, gps = pcall(require, "nvim-gps")
+  if not status_gps_ok then
+    return ""
+  end
+
   local status_ok, gps_location = pcall(gps.get_location, {})
   if not status_ok then
     return ""
   end
 
-  local icons = require "lew.icons"
-
-  if not gps.is_available() then -- Returns boolean value indicating whether a output can be provided
+  if not gps.is_available() or gps_location == "error" then
     return ""
   end
 
-  if gps_location == "error" then
-    return ""
+  if not require("lew.functions").isempty(gps_location) then
+    return require("lew.icons").ui.ChevronRight .. " " .. gps_location
   else
-    if not f.isempty(gps_location) then
-      return icons.ui.ChevronRight .. " " .. gps_location
-    else
-      return ""
-    end
+    return ""
   end
 end
 
 local excludes = function()
-  local winbar_filetype_exclude = {
-    "help",
-    "startify",
-    "dashboard",
-    "packer",
-    "neogitstatus",
-    "NvimTree",
-    "Trouble",
-    "alpha",
-    "lir",
-    "Outline",
-    "spectre_panel",
-    "toggleterm",
-  }
-
-  if vim.tbl_contains(winbar_filetype_exclude, vim.bo.filetype) then
+  if vim.tbl_contains(M.winbar_filetype_exclude, vim.bo.filetype) then
     vim.opt_local.winbar = nil
     return true
   end
-
   return false
 end
 
