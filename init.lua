@@ -20,7 +20,7 @@ require "lew.autopairs"
 require "lew.trouble"
 require "lew.toggleterm"
 require "lew.gitsigns"
-require("lew.gps")
+require "lew.gps"
 require "lew.neoscroll"
 require "lew.illuminate"
 require "lew.comment"

@@ -89,7 +89,7 @@ keymap("t", "<C-k>", [[<C-\><C-n><C-W>k]], noremap)
 keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], noremap)
 keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", noremap)
 
-keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", noremap)
+keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format ({ async = true })<CR>", noremap)
 
 -- Run JS
 keymap("n", "<leader>jj", "<cmd>w !node<cr>", noremap)
