@@ -164,7 +164,7 @@ else
     },
     ui = {
       Lock = " ",
-      Circle = "● ",
+      Circle = " ",
       BigCircle = " ",
       BigUnfilledCircle = " ",
       Close = " ",
