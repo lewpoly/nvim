@@ -1,6 +1,7 @@
 local M = {}
 
--- TODO: backfill this to template
+M.capabilities = vim.lsp.protocol.make_client_capabilities()
+
 M.setup = function()
   local signs = {
     { name = "DiagnosticSignError", text = "" },
