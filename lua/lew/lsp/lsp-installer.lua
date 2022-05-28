@@ -14,6 +14,7 @@ local servers = {
   "sumneko_lua",
   "tsserver",
   "pyright",
+  "bashls",
 }
 
 local settings = {
