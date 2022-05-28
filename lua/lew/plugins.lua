@@ -164,6 +164,7 @@ require("packer").startup(function(use)
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
   use { "ghillb/cybu.nvim", branch = "v1.x" }
+  use "dstein64/vim-startuptime"
 
   -- DAP
   use "mfussenegger/nvim-dap"
