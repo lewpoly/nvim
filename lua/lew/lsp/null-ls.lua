@@ -10,7 +10,7 @@ local formatting = null_ls.builtins.formatting
 local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup {
-  debug = true,
+  debug = false,
   sources = {
     formatting.prettierd,
     -- diagnostics.tidy,
