@@ -17,7 +17,7 @@ bufferline.setup {
     buffer_close_icon = "",
     -- buffer_close_icon = '',
     modified_icon = "●",
-    close_icon = "",
+    close_icon = "",
     -- close_icon = '',
     left_trunc_marker = "",
     right_trunc_marker = "",
@@ -55,7 +55,7 @@ bufferline.setup {
     --     return true
     --   end
     -- end,
-    offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "center", padding = 1 } },
+    offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "center", padding = 0 } },
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_close_icon = true,
