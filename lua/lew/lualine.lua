@@ -8,36 +8,6 @@ end
 -- 	return
 -- end
 
-vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#13151b" })
-vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#D4D4D4", bg = "#13151b", bold = false })
--- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#13151b" })
-vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D4D4D4", bg = "#13151b" })
-vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#808080", bg = "#13151b" })
-
-local mode_color = {
-  n = "#808080",
-  i = "#458588",
-  v = "#ce9178",
-  [""] = "#ce9178",
-  V = "#ce9178",
-  -- c = '#B5CEA8',
-  -- c = '#D7BA7D',
-  c = "#B5CEA8",
-  no = "#569cd6",
-  s = "#ce9178",
-  S = "#ce9178",
-  [""] = "#ce9178",
-  ic = "#dcdcaa",
-  R = "#d16969",
-  Rv = "#d16969",
-  cv = "#569cd6",
-  ce = "#569cd6",
-  r = "#d16969",
-  rm = "#4EC9B0",
-  ["r?"] = "#4EC9B0",
-  ["!"] = "#4EC9B0",
-  t = "#D7BA7D",
-}
 
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
@@ -60,25 +30,25 @@ local diff = {
   cond = hide_in_width,
 }
 
--- local mode = {
---   "mode",
---   fmt = function(str)
---     return "-- " .. str .. " --"
---   end,
--- }
-
 local mode = {
-  -- mode component
-  function()
-    return "▊"
+  "mode",
+  fmt = function(str)
+    return "-- " .. str .. " --"
   end,
-  color = function()
-    -- auto change color according to neovims mode
-    return { fg = mode_color[vim.fn.mode()] }
-  end,
-  -- padding = { right = 1 },
-  padding = 0,
 }
+
+-- local mode = {
+--   -- mode component
+--   function()
+--     return "▊"
+--   end,
+--   color = function()
+--     -- auto change color according to neovims mode
+--     return { fg = mode_color[vim.fn.mode()] }
+--   end,
+--   -- padding = { right = 1 },
+--   padding = 0,
+-- }
 
 local filetype = {
   "filetype",
@@ -94,14 +64,11 @@ local branch = {
 
 local location = {
   "location",
-  padding = 1,
+  padding = 0,
 }
 
 local progress = {
   "progress",
-  color = function()
-    return { fg = "#13151b", bg = mode_color[vim.fn.mode()] }
-  end,
   padding = 1,
 }
 
@@ -110,9 +77,9 @@ local filename = {
   path = 1,
   shorting_target = 40,
   symbols = {
-    modified = "",
+    modified = "  ",
     readonly = "",
-    unnamed = "[No Name]",
+    unnamed = "",
   },
 }
 
@@ -131,21 +98,21 @@ lualine.setup {
     theme = "auto",
     component_separators = "  ",
     section_separators = { left = "", right = "" },
-    disabled_filetypes = { "alpha", "dashboard", "Outline" },
+    disabled_filetypes = { "alpha", "dashboard", "Outline", "packer" },
     always_divide_middle = true,
     globalstatus = true,
   },
   sections = {
-    lualine_a = { mode },
-    lualine_b = { branch, diagnostics },
+    lualine_a = { branch, diagnostics, filename },
+    lualine_b = {},
     -- lualine_b = {
     -- 	{ nvim_gps, cond = hide_in_width },
     -- },
     lualine_c = {},
     -- lualine_x = { "encoding", "fileformat", "filetype" },
     lualine_x = {},
-    lualine_y = { diff, filetype, location, progress },
-    lualine_z = {},
+    lualine_y = {},
+    lualine_z = { diff, filetype, location, progress },
   },
   inactive_sections = {
     lualine_a = {},
