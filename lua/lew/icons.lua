@@ -97,7 +97,7 @@ if vim.fn.has "mac" == 1 then
       Warning = "",
       Information = "",
       Question = "",
-      Hint = "",
+      Hint = "",
     },
     misc = {
       Robot = "ﮧ",
@@ -198,7 +198,7 @@ else
       Warning = " ",
       Information = " ",
       Question = " ",
-      Hint = " ",
+      Hint = " ",
     },
     misc = {
       Robot = " ",
