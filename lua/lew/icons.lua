@@ -301,9 +301,12 @@ if vim.fn.has "mac" == 1 then
     diagnostics = {
       Error = " ",
       Warning = " ",
-      Information = " ",
-      Question = " ",
-      Hint = " ",
+      -- Information = " ",
+      Information = " ",
+      -- Question = " ",
+      Question = " ",
+      -- Hint = " ",
+      Hint = " ",
     },
     misc = {
       Robot = " ",
