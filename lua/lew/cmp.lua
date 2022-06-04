@@ -59,10 +59,13 @@ cmp.setup {
   },
 
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+
+      -- This concatonates the icons with the name of the item kind
+      vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
 
       if entry.source.name == "cmp_tabnine" then
         -- if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
@@ -71,14 +74,13 @@ cmp.setup {
         vim_item.kind = icons.misc.Robot
       end
 
-      -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        nvim_lsp = "LSP",
-        nvim_lua = "Lua",
-        luasnip = "Snip",
-        cmp_tabnine = "T9",
-        buffer = "Buf",
-        path = "Path",
+        nvim_lsp = "",
+        nvim_lua = "",
+        luasnip = "",
+        cmp_tabnine = "",
+        buffer = "",
+        path = "",
         emoji = "",
       })[entry.source.name]
       return vim_item
