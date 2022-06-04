@@ -1,4 +1,5 @@
 local status_ok, lualine = pcall(require, "lualine")
+
 if not status_ok then
   return
 end
@@ -43,11 +44,11 @@ local mode = {
 --   function()
 --     return "▊"
 --   end,
---   color = function()
---     -- auto change color according to neovims mode
---     return { fg = mode_color[vim.fn.mode()] }
---   end,
---   -- padding = { right = 1 },
+-- color = function()
+--   -- auto change color according to neovims mode
+--   return { fg = mode_color[vim.fn.mode()] }
+-- end,
+-- padding = { right = 1 },
 --   padding = 0,
 -- }
 
@@ -78,7 +79,7 @@ local filename = {
   path = 1,
   shorting_target = 40,
   symbols = {
-    modified = "  ",
+    modified = icons.ui.Circle,
     readonly = "",
     unnamed = "",
   },
@@ -97,14 +98,14 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = "auto",
-    component_separators = "  ",
+    component_separators = "",
     section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard", "Outline", "packer" },
     always_divide_middle = true,
     globalstatus = true,
   },
   sections = {
-    lualine_a = { branch, diagnostics, filename },
+    lualine_a = { branch, diagnostics },
     lualine_b = {},
     -- lualine_b = {
     -- 	{ nvim_gps, cond = hide_in_width },
