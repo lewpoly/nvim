@@ -129,15 +129,16 @@ require("packer").startup(function(use)
     end,
   }
   -- Colorschemes
-  use "rose-pine/neovim"
-  use "sainnhe/sonokai"
+  -- use "rose-pine/neovim"
+  -- use "sainnhe/sonokai"
   -- use("daschw/leaf.nvim")
-  use "navarasu/onedark.nvim"
+  -- use "navarasu/onedark.nvim"
   use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
   use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
-  -- use("rebelot/kanagawa.nvim")
+  use "rebelot/kanagawa.nvim"
+  use "lewis6991/github_dark.nvim"
   use {
     "catppuccin/nvim",
     as = "catppuccin",
