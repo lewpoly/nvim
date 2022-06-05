@@ -41,6 +41,7 @@ packer.init {
 require("packer").startup(function(use)
   use "wbthomason/packer.nvim"
 
+  use "lewis6991/impatient.nvim"
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
@@ -52,14 +53,6 @@ require("packer").startup(function(use)
   use "folke/lsp-colors.nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
-  use {
-    "lewis6991/spellsitter.nvim",
-    config = function()
-      require("spellsitter").setup {
-        enable = true,
-      }
-    end,
-  }
   use { "p00f/nvim-ts-rainbow" }
   use "folke/trouble.nvim"
   use "antoinemadec/FixCursorHold.nvim"
@@ -68,6 +61,21 @@ require("packer").startup(function(use)
   use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
   use { "christianchiarulli/nvim-gps", branch = "text_hl" }
+  use {
+    "lewis6991/spellsitter.nvim",
+    config = function()
+      require("spellsitter").setup {
+        enable = true,
+      }
+    end,
+  }
+
+  -- REST
+  use {
+    "NTBBloodbath/rest.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function() end,
+  }
 
   -- Markdown
   use {
@@ -129,20 +137,12 @@ require("packer").startup(function(use)
     end,
   }
   -- Colorschemes
-  -- use "rose-pine/neovim"
-  -- use "sainnhe/sonokai"
-  -- use("daschw/leaf.nvim")
-  -- use "navarasu/onedark.nvim"
   use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
   use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
   use "rebelot/kanagawa.nvim"
   use "lewis6991/github_dark.nvim"
-  use {
-    "catppuccin/nvim",
-    as = "catppuccin",
-  }
 
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
@@ -156,7 +156,6 @@ require("packer").startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
-  use "lewis6991/impatient.nvim"
   use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
   use "unblevable/quick-scope"
