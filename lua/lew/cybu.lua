@@ -27,7 +27,7 @@ cybu.setup {
       colored = true, -- enable color for web dev icons
     },
     highlights = { -- see highlights via :highlight
-      current_buffer = "Visual", -- used for the current buffer
+      current_buffer = "CursorLine", -- used for the current buffer
       adjacent_buffers = "Comment", -- used for buffers not in focus
       background = "Normal", -- used for the window background
     },
