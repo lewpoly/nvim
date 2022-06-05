@@ -50,6 +50,15 @@ M.setup = function()
   })
 end
 
+local win = require "lspconfig.ui.windows"
+local _default_opts = win.default_opts
+
+win.default_opts = function(options)
+  local opts = _default_opts(options)
+  opts.border = "rounded"
+  return opts
+end
+
 local function lsp_highlight_document(client)
   -- if client.server_capabilities.documentHighlightProvider then
   local status_ok, illuminate = pcall(require, "illuminate")

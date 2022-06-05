@@ -21,6 +21,7 @@ local settings = {
   ensure_installed = servers,
   -- automatic_installation = false,
   ui = {
+    border = "rounded",
     icons = {
       -- server_installed = "◍",
       -- server_pending = "◍",
