@@ -59,6 +59,11 @@ keymap(
   noremap
 )
 
+-- Rest
+keymap("n", "<leader>rn", "lua require('rest-nvim').run()<CR>", noremap)
+keymap("n", "<leader>rp", "lua require('rest-nvim').run(true)<CR>", noremap)
+keymap("n", "<leader>rl", "lua require('rest-nvim').last()<CR>", noremap)
+
 -- Toggle Tabline
 keymap("n", "<leader>b", "<cmd>lua require('lew.functions').toggle_tabline()<cr>", noremap)
 
