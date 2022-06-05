@@ -22,8 +22,19 @@ rest.setup {
     show_headers = true,
   },
   -- Jump to request line on run
-  jump_to_request = false,
+  jump_to_request = true,
   env_file = ".env",
   custom_dynamic_variables = {},
   yank_dry_run = true,
 }
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "http",
+  callback = function()
+    local buff = tonumber(vim.fn.expand "<abuf>", 10)
+    vim.keymap.set("n", "<leader>rn", rest.run, { noremap = true, buffer = buff })
+    vim.keymap.set("n", "<leader>rl", rest.last, { noremap = true, buffer = buff })
+    vim.keymap.set("n", "<leader>rp", function()
+      rest.run(true)
+    end, { noremap = true, buffer = buff })
+  end,
+})
