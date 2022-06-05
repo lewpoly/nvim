@@ -75,6 +75,7 @@ require("packer").startup(function(use)
     "NTBBloodbath/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
     config = function() end,
+    commit = "e5f68db73276c4d4d255f75a77bbe6eff7a476ef",
   }
 
   -- Markdown
