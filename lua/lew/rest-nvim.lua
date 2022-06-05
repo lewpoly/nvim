@@ -28,11 +28,11 @@ rest.setup {
   yank_dry_run = true,
 }
 
-local bufmap = vim.api.nvim_buf_set_keymap
-local opts = {
-  noremap = true,
-  expr = false,
-}
-bufmap(0, "n", "<Leader>rn", ":lua require('rest-nvim').run()<CR>", opts)
-bufmap(0, "n", "<Leader>rp", ":lua require('rest-nvim').run(true)<CR>", opts)
-bufmap(0, "n", "<Leader>rl", ":lua require('rest-nvim').last()<CR>", opts)
+-- local bufmap = vim.api.nvim_buf_set_keymap
+-- local opts = {
+--   noremap = true,
+--   expr = false,
+-- }
+-- bufmap(0, "n", "<Leader>rn", ":lua require('rest-nvim').run()<CR>", opts)
+-- bufmap(0, "n", "<Leader>rp", ":lua require('rest-nvim').run(true)<CR>", opts)
+-- bufmap(0, "n", "<Leader>rl", ":lua require('rest-nvim').last()<CR>", opts)
