@@ -15,7 +15,6 @@ local servers = {
   "tsserver",
   "pyright",
   "bashls",
-  "grammarly",
 }
 
 local settings = {
