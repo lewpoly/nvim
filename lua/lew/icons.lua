@@ -312,7 +312,9 @@ if vim.fn.has "mac" == 1 then
       Robot = " ",
       Squirrel = " ",
       Tag = " ",
+      GitHub = " ",
       Watch = " ",
+      TabNine = " "
     },
   }
 end

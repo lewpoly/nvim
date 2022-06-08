@@ -71,7 +71,7 @@ cmp.setup {
         -- if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
         -- menu = entry.completion_item.data.detail .. " " .. menu
         -- end
-        vim_item.kind = icons.misc.Robot
+        vim_item.kind = icons.misc.TabNine
       end
 
       vim_item.menu = ({
