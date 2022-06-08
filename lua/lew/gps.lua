@@ -94,5 +94,5 @@ gps.setup {
 
   -- indicator used when context is hits depth limit
   depth_limit_indicator = "..",
-  text_hl = "CursorLineNr",
+  text_hl = "Variable",
 }
