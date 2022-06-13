@@ -118,6 +118,7 @@ require("packer").startup(function(use)
   use "tpope/vim-surround"
   use "tpope/vim-repeat"
   use "tpope/vim-speeddating"
+  use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
 
   -- Colorizer
   -- use "norcalli/nvim-colorizer.lua"

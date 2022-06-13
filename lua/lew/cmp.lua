@@ -20,12 +20,16 @@ luasnip.config.set_config {
 }
 
 require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip").filetype_extend("javascript", { "javascriptreact" })
+require("luasnip").filetype_extend("javascript", { "html" })
+
 cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
   },
+
   mapping = cmp.mapping.preset.insert {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
