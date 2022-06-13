@@ -11,6 +11,7 @@ if not config_status_ok then
 end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
+local icons = require "lew.icons"
 
 nvim_tree.setup {
   renderer = {
@@ -42,8 +43,10 @@ nvim_tree.setup {
         default = "",
         symlink = "",
         folder = {
-          arrow_closed = "",
-          arrow_open = "",
+          -- arrow_closed = "",
+          -- arrow_open = "",
+          arrow_closed = icons.ui.ArrowClosed,
+          arrow_open = icons.ui.ArrowOpen,
           default = "",
           open = "",
           empty = "",
