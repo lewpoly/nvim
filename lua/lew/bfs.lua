@@ -31,6 +31,7 @@ M.get_bufs = function()
     if buf_info.listed == 1 then
       -- print(vim.inspect(buf_info.bufnr))
       -- print(vim.inspect(buf_info))
+      -- TODO: this is unecessary
       table.insert(bufs, {
         id = id,
         name = string.gsub(buf_info.name, cwd_path, ""),
@@ -71,11 +72,10 @@ end
 -- Close buffer from line
 function M.closeBufNum(win)
   local l = vim.api.nvim_get_current_line()
-  -- local buf = l:split(" ", true)[3]
   local buf = l:split(" ", true)[3]
 
   local current_buf = vim.api.nvim_win_get_buf(win)
-  local jabs_buf = vim.api.nvim_get_current_buf()
+  local bfs_buf = vim.api.nvim_get_current_buf()
   local new_current_buf = vim.api.nvim_buf_get_name(current_buf)
   local cwd_path = vim.fn.getcwd() .. "/"
   local cur_buf_name = string.gsub(new_current_buf, cwd_path, "")
@@ -85,7 +85,7 @@ function M.closeBufNum(win)
     local ln = vim.api.nvim_win_get_cursor(0)[1]
     table.remove(M.bopen, ln - 1)
 
-    M.refresh(jabs_buf)
+    M.refresh(bfs_buf)
   else
     vim.api.nvim_notify("Cannot close current buffer!", 3, {})
   end
@@ -109,8 +109,7 @@ end
 
 -- Set floating window keymaps
 function M.setKeymaps(win, buf)
-  -- vim.wo.cursorline = true
-  -- vim.wo.number = true
+  vim.api.nvim_buf_set_option(buf, "filetype", "bfs")
   vim.api.nvim_buf_set_keymap(
     buf,
     "n",
@@ -118,7 +117,6 @@ function M.setKeymaps(win, buf)
     string.format([[:<C-U>lua require'lew.bfs'.selBufNum(%s, 'window', vim.v.count)<CR>]], win),
     { nowait = true, noremap = true, silent = true }
   )
-
   vim.api.nvim_buf_set_keymap(
     buf,
     "n",
@@ -126,13 +124,32 @@ function M.setKeymaps(win, buf)
     ':lua require"lew.bfs".close()<CR>',
     { nowait = true, noremap = true, silent = true }
   )
-
   vim.api.nvim_buf_set_keymap(
     buf,
     "n",
     "d",
-    -- string.format([[:lua require'lew.bfs'.closeBufNum(%s)<CR>]], win),
     string.format([[:lua require'lew.bfs'.closeBufNum(%s)<CR>]], win),
+    { nowait = true, noremap = true, silent = true }
+  )
+  vim.api.nvim_buf_set_keymap(
+    buf,
+    "n",
+    "l",
+    string.format([[:<C-U>lua require'lew.bfs'.selBufNum(%s, 'window', vim.v.count)<CR>]], win),
+    { nowait = true, noremap = true, silent = true }
+  )
+  vim.api.nvim_buf_set_keymap(
+    buf,
+    "n",
+    "s",
+    string.format([[:<C-U>lua require'lew.bfs'.selBufNum(%s, 'hsplit', vim.v.count)<CR>]], win),
+    { nowait = true, noremap = true, silent = true }
+  )
+  vim.api.nvim_buf_set_keymap(
+    buf,
+    "n",
+    "v",
+    string.format([[:<C-U>lua require'lew.bfs'.selBufNum(%s, 'vsplit', vim.v.count)<CR>]], win),
     { nowait = true, noremap = true, silent = true }
   )
 end
@@ -141,7 +158,6 @@ M.set_buffers = function(buf, current_buf)
   for i, b in ipairs(M.get_bufs()) do
     local filename = b.name
     local changed = b.changed
-    -- print("changed: " .. tostring(changed))
 
     local changed_icon = ""
     local padding = 0
@@ -152,8 +168,25 @@ M.set_buffers = function(buf, current_buf)
     end
 
     local extension = ""
-    extension = filename:match "^.+(%..+)$"
-    extension = extension:gsub("%.", "") -- remove . (. is a special character so we have to escape it)
+    extension = filename:match("^.+(%..+)$")
+
+    if filename:sub(1, 7) == "term://" then
+      filename = "Terminal" .. filename:gsub("^.*:", ': "')
+      filename = filename:gsub('"', "")
+      extension = ""
+    end
+
+    local hl_group = "FileIconColor"
+    if not (extension == nil or extension == " " or extension == "") then
+      extension = extension:gsub("%.", "") -- remove . (. is a special character so we have to escape it)
+      hl_group = hl_group .. extension
+    else
+      if filename:split(" ", true)[1] == "Terminal:" then
+        hl_group = hl_group .. "term"
+      else
+        hl_group = hl_group .. filename:gsub('%W', '')
+      end
+    end
 
     local file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(
       filename,
@@ -161,19 +194,16 @@ M.set_buffers = function(buf, current_buf)
       { default = true }
     )
 
-    -- local current_buf = vim.api.nvim_win_get_buf(win)
+    -- TODO: refactor this
+    if filename:split(" ", true)[1] == "Terminal:" then
+      hl_group = hl_group .. "term"
+      file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(
+        "terminal",
+        extension,
+        { default = true }
+      )
+    end
 
-    -- print("filename: " .. tostring(filename))
-    -- print("extension: " .. tostring(extension))
-    -- print("file_icon: " .. tostring(file_icon))
-    -- print("file_icon_color: " .. tostring(file_icon_color))
-
-    -- local current_buf = vim.api.nvim_win_get_buf(0)
-    -- print("current buf: " .. tostring(current_buf))
-    -- print("lastused: " .. tostring(b.lastused))
-
-    local hl_group = "FileIconColor"
-    hl_group = hl_group .. filename:gsub("%W", "")
     vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color })
     local line = " " .. file_icon .. " " .. filename .. " " .. changed_icon
 
@@ -183,7 +213,8 @@ M.set_buffers = function(buf, current_buf)
     empty[#empty + 1] = string.rep(" ", max_width)
     vim.api.nvim_buf_set_lines(buf, i - 1, -1, false, empty)
     vim.api.nvim_buf_set_text(buf, i - 1, 0, i - 1, line:len(), { line })
-    vim.api.nvim_buf_set_text(buf, i - 1, max_width - tostring(linenr):len() + padding, i - 1, max_width, { " " .. linenr })
+    vim.api.nvim_buf_set_text(buf, i - 1, max_width - tostring(linenr):len() + padding, i - 1, max_width,
+      { " " .. linenr })
     vim.api.nvim_buf_add_highlight(buf, -1, hl_group, i - 1, 3, 4)
 
 
@@ -196,10 +227,10 @@ end
 function M.refresh(buf, current_buf)
   vim.api.nvim_buf_set_option(buf, "modifiable", true)
   M.set_buffers(buf, current_buf)
+  vim.api.nvim_buf_set_option(buf, "modifiable", false)
 end
 
 M.open = function()
-  -- print("win: " .. tostring(win))
   local back_win = vim.api.nvim_get_current_win()
 
   local current_buf = vim.api.nvim_win_get_buf(back_win)
