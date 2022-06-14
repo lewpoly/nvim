@@ -59,6 +59,8 @@ require("packer").startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/typescript.nvim"
+  use "vim-ruby/vim-ruby"
+  use "tpope/vim-rails"
   use "windwp/nvim-ts-autotag"
   use { "christianchiarulli/nvim-gps", branch = "text_hl" }
   use {
