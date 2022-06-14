@@ -13,6 +13,7 @@ local servers = {
   "yamlls",
   "sumneko_lua",
   "tsserver",
+  "solargraph",
   "pyright",
   "bashls",
 }
@@ -84,6 +85,11 @@ for _, server in pairs(servers) do
   if server == "emmet_ls" then
     local emmet_ls_opts = require "lew.lsp.settings.emmet_ls"
     opts = vim.tbl_deep_extend("force", emmet_ls_opts, opts)
+  end
+
+  if server == "solargraph" then
+    local solargraph_opts = require "lew.lsp.settings.solargraph"
+    opts = vim.tbl_deep_extend("force", solargraph_opts, opts)
   end
 
   lspconfig[server].setup(opts)
