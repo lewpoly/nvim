@@ -77,10 +77,10 @@ local progress = {
 
 local filename = {
   "filename",
-  path = 1,
+  path = 0,
   shorting_target = 40,
   symbols = {
-    modified = icons.ui.Circle,
+    modified = "",
     readonly = "",
     unnamed = "",
   },
@@ -95,6 +95,16 @@ local filename = {
 -- 	end
 -- end
 
+function search_cnt()
+  local res = vim.fn.searchcount { maxcount = 1000, timeout = 500 }
+
+  if res.total > 0 then
+    return string.format("%s/%d %s", res.current, res.total, vim.fn.getreg "/")
+  else
+    return ""
+  end
+end
+
 lualine.setup {
   options = {
     icons_enabled = true,
@@ -106,8 +116,8 @@ lualine.setup {
     globalstatus = true,
   },
   sections = {
-    lualine_a = { branch, diagnostics },
-    lualine_b = {},
+    lualine_a = { branch, search_cnt, diagnostics },
+    lualine_b = { filename },
     -- lualine_b = {
     -- 	{ nvim_gps, cond = hide_in_width },
     -- },
