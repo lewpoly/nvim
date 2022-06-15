@@ -143,10 +143,11 @@ require("packer").startup(function(use)
   -- Colorschemes
   use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
-  use "lewpoly/nvcode-color-schemes.vim"
+  -- use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
   use "rebelot/kanagawa.nvim"
   use "lewis6991/github_dark.nvim"
+  use "folke/tokyonight.nvim"
 
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
