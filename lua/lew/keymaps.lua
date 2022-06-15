@@ -71,6 +71,8 @@ keymap("n", "<leader>b", "<cmd>lua require('lew.functions').toggle_tabline()<cr>
 -- cybu
 keymap("n", "<S-l>", ":CybuNext<CR>", opts)
 keymap("n", "<S-h>", ":CybuPrev<CR>", opts)
+-- keymap("n", "<TAB>", ":CybuHistoryNext<CR>", opts)
+-- keymap("n", "<S-<TAB>>", ":CybuHistoryPrev<CR>", opts)
 
 -- Comment
 keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
