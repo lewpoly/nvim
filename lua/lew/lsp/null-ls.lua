@@ -24,6 +24,8 @@ null_ls.setup {
     diagnostics.eslint_d.with {
       prefer_local = "node_modules/.bin",
     },
+    diagnostics.flake8,
+    diagnostics.shfmt,
     formatting.stylua,
     formatting.black.with { extra_args = { "--fast" } },
   },
