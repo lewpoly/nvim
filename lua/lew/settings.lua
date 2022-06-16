@@ -2,6 +2,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.autoindent = true
 vim.o.background = "dark"
+vim.o.backup = false
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 0
 vim.o.completeopt = "menu,menuone,noselect"
@@ -37,6 +38,7 @@ vim.o.writebackup = false
 vim.opt.shortmess:append "c"
 vim.o.guifont = "monospace:h17"
 
+vim.opt.fillchars.eob = " "
 vim.opt.fillchars = "fold: "
 vim.opt.foldnestmax = 3
 vim.opt.foldminlines = 1
