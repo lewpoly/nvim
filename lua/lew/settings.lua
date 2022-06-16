@@ -11,6 +11,7 @@ vim.o.expandtab = true
 vim.o.fileencoding = "utf-8"
 vim.o.hidden = true
 vim.o.hlsearch = true
+vim.o.ignorcase = true
 vim.o.mouse = "a"
 vim.o.numberwidth = 4
 -- vim.o.pumblend = 20
@@ -35,9 +36,11 @@ vim.o.wrap = true
 vim.o.writebackup = false
 vim.opt.shortmess:append "c"
 vim.o.guifont = "monospace:h17"
+
 vim.opt.fillchars = "fold: "
 vim.opt.foldnestmax = 3
 vim.opt.foldminlines = 1
 vim.o.foldtext =
   [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
--- vim.opt.winbar = "%f"
+
+vim.cmd "set whichwrap+=<,>,[,],h,l"
