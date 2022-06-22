@@ -19,6 +19,7 @@ nvim_tree.setup {
     group_empty = false,
     highlight_git = false,
     highlight_opened_files = "none",
+    update_cwd = true,
     root_folder_modifier = ":t",
     indent_markers = {
       enable = false,
@@ -67,12 +68,6 @@ nvim_tree.setup {
     },
     special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
   },
-  -- update_to_buf_dir = {
-  -- 	enable = false,
-  -- },
-  -- disable_netrw = true,
-  -- hijack_netrw = true,
-  -- open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
@@ -82,14 +77,6 @@ nvim_tree.setup {
     custom = { ".git" },
     exclude = { ".gitignore" },
   },
-  -- auto_close = true,
-  -- open_on_tab = false,
-  -- hijack_cursor = false,
-  update_cwd = true,
-  -- update_to_buf_dir = {
-  -- 	enable = true,
-  -- 	auto_open = true,
-  -- },
   diagnostics = {
     enable = true,
     icons = {
@@ -99,19 +86,6 @@ nvim_tree.setup {
       error = icons.diagnostics.Error,
     },
   },
-  update_focused_file = {
-    enable = true,
-    update_cwd = true,
-    ignore_list = {},
-  },
-  -- system_open = {
-  -- 	cmd = nil,
-  -- 	args = {},
-  -- },
-  -- filters = {
-  -- 	dotfiles = false,
-  -- 	custom = {},
-  -- },
   git = {
     enable = true,
     ignore = true,
@@ -133,19 +107,4 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
-  -- trash = {
-  -- 	cmd = "trash",
-  -- 	require_confirm = true,
-  -- },
-  -- NOTE: deprecated
-  -- git_hl = 1,
-  -- disable_window_picker = 0,
-  -- root_folder_modifier = ":t",
-  -- show_icons = {
-  --   git = 1,
-  --   folders = 1,
-  --   files = 1,
-  --   folder_arrows = 1,
-  --   tree_width = 30,
-  -- },
 }
