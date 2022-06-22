@@ -19,7 +19,6 @@ nvim_tree.setup {
     group_empty = false,
     highlight_git = false,
     highlight_opened_files = "none",
-    update_cwd = true,
     root_folder_modifier = ":t",
     indent_markers = {
       enable = false,
@@ -68,6 +67,7 @@ nvim_tree.setup {
     },
     special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
   },
+  update_cwd = true,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
