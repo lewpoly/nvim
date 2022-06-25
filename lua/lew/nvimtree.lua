@@ -14,6 +14,22 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 local icons = require "lew.icons"
 
 nvim_tree.setup {
+  auto_reload_on_write = true,
+  create_in_closed_folder = false,
+  disable_netrw = false,
+  hijack_cursor = false,
+  hijack_netrw = true,
+  hijack_unnamed_buffer_when_opening = false,
+  ignore_buffer_on_setup = false,
+  open_on_setup = false,
+  open_on_setup_file = false,
+  open_on_tab = false,
+  sort_by = "name",
+  root_dirs = {},
+  prefer_startup_root = false,
+  update_cwd = true,
+  reload_on_bufenter = false,
+  respect_buf_cwd = false,
   renderer = {
     add_trailing = false,
     group_empty = false,
@@ -67,7 +83,12 @@ nvim_tree.setup {
     },
     special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
   },
-  update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    update_root = false,
+    ignore_list = {},
+  },
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
