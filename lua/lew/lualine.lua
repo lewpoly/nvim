@@ -116,7 +116,7 @@ lualine.setup {
     globalstatus = true,
   },
   sections = {
-    lualine_a = { branch, search_cnt, diagnostics },
+    lualine_a = { branch, diagnostics },
     lualine_b = { filename },
     -- lualine_b = {
     -- 	{ nvim_gps, cond = hide_in_width },
