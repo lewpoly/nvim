@@ -48,7 +48,7 @@ require("packer").startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "simrat39/symbols-outline.nvim"
   use "simrat39/rust-tools.nvim"
-  use "filipdutescu/renamer.nvim"
+  -- use "filipdutescu/renamer.nvim"
   use "onsails/lspkind-nvim"
   use "folke/lsp-colors.nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
@@ -161,10 +161,11 @@ require("packer").startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
+  use "stevearc/dressing.nvim"
   use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
   use "unblevable/quick-scope"
-  use { "christianchiarulli/JABS.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
+  -- use { "christianchiarulli/JABS.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
   use "nacro90/numb.nvim"
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"

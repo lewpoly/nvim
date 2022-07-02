@@ -48,3 +48,13 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter", "BufFilePost", "Inse
     require("lew.winbar").get_winbar()
   end,
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir", "DressingSelect" },
+  callback = function()
+    vim.cmd [[
+      nnoremap <silent> <buffer> q :close<CR> 
+      set nobuflisted 
+    ]]
+  end,
+})
