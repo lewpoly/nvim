@@ -51,7 +51,6 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
--- keymap("n", "<leader>cc", "<cmd>Telescope command_center<CR>", noremap)
 keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
 keymap(
   "n",
@@ -61,7 +60,7 @@ keymap(
 )
 
 -- Rest
-keymap("n", "<leader>rn", ":lua require('rest-nvim').run()<CR>", opts)
+keymap("n", "<leader>rr", ":lua require('rest-nvim').run()<CR>", opts)
 keymap("n", "<leader>rp", ":lua require('rest-nvim').run(true)<CR>", opts)
 keymap("n", "<leader>rl", ":lua require('rest-nvim').last()<CR>", opts)
 
