@@ -48,6 +48,7 @@ require("packer").startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "simrat39/symbols-outline.nvim"
   use "simrat39/rust-tools.nvim"
+  use "Saecki/crates.nvim"
   -- use "filipdutescu/renamer.nvim"
   use "onsails/lspkind-nvim"
   use "folke/lsp-colors.nvim"
@@ -71,6 +72,20 @@ require("packer").startup(function(use)
         enable = true,
       }
     end,
+  }
+  -- use "github/copilot.vim"
+  use {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require "lew.copilot"
+      end, 100)
+    end,
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    module = "copilot_cmp",
   }
 
   -- REST

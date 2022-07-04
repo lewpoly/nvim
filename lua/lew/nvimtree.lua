@@ -96,7 +96,7 @@ nvim_tree.setup {
   },
   filters = {
     custom = { ".git" },
-    exclude = { ".gitignore" },
+    -- exclude = { ".gitignore" },
   },
   diagnostics = {
     enable = true,
@@ -109,7 +109,7 @@ nvim_tree.setup {
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   view = {

@@ -16,6 +16,8 @@ local servers = {
   "solargraph",
   "pyright",
   "bashls",
+  "rust_analyzer",
+  "taplo",
 }
 
 local settings = {
@@ -92,7 +94,25 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", solargraph_opts, opts)
   end
 
+  if server == "yamlls" then
+    local yamlls_opts = require "lew.lsp.settings.yamlls"
+    opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
+  end
+
+    if server == "rust_analyzer" then
+    local rust_opts = require "lew.lsp.settings.rust"
+
+    local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
+    if not rust_tools_status_ok then
+      return
+    end
+
+    rust_tools.setup(rust_opts)
+    goto continue
+  end
+
   lspconfig[server].setup(opts)
+  ::continue::
 end
 
 -- TODO: add something to installer later
