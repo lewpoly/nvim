@@ -55,7 +55,7 @@ keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
 keymap(
   "n",
   "<leader>fc",
-  "<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
+  "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
   opts
 )
 
