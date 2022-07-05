@@ -1,5 +1,11 @@
 -- vim.g.transparent_background = true
-vim.cmd "colorscheme sherbet"
+local colorscheme = "sherbet"
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+  vim.notify("colorscheme " .. colorscheme .. " not found!")
+  return
+end
 -- vim.cmd("hi NormalNC guibg=NONE")
 -- vim.cmd("hi Normal guibg=none ctermbg=none")
 -- vim.cmd("hi NvimTreeNormal guibg=none ctermbg=none")
