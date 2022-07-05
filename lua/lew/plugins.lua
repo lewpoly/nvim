@@ -161,7 +161,7 @@ require("packer").startup(function(use)
   use "lewpoly/sherbet.nvim"
   -- use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
-  use "LunarVim/onedarker.nvim"
+  -- use "LunarVim/onedarker.nvim"
   use "rebelot/kanagawa.nvim"
   use "lewis6991/github_dark.nvim"
   use "folke/tokyonight.nvim"
