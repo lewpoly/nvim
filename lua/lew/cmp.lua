@@ -1,8 +1,8 @@
 -- nvim-cmp setup
-local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
-end
+-- local has_words_before = function()
+--   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+--   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
+-- end
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
@@ -18,7 +18,6 @@ local icons = require "lew.icons"
 
 local kind_icons = icons.kind
 
-local tabnine = require "cmp_tabnine.config"
 local luasnip = require "luasnip"
 luasnip.config.set_config {
   history = true,
@@ -70,8 +69,10 @@ cmp.setup {
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
+      elseif luasnip.expandable() then
+        luasnip.expand()
+        -- elseif has_words_before() then
+        --   cmp.complete()
       elseif check_backspace() then
         luasnip.expand()
       else
@@ -91,7 +92,7 @@ cmp.setup {
   },
 
   formatting = {
-    fields = { "abbr", "kind", "menu" },
+    fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = kind_icons[vim_item.kind]
@@ -140,21 +141,14 @@ cmp.setup {
   window = {
     documentation = {
       border = "rounded",
-      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+      winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
     },
     completion = {
       border = "rounded",
-      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+      winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
     },
   },
   experimental = {
     ghost_text = true,
   },
-}
-tabnine:setup {
-  max_lines = 1000,
-  max_num_results = 20,
-  sort = true,
-  run_on_every_keystroke = true,
-  snippet_placeholder = "..",
 }
