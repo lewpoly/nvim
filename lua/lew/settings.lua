@@ -1,7 +1,7 @@
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.autoindent = true
-vim.o.background = "dark"
+-- vim.o.background = "dark"
 vim.o.backup = false
 vim.o.clipboard = "unnamedplus"
 vim.o.cmdheight = 1
