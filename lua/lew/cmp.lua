@@ -15,6 +15,7 @@ local check_backspace = function()
 end
 
 local icons = require "lew.icons"
+
 local kind_icons = icons.kind
 
 local tabnine = require "cmp_tabnine.config"
@@ -56,7 +57,10 @@ cmp.setup {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-Space>"] = cmp.mapping.complete(),
-    ["<C-l>"] = cmp.mapping.close(),
+    ["<C-l>"] = cmp.mapping {
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close(),
+    },
     ["<CR>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -90,30 +94,27 @@ cmp.setup {
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      -- vim_item.kind = kind_icons[vim_item.kind]
-
+      vim_item.kind = kind_icons[vim_item.kind]
       -- This concatonates the icons with the name of the item kind
-      vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
+      -- vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
 
       if entry.source.name == "cmp_tabnine" then
         vim_item.kind = icons.misc.TabNine
+        vim_item.kind_hl_group = "CmpItemKindTabnine"
       end
       if entry.source.name == "copilot" then
         vim_item.kind = icons.git.Octoface
-        -- vim_item.kind_hl_group = "CmpItemKindCopilot"
+        vim_item.kind_hl_group = "CmpItemKindCopilot"
       end
       if entry.source.name == "crates" then
         vim_item.kind = icons.misc.Package
-        -- vim_item.kind_hl_group = "CmpItemKindCrate"
+        vim_item.kind_hl_group = "CmpItemKindCrate"
       end
 
       vim_item.menu = ({
         nvim_lsp = "",
         nvim_lua = "",
         luasnip = "",
-        -- copilot = "",
-        -- cmp_tabnine = "",
         buffer = "",
         path = "",
         emoji = "",
@@ -137,19 +138,17 @@ cmp.setup {
     select = false,
   },
   window = {
-    -- documentation = "native",
     documentation = {
       border = "rounded",
-      winhighlight = "NormalFloat:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
     },
     completion = {
       border = "rounded",
-      winhighlight = "NormalFloat:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
     },
   },
   experimental = {
     ghost_text = true,
-    -- native_menu = false,
   },
 }
 tabnine:setup {
