@@ -22,8 +22,8 @@ vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#13151b" })
 -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#abb2bf", bg = "#13151b" })
 -- vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#545862", bg = "#13151b" })
 local mode_color = {
-  -- n = "#519fdf",
-  n = "#d4d4d4",
+  n = "#519fdf",
+  -- n = "#d4d4d4",
   -- i = "#d05c65",
   i = "#ce9178",
   -- v = "#b668cd",
@@ -110,6 +110,17 @@ local filetype = {
   "filetype",
   icons_enabled = true,
   -- icon = nil,
+}
+
+local filename = {
+  "filename",
+  path = 0,
+  shorting_target = 40,
+  symbols = {
+    modified = "",
+    readonly = "",
+    unnamed = "",
+  },
 }
 
 local branch = {
@@ -264,7 +275,7 @@ lualine.setup {
     lualine_a = { mode, branch },
     lualine_b = { diagnostics },
     -- lualine_c = {},
-    lualine_c = { current_signature },
+    lualine_c = { filename },
     -- lualine_x = { diff, spaces, "encoding", filetype },
     lualine_x = { diff, lanuage_server, spaces, filetype },
     lualine_y = { progress },
