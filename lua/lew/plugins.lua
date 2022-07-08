@@ -150,6 +150,7 @@ require("packer").startup(function(use)
   --     }
   --   end,
   -- }
+
   -- Colorschemes
   -- use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
