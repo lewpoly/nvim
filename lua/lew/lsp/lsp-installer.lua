@@ -99,7 +99,7 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
   end
 
-    if server == "rust_analyzer" then
+  if server == "rust_analyzer" then
     local rust_opts = require "lew.lsp.settings.rust"
 
     local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
@@ -114,6 +114,5 @@ for _, server in pairs(servers) do
   lspconfig[server].setup(opts)
   ::continue::
 end
-
 -- TODO: add something to installer later
 -- require("lspconfig").motoko.setup {}

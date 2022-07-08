@@ -51,17 +51,14 @@ require("packer").startup(function(use)
   use "Saecki/crates.nvim"
   -- use "filipdutescu/renamer.nvim"
   use "onsails/lspkind-nvim"
-  use "folke/lsp-colors.nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
-  use { "p00f/nvim-ts-rainbow" }
+  use "p00f/nvim-ts-rainbow"
   use "folke/trouble.nvim"
-  use "antoinemadec/FixCursorHold.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/typescript.nvim"
-  use "vim-ruby/vim-ruby"
-  use "tpope/vim-rails"
+  -- use "vim-ruby/vim-ruby"
+  -- use "tpope/vim-rails"
   use "windwp/nvim-ts-autotag"
   use "j-hui/fidget.nvim"
   use { "christianchiarulli/nvim-gps", branch = "text_hl" }
@@ -104,7 +101,7 @@ require("packer").startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-file-browser.nvim"
+  -- use "nvim-telescope/telescope-file-browser.nvim"
   use "nvim-telescope/telescope-ui-select.nvim"
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
   use "nvim-lua/popup.nvim"
@@ -136,32 +133,32 @@ require("packer").startup(function(use)
   use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
 
   -- Colorizer
-  -- use "norcalli/nvim-colorizer.lua"
-  use {
-    "RRethy/vim-hexokinase",
-    run = "make hexokinase",
-    config = function()
-      vim.g.Hexokinase_highlighters = { "backgroundfull" }
-      vim.g.Hexokinase_optInPatterns = {
-        "full_hex",
-        "rgb",
-        "rgba",
-        "hsl",
-        "hsla",
-        "triple_hex",
-        -- "colour_names",
-      }
-    end,
-  }
+  use "norcalli/nvim-colorizer.lua"
+  -- use {
+  --   "RRethy/vim-hexokinase",
+  --   run = "make hexokinase",
+  --   config = function()
+  --     vim.g.Hexokinase_highlighters = { "backgroundfull" }
+  --     vim.g.Hexokinase_optInPatterns = {
+  --       "full_hex",
+  --       "rgb",
+  --       "rgba",
+  --       "hsl",
+  --       "hsla",
+  --       "triple_hex",
+  --       -- "colour_names",
+  --     }
+  --   end,
+  -- }
   -- Colorschemes
-  use "rmehri01/onenord.nvim"
+  -- use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
   -- use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
   -- use "LunarVim/onedarker.nvim"
-  use "rebelot/kanagawa.nvim"
+  -- use "rebelot/kanagawa.nvim"
   use "lewis6991/github_dark.nvim"
-  use "folke/tokyonight.nvim"
+  -- use "folke/tokyonight.nvim"
 
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
@@ -188,9 +185,9 @@ require("packer").startup(function(use)
 
   -- DAP
   use "mfussenegger/nvim-dap"
-  use "theHamsta/nvim-dap-virtual-text"
-  use "rcarriga/nvim-dap-ui"
-  use "Pocco81/dap-buddy.nvim"
+  -- use "theHamsta/nvim-dap-virtual-text"
+  -- use "rcarriga/nvim-dap-ui"
+  -- use "Pocco81/dap-buddy.nvim"
 
   -- ToggleTerm
   use { "akinsho/toggleterm.nvim" }
@@ -199,8 +196,8 @@ require("packer").startup(function(use)
   use "nvim-lualine/lualine.nvim"
 
   -- Bufferline
-  use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
+  -- use "akinsho/bufferline.nvim"
+  -- use "moll/vim-bbye"
 
   -- Dashboard/Alpha
   use "goolord/alpha-nvim"
@@ -216,6 +213,9 @@ require("packer").startup(function(use)
   }
   use "folke/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- unused
+  -- use "folke/lsp-colors.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
