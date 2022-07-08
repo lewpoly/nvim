@@ -185,7 +185,7 @@ require("packer").startup(function(use)
   use "dstein64/vim-startuptime"
 
   -- DAP
-  use "mfussenegger/nvim-dap"
+  -- use "mfussenegger/nvim-dap"
   -- use "theHamsta/nvim-dap-virtual-text"
   -- use "rcarriga/nvim-dap-ui"
   -- use "Pocco81/dap-buddy.nvim"

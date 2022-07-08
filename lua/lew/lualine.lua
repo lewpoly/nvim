@@ -8,6 +8,15 @@ if not status_theme_ok then
   return
 end
 
+local function contains(t, value)
+  for _, v in pairs(t) do
+    if v == value then
+      return true
+    end
+  end
+  return false
+end
+
 vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#abb2bf", bg = "#13151b", bold = false })
 -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#252525" })
@@ -15,12 +24,6 @@ vim.api.nvim_set_hl(0, "SLProgress", { fg = "#abb2bf", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#6b727f", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#13151b" })
--- darkerplus
--- vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#13151b" })
--- vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#abb2bf", bg = "#13151b", bold = false })
--- -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#13151b" })
--- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#abb2bf", bg = "#13151b" })
--- vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#545862", bg = "#13151b" })
 local mode_color = {
   n = "#519fdf",
   -- n = "#d4d4d4",
@@ -61,7 +64,7 @@ local mode = {
   end,
   color = function()
     -- auto change color according to neovims mode
-    return { bg = mode_color[vim.fn.mode()], fg = "13151b" }
+    return { bg = mode_color[vim.fn.mode()], fg = "#0d1117" }
   end,
   -- padding = { right = 1 },
   padding = 0,
@@ -108,19 +111,37 @@ local diff = {
 
 local filetype = {
   "filetype",
+  -- fmt = function(str)
+  --   local buf_ft = vim.bo.filetype
+  --   local ui_filetypes = {
+  --     "help",
+  --     "packer",
+  --     "neogitstatus",
+  --     "NvimTree",
+  --     "Trouble",
+  --     "lir",
+  --     "Outline",
+  --     "spectre_panel",
+  --     "toggleterm",
+  --     "DressingSelect",
+  --     "",
+  --   }
+  --   print(buf_ft)
+  --
+  --   if contains(ui_filetypes, buf_ft) then
+  --     return M.filetype
+  --   end
+  --
+  --   local file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color("", buf_ft, { default = true })
+  --
+  --   local hl_group = "FileIconColor" .. buf_ft
+  --   vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color, bg = "#282c34" })
+  --
+  --   M.filetype = "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. buf_ft
+  --   return M.filetype
+  -- end,
   icons_enabled = true,
   -- icon = nil,
-}
-
-local filename = {
-  "filename",
-  path = 0,
-  shorting_target = 40,
-  symbols = {
-    modified = "",
-    readonly = "",
-    unnamed = "",
-  },
 }
 
 local branch = {
@@ -188,7 +209,7 @@ local current_signature = {
 local spaces = {
   function()
     -- TODO: update codicons and use their indent
-    return " " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+    return "  " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
   end,
   padding = 0,
   separator = "%#SLSeparator#" .. " │" .. "%*",
@@ -197,6 +218,25 @@ local spaces = {
 
 local lanuage_server = {
   function()
+    local buf_ft = vim.bo.filetype
+    local ui_filetypes = {
+      "help",
+      "packer",
+      "neogitstatus",
+      "NvimTree",
+      "Trouble",
+      "lir",
+      "Outline",
+      "spectre_panel",
+      "toggleterm",
+      "DressingSelect",
+      "",
+    }
+
+    if contains(ui_filetypes, buf_ft) then
+      return M.language_servers
+    end
+
     local clients = vim.lsp.buf_get_clients()
     local client_names = {}
     local copilot_active = false
@@ -210,8 +250,6 @@ local lanuage_server = {
         copilot_active = true
       end
     end
-
-    local buf_ft = vim.bo.filetype
 
     -- add formatter
     local s = require "null-ls.sources"
@@ -243,12 +281,19 @@ local lanuage_server = {
       language_servers = "%#SLLSP#" .. "[" .. client_names_str .. "]" .. "%*"
     end
     if copilot_active then
-      return language_servers .. " " .. "%#SLCopilot#" .. icons.git.Octoface .. "%*"
+      language_servers = language_servers .. " " .. "%#SLCopilot#" .. icons.git.Octoface .. "%*"
+    end
+
+    if client_names_str_len ~= 0 and not copilot_active then
+      return ""
+    else
+      M.language_servers = language_servers
+      return language_servers
     end
   end,
   padding = 0,
   cond = hide_in_width,
-  separator = "%#SLSeparator#" .. " │ " .. "%*",
+  separator = "%#SLSeparator#" .. " │" .. "%*",
 }
 
 local location = {
@@ -258,6 +303,17 @@ local location = {
     -- return { fg = "#252525", bg = mode_color[vim.fn.mode()] }
     return { fg = "#1E232A", bg = mode_color[vim.fn.mode()] }
   end,
+}
+
+local filename = {
+  "filename",
+  path = 0,
+  shorting_target = 40,
+  symbols = {
+    modified = "",
+    readonly = "",
+    unnamed = "",
+  },
 }
 
 lualine.setup {
