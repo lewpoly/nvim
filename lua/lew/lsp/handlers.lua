@@ -2,6 +2,13 @@ local M = {}
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
+local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status_cmp_ok then
+  return
+end
+M.capabilities.textDocument.completion.completionItem.snippetSupport = true
+M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
+
 M.setup = function()
   local icons = require "lew.icons"
   local signs = {
@@ -52,15 +59,6 @@ M.setup = function()
   })
 end
 
-local win = require "lspconfig.ui.windows"
-local _default_opts = win.default_opts
-
-win.default_opts = function(options)
-  local opts = _default_opts(options)
-  opts.border = "rounded"
-  return opts
-end
-
 local function lsp_highlight_document(client)
   -- if client.server_capabilities.documentHighlightProvider then
   local status_ok, illuminate = pcall(require, "illuminate")
@@ -97,14 +95,15 @@ M.on_attach = function(client, bufnr)
   lsp_highlight_document(client)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- Borders for LSP Info
 
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-  return
+local win = require "lspconfig.ui.windows"
+local _default_opts = win.default_opts
+
+win.default_opts = function(options)
+  local opts = _default_opts(options)
+  opts.border = "rounded"
+  return opts
 end
-
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 return M
