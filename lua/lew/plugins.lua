@@ -45,20 +45,17 @@ require("packer").startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
+  use "nvim-lua/lsp_extensions.nvim"
   use "ray-x/lsp_signature.nvim"
   use "simrat39/symbols-outline.nvim"
   use "simrat39/rust-tools.nvim"
   use "Saecki/crates.nvim"
-  -- use "filipdutescu/renamer.nvim"
-  use "onsails/lspkind-nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
   use "p00f/nvim-ts-rainbow"
   use "folke/trouble.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "jose-elias-alvarez/typescript.nvim"
-  -- use "vim-ruby/vim-ruby"
-  -- use "tpope/vim-rails"
   use "windwp/nvim-ts-autotag"
   use "j-hui/fidget.nvim"
   use { "christianchiarulli/nvim-gps", branch = "text_hl" }
@@ -152,21 +149,15 @@ require("packer").startup(function(use)
   -- }
 
   -- Colorschemes
-  -- use "rmehri01/onenord.nvim"
   use "lewpoly/sherbet.nvim"
-  -- use "lewpoly/nvcode-color-schemes.vim"
   use "LunarVim/darkplus.nvim"
-  -- use "LunarVim/onedarker.nvim"
-  -- use "rebelot/kanagawa.nvim"
   use "lewis6991/github_dark.nvim"
-  -- use "folke/tokyonight.nvim"
 
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- File Exploration
   use "kyazdani42/nvim-tree.lua"
-  -- use("tamago324/lir.nvim")
   use "kyazdani42/nvim-web-devicons"
 
   -- Git
@@ -177,7 +168,6 @@ require("packer").startup(function(use)
   use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
   use "unblevable/quick-scope"
-  -- use { "christianchiarulli/JABS.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
   use "nacro90/numb.nvim"
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
@@ -202,7 +192,6 @@ require("packer").startup(function(use)
 
   -- Dashboard/Alpha
   use "goolord/alpha-nvim"
-  -- use("glepnir/dashboard-nvim")
   use "ahmedkhalf/project.nvim"
 
   -- Comment
@@ -214,9 +203,6 @@ require("packer").startup(function(use)
   }
   use "folke/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
-
-  -- unused
-  -- use "folke/lsp-colors.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
