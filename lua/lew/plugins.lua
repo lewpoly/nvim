@@ -188,7 +188,7 @@ require("packer").startup(function(use)
 
   -- Bufferline
   -- use "akinsho/bufferline.nvim"
-  -- use "moll/vim-bbye"
+  use "moll/vim-bbye"
 
   -- Dashboard/Alpha
   use "goolord/alpha-nvim"
