@@ -127,7 +127,7 @@ local filetype = {
     }
 
     if str == "toggleterm" then
-      local term = " " .. vim.api.nvim_buf_get_var(0, "toggle_number")
+      local term = " " .. vim.api.nvim_buf_get_var(0, "toggle_number")
       return term
     end
 
@@ -326,7 +326,7 @@ lualine.setup {
     lualine_a = { mode, branch },
     lualine_b = { diagnostics },
     -- lualine_c = {},
-    lualine_c = { filename },
+    lualine_c = {},
     -- lualine_x = { diff, spaces, "encoding", filetype },
     lualine_x = { diff, lanuage_server, spaces, filetype },
     lualine_y = { progress },

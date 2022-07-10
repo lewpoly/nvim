@@ -184,7 +184,7 @@ require("packer").startup(function(use)
   use { "akinsho/toggleterm.nvim" }
 
   -- Lualine
-  use "nvim-lualine/lualine.nvim"
+  use "christianchiarulli/lualine.nvim"
 
   -- Bufferline
   -- use "akinsho/bufferline.nvim"
