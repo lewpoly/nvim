@@ -130,7 +130,7 @@ require("packer").startup(function(use)
   use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
 
   -- Colorizer
-  use "norcalli/nvim-colorizer.lua"
+  use "NvChad/nvim-colorizer.lua"
   -- use {
   --   "RRethy/vim-hexokinase",
   --   run = "make hexokinase",
