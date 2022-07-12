@@ -159,6 +159,7 @@ require("packer").startup(function(use)
   -- File Exploration
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
+  use "christianchiarulli/JABS.nvim"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
