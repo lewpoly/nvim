@@ -17,10 +17,10 @@ local function contains(t, value)
   return false
 end
 
-vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#13151b" })
-vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#abb2bf", bg = "#13151b", bold = false })
+vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#191c24" })
+vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#d4d4d4", bg = "#191c24", bold = false })
 -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#252525" })
-vim.api.nvim_set_hl(0, "SLProgress", { fg = "#abb2bf", bg = "#13151b" })
+vim.api.nvim_set_hl(0, "SLProgress", { fg = "#d4d4d4", bg = "#191c24" })
 vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#6b727f", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#13151b" })
@@ -59,7 +59,8 @@ local mode = {
   -- mode component
   function()
     -- return "▊"
-    return "  "
+    return "  "
+    -- return "  "
     -- return "  "
   end,
   color = function()
@@ -279,7 +280,7 @@ local lanuage_server = {
       language_servers = language_servers .. "%#SLCopilot#" .. " " .. icons.git.Octoface .. "%*"
     end
 
-    if client_names_str_len ~= 0 and not copilot_active then
+    if client_names_str_len == 0 and not copilot_active then
       return ""
     else
       M.language_servers = language_servers
@@ -323,10 +324,9 @@ lualine.setup {
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = { mode, branch },
-    lualine_b = { diagnostics },
-    -- lualine_c = {},
-    lualine_c = {},
+    lualine_a = { mode },
+    lualine_b = { branch },
+    lualine_c = { diagnostics },
     -- lualine_x = { diff, spaces, "encoding", filetype },
     lualine_x = { diff, lanuage_server, spaces, filetype },
     lualine_y = { progress },
