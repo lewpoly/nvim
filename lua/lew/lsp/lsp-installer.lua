@@ -13,11 +13,13 @@ local servers = {
   "yamlls",
   "sumneko_lua",
   "tsserver",
+  "terraformls",
   "solargraph",
   "pyright",
   "bashls",
   "rust_analyzer",
   "taplo",
+  "zk@v0.10.1",
 }
 
 local settings = {
@@ -64,6 +66,8 @@ for _, server in pairs(servers) do
     capabilities = require("lew.lsp.handlers").capabilities,
   }
 
+  server = vim.split(server, "@")[1]
+
   if server == "jsonls" then
     local jsonls_opts = require "lew.lsp.settings.jsonls"
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)
@@ -97,6 +101,11 @@ for _, server in pairs(servers) do
   if server == "yamlls" then
     local yamlls_opts = require "lew.lsp.settings.yamlls"
     opts = vim.tbl_deep_extend("force", yamlls_opts, opts)
+  end
+
+  if server == "zk" then
+    local zk_opts = require "lew.lsp.settings.zk"
+    opts = vim.tbl_deep_extend("force", zk_opts, opts)
   end
 
   if server == "rust_analyzer" then

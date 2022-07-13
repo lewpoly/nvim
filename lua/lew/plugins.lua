@@ -58,7 +58,7 @@ require("packer").startup(function(use)
   use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
   use "j-hui/fidget.nvim"
-  use { "christianchiarulli/nvim-gps", branch = "text_hl" }
+  -- use { "christianchiarulli/nvim-gps", branch = "text_hl" }
   use {
     "lewis6991/spellsitter.nvim",
     config = function()
@@ -173,12 +173,16 @@ require("packer").startup(function(use)
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
   use "ghillb/cybu.nvim"
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig",
+  }
   use "dstein64/vim-startuptime"
 
   -- DAP
   use "mfussenegger/nvim-dap"
   -- use "theHamsta/nvim-dap-virtual-text"
-  -- use "rcarriga/nvim-dap-ui"
+  use "rcarriga/nvim-dap-ui"
   -- use "Pocco81/dap-buddy.nvim"
 
   -- ToggleTerm

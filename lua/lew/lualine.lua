@@ -25,8 +25,8 @@ vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#6b727f", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#13151b" })
 vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#13151b" })
 local mode_color = {
-  n = "#519fdf",
-  -- n = "#d4d4d4",
+  -- n = "#519fdf",
+  n = "#8fbcbb",
   -- i = "#d05c65",
   i = "#ce9178",
   -- v = "#b668cd",
@@ -38,7 +38,7 @@ local mode_color = {
   -- c = '#B5CEA8',
   -- c = '#D7BA7D',
   -- c = "#46a6b2",
-  c = "#8fbcbb",
+  c = "#519fdf",
   no = "#519fdf",
   s = "#c18a56",
   S = "#c18a56",
