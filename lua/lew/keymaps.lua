@@ -40,14 +40,14 @@ keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>km", ":Telescope keymaps<CR>", opts)
-keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+-- keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fn", ":Telescope notify theme=dropdown<CR>", opts)
 keymap("n", "<leader>f.", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 -- keymap("n", "<TAB>", ":Telescope buffers<CR>", opts)
--- keymap("n", "<TAB>", "<cmd>lua require('lew.bfs').open()<CR>", opts)
-keymap("n", "<TAB>", "<cmd>JABSOpen<CR>", opts)
+keymap("n", "<TAB>", "<cmd>lua require('lew.bfs').open()<CR>", opts)
+-- keymap("n", "<TAB>", "<cmd>JABSOpen<CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
@@ -59,6 +59,7 @@ keymap(
   "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
   opts
 )
+vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 
 -- Rest
 keymap("n", "<leader>rr", ":lua require('rest-nvim').run()<CR>", opts)
