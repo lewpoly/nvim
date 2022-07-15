@@ -97,12 +97,13 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  if client.name == "tsserver" or client.name == "html" or client.name == "jsonls" or client.name == "sumneko_lua" then
-    client.server_capabilities.documentFormattingProvider = false
-  end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
   attach_navic(client, bufnr)
+
+  if client.name == "tsserver" or client.name == "html" or client.name == "jsonls" or client.name == "sumneko_lua" then
+    client.server_capabilities.documentFormattingProvider = false
+  end
 end
 
 -- Borders for LSP Info

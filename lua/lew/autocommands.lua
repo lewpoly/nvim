@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd({ "User" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir", "DressingSelect" },
+  pattern = { "Jaq", "qf", "help", "man", "lspinfo", "spectre_panel", "lir", "DressingSelect", "tsplayground" },
   callback = function()
     vim.cmd [[
       nnoremap <silent> <buffer> q :close<CR> 
@@ -27,10 +27,53 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "Jaq" },
+  callback = function()
+    vim.cmd [[
+      nnoremap <silent> <buffer> <m-r> :close<CR>
+      " nnoremap <silent> <buffer> <m-r> <NOP> 
+      set nobuflisted 
+    ]]
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "" },
+  callback = function()
+    local buf_ft = vim.bo.filetype
+    if buf_ft == "" or buf_ft == nil then
+      vim.cmd [[
+      nnoremap <silent> <buffer> q :close<CR> 
+      nnoremap <silent> <buffer> <c-j> j<CR> 
+      nnoremap <silent> <buffer> <c-k> k<CR> 
+      set nobuflisted 
+    ]]
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "term://*" },
+  callback = function()
+    vim.cmd "startinsert!"
+    -- TODO: if java = 2
+    vim.cmd "set cmdheight=1"
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "gitcommit", "markdown" },
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "lir" },
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
   end,
 })
 
@@ -55,6 +98,8 @@ vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
   end,
 })
 
+-- require("lew.winbar").get_winbar()
+
 if vim.fn.has "nvim-0.8" == 1 then
   vim.api.nvim_create_autocmd(
     { "CursorMoved", "CursorHold", "BufWinEnter", "BufFilePost", "InsertEnter", "BufWritePost", "TabClosed" },
@@ -65,6 +110,7 @@ if vim.fn.has "nvim-0.8" == 1 then
     }
   )
 end
+-- require "lew.winbar"
 
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
@@ -91,7 +137,12 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
   end,
 })
 
-vim.cmd [[ au FocusGained,BufEnter * :checktime ]]
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+  pattern = { "*" },
+  callback = function()
+    vim.cmd "checktime"
+  end,
+})
 
 -- vim.api.nvim_create_autocmd({ "ModeChanged" }, {
 --   callback = function()
