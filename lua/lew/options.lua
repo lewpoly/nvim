@@ -31,6 +31,7 @@ vim.o.swapfile = false
 vim.o.tabstop = 2
 vim.o.termguicolors = true
 vim.o.title = true
+vim.o.timeoutlength = 1000
 vim.o.updatetime = 0
 vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.o.undofile = true

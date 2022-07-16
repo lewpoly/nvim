@@ -151,6 +151,7 @@ require("packer").startup(function(use)
   -- Colorschemes
   use "lewpoly/sherbet.nvim"
   use "LunarVim/darkplus.nvim"
+  use "LunarVim/onedarker.nvim"
   use "lewis6991/github_dark.nvim"
 
   -- Formatting
