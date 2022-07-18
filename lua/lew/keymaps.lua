@@ -53,13 +53,13 @@ keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
 keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
-keymap(
+keymap("n", "<leader>fc", "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>", opts)
+vim.api.nvim_set_keymap(
   "n",
-  "<leader>fc",
-  "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+  "<leader>ff",
+  "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   opts
 )
-vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 
 -- Rest
 keymap("n", "<leader>rr", ":lua require('rest-nvim').run()<CR>", opts)
@@ -102,9 +102,6 @@ keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format ({ async = true })<CR>", 
 
 -- Run JS
 keymap("n", "<leader>jj", "<cmd>w !node<cr>", opts)
-
--- Vim Repeat
-keymap("n", "<Plug>MyWonderfulMap", ":lua require'My_module'.my_function()<CR>", opts)
 
 -- Remove Highlight
 keymap("n", "<leader>nh", "<cmd>nohlsearch<cr>", opts)
