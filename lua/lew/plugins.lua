@@ -162,6 +162,7 @@ require("packer").startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   use "christianchiarulli/JABS.nvim"
+  use "ThePrimeagen/harpoon"
 
   -- Git
   use "lewis6991/gitsigns.nvim"

@@ -60,6 +60,7 @@ vim.api.nvim_set_keymap(
   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   opts
 )
+vim.api.nvim_set_keymap("n", "<leader>ha", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
 
 -- Rest
 keymap("n", "<leader>rr", ":lua require('rest-nvim').run()<CR>", opts)

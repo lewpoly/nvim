@@ -3,8 +3,14 @@ if not status_ok then
   return
 end
 
+local h_status_ok, harpoon = pcall(require, "harpoon")
+if not h_status_ok then
+  return
+end
+
 local actions = require "telescope.actions"
 telescope.load_extension "media_files"
+telescope.load_extension "harpoon"
 local icons = require "lew.icons"
 
 telescope.setup {
