@@ -171,7 +171,7 @@ M.set_buffers = function(buf)
     vim.api.nvim_buf_add_highlight(buf, -1, hl_group, i - 1, 3, 4)
 
     if b.bufnr == M.current_buf then
-      vim.api.nvim_buf_add_highlight(buf, -1, "Visual", i - 1, 0, -1)
+      vim.api.nvim_buf_add_highlight(buf, -1, "Constant", i - 1, 0, -1)
     end
   end
 end
