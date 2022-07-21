@@ -77,6 +77,7 @@ require("packer").startup(function(use)
       end, 100)
     end,
   }
+  use { "christianchiarulli/lsp-inlayhints.nvim", branch = "user-config" }
 
   -- REST
   use {

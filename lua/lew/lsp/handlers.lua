@@ -101,6 +101,10 @@ M.on_attach = function(client, bufnr)
   lsp_highlight_document(client)
   attach_navic(client, bufnr)
 
+  if client.name == "tsserver" then
+    require("lsp-inlayhints").setup_autocmd(bufnr, "typescript/inlayHints")
+  end
+
   if client.name == "tsserver" or client.name == "html" or client.name == "jsonls" or client.name == "sumneko_lua" then
     client.server_capabilities.documentFormattingProvider = false
   end

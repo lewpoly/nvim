@@ -284,7 +284,7 @@ local lanuage_server = {
       return ""
     else
       M.language_servers = language_servers
-      return language_servers
+      return language_servers:gsub(", anonymous source", "")
     end
   end,
   padding = 0,
