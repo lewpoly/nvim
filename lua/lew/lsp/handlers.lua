@@ -112,15 +112,4 @@ M.on_attach = function(client, bufnr)
   end
 end
 
--- Borders for LSP Info
-
-local win = require "lspconfig.ui.windows"
-local _default_opts = win.default_opts
-
-win.default_opts = function(options)
-  local opts = _default_opts(options)
-  opts.border = "rounded"
-  return opts
-end
-
 return M
