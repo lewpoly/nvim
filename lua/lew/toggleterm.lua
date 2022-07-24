@@ -5,7 +5,7 @@ end
 
 toggleterm.setup {
   size = 15,
-  open_mapping = [[<c-\>]],
+  -- open_mapping = [[<c-\>]],
   hide_numbers = true,
   shade_filetypes = {},
   shade_terminals = true,
@@ -29,7 +29,7 @@ toggleterm.setup {
 function _G.set_terminal_keymaps()
   local opts = { noremap = true }
   -- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
-  vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
+  -- vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
@@ -44,8 +44,18 @@ local lazygit = Terminal:new {
   hidden = true,
   direction = "float",
   float_opts = {
-    border = "rounded",
+    border = "none",
+    width = 100000,
+    height = 100000,
   },
+  on_open = function(_)
+    vim.cmd "startinsert!"
+    -- vim.cmd "set laststatus=0"
+  end,
+  on_close = function(_)
+    -- vim.cmd "set laststatus=3"
+  end,
+  count = 99,
 }
 
 function _LAZYGIT_TOGGLE()

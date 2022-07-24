@@ -96,6 +96,7 @@ keymap("n", "<leader>s", ":SymbolsOutline<CR>", opts)
 
 -- ToggleTerm
 keymap("n", "<leader>t", ":ToggleTerm dir='%:p:h'<CR>", opts)
+-- keymap("n", "<leader>t", ":ToggleTerm<CR>", opts)
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
 keymap("t", "jk", [[<C-\><C-n>]], opts)
 keymap("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
