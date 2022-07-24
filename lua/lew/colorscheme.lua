@@ -1,5 +1,15 @@
+local colorscheme = "onegruv"
 -- vim.g.transparent_background = true
-local colorscheme = "sherbet"
+
+vim.g.onegruv_italic_keywords = true
+
+vim.g.onegruv_italic_functions = false
+
+vim.g.onegruv_italic_comments = true
+
+vim.g.onegruv_italic_loops = true
+
+vim.g.onegruv_italic_conditionals = true
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

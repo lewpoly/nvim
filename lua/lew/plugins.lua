@@ -38,10 +38,11 @@ packer.init {
   },
 }
 
-require("packer").startup(function(use)
+return packer.startup(function(use)
+  --Plugin Manager
   use "wbthomason/packer.nvim"
-
   use "lewis6991/impatient.nvim"
+
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
@@ -77,7 +78,8 @@ require("packer").startup(function(use)
       end, 100)
     end,
   }
-  use { "christianchiarulli/lsp-inlayhints.nvim", branch = "user-config" }
+  use { "lvimuser/lsp-inlayhints.nvim", branch = "readme" }
+  use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
   -- REST
   use {
@@ -151,10 +153,12 @@ require("packer").startup(function(use)
 
   -- Colorschemes
   use "lewpoly/sherbet.nvim"
-  use "LunarVim/darkplus.nvim"
+  use "lewpoly/onegruv.nvim"
+  -- use "~/colors/onegruv.nvim"
   -- use "LunarVim/onedarker.nvim"
-  use "lewis6991/github_dark.nvim"
-  use "ellisonleao/gruvbox.nvim"
+  -- use "LunarVim/darkplus.nvim"
+  -- use "lewis6991/github_dark.nvim"
+  -- use "ellisonleao/gruvbox.nvim"
 
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
@@ -185,8 +189,8 @@ require("packer").startup(function(use)
 
   -- DAP
   use "mfussenegger/nvim-dap"
-  -- use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
+  -- use "theHamsta/nvim-dap-virtual-text"
   -- use "Pocco81/dap-buddy.nvim"
 
   -- ToggleTerm
