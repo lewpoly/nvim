@@ -45,15 +45,15 @@ keymap("n", "<leader>fn", ":Telescope notify theme=dropdown<CR>", opts)
 keymap("n", "<leader>f.", ":Telescope find_files hidden=true<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
--- keymap("n", "<TAB>", ":Telescope buffers<CR>", opts)
-keymap("n", "<TAB>", "<cmd>lua require('lew.bfs').open()<CR>", opts)
+keymap("n", "<TAB>", ":Telescope buffers<CR>", opts)
+-- keymap("n", "<TAB>", "<cmd>lua require('lew.bfs').open()<CR>", opts)
 -- keymap("n", "<TAB>", "<cmd>JABSOpen<CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
 keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
-keymap("n", "<leader>fc", "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>", opts)
+keymap("n", "<leader>fc", ":Telescope colorscheme theme=dropdown<CR>", opts)
 vim.api.nvim_set_keymap(
   "n",
   "<leader>ff",
@@ -81,7 +81,12 @@ keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 
 -- Toggle Diagnostic
-keymap("n", "<leader>d", ":TroubleToggle<CR>", opts)
+keymap(
+  "n",
+  "<leader>d",
+  "<cmd>lua require('telescope.builtin').diagnostics(require('telescope.themes').get_ivy{previewer = false})<cr>",
+  opts
+)
 
 -- PackerSync
 keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
