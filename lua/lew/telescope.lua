@@ -152,7 +152,7 @@ telescope.setup {
   extensions = {
     notify = {
       theme = "dropdown",
-      previewer = true,
+      previewer = false,
     },
     media_files = {
       -- filetypes whitelist
