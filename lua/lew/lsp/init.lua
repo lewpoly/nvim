@@ -30,4 +30,12 @@ require "lew.lsp.lsp-signature"
 require("lew.lsp.handlers").setup()
 require "lew.lsp.null-ls"
 
+local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
+if not l_status_ok then
+  return
+end
+
+lsp_lines.setup()
+
+
 return M
