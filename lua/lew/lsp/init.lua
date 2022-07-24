@@ -18,14 +18,12 @@ M.server_capabilities = function()
     end,
   }, function(choice)
     -- print(active_client_map[choice])
-    print(
-      vim.pretty_print(vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities)
-    )
+    print(vim.pretty_print(vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities))
     -- print(vim.inspect(vim.lsp.get_active_clients()[active_client_map[choice]]))
   end)
 end
 
-require "lew.lsp.lsp-installer"
+require "lew.lsp.mason"
 require "lew.lsp.lsp-signature"
 require("lew.lsp.handlers").setup()
 require "lew.lsp.null-ls"
@@ -36,6 +34,5 @@ if not l_status_ok then
 end
 
 lsp_lines.setup()
-
 
 return M

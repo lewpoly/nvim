@@ -45,7 +45,8 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "nvim-lua/lsp_extensions.nvim"
   use "ray-x/lsp_signature.nvim"
   use "simrat39/symbols-outline.nvim"
@@ -54,6 +55,7 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
   use "p00f/nvim-ts-rainbow"
+  use "christianchiarulli/lua-dev.nvim"
   use "folke/trouble.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "jose-elias-alvarez/typescript.nvim"
@@ -194,7 +196,7 @@ return packer.startup(function(use)
   -- use "Pocco81/dap-buddy.nvim"
 
   -- ToggleTerm
-  use { "akinsho/toggleterm.nvim" }
+  use { "akinsho/toggleterm.nvim", tag = 'v2.*' }
 
   -- Lualine
   use "christianchiarulli/lualine.nvim"
