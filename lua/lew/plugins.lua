@@ -42,6 +42,7 @@ return packer.startup(function(use)
   --Plugin Manager
   use "wbthomason/packer.nvim"
   use "lewis6991/impatient.nvim"
+  use "nvim-lua/plenary.nvim"
 
   -- LSP
   use "neovim/nvim-lspconfig"
@@ -107,7 +108,6 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-ui-select.nvim"
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
   use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
   use "BurntSushi/ripgrep"
   use {
     "nvim-telescope/telescope-media-files.nvim",
@@ -128,7 +128,6 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "saadparwaiz1/cmp_luasnip"
   use "windwp/nvim-autopairs"
-  -- use("blackCauldron7/surround.nvim")
   use "tpope/vim-surround"
   use "tpope/vim-repeat"
   use "tpope/vim-speeddating"
