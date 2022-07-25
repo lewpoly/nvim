@@ -127,7 +127,7 @@ local filetype = {
       "lir",
       "Outline",
       "spectre_panel",
-      -- "toggleterm",
+      "toggleterm",
       "DressingSelect",
       "",
     }
