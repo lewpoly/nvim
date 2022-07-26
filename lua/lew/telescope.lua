@@ -144,43 +144,56 @@ telescope.setup {
     },
   },
   pickers = {
+
+    live_grep = {
+      theme = "dropdown",
+    },
+    grep_string = {
+      theme = "dropdown",
+    },
+    find_files = {
+      theme = "dropdown",
+      previewer = false,
+    },
     buffers = {
       theme = "dropdown",
       previewer = false,
+      initial_mode = "normal",
     },
-  },
-  extensions = {
-    notify = {
+    planets = {
+      show_pluto = true,
+      show_moon = true,
+    },
+    colorscheme = {
+      -- enable_preview = true,
+    },
+    lsp_references = {
       theme = "dropdown",
-      previewer = false,
+      initial_mode = "normal",
     },
-    media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = { "png", "webp", "jpg", "jpeg" },
-      find_cmd = "rg", -- find command (defaults to `fd`)
+    lsp_definitions = {
+      theme = "dropdown",
+      initial_mode = "normal",
     },
-    file_browser = {
-      -- theme = "ivy",
-      -- require("telescope.themes").get_dropdown {
+    lsp_declarations = {
+      theme = "dropdown",
+      initial_mode = "normal",
+    },
+    lsp_implementations = {
+      theme = "dropdown",
+      initial_mode = "normal",
+    },
+    diagnostics = {
+      theme = "ivy",
+      initial_mode = "normal",
       -- previewer = true,
-      --   -- even more opts
-      -- },
-      mappings = {
-        ["i"] = {
-          -- your custom insert mode mappings
-        },
-        ["n"] = {
-          -- your custom normal mode mappings
-        },
-      },
     },
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown {
-        -- previewer = true,
-        -- even more opts
-      },
-    },
+    -- ["ui-select"] = {
+    --   require("telescope.themes").get_dropdown {
+    --     -- previewer = true,
+    --     -- even more opts
+    --   },
+    -- },
   },
 }
 
