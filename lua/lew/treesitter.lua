@@ -7,6 +7,12 @@ configs.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
+  matchup = {
+    enable = true, -- mandatory, false will disable the whole extension
+    -- disable = { "c", "ruby" }, -- optional, list of language that will be disabled
+    -- disable_virtual_text = false,
+    -- include_match_words = false
+  },
   highlight = {
     enable = true, -- false will disable the whole extension
     disable = { "css" }, -- list of language that will be disabled
@@ -26,20 +32,20 @@ configs.setup {
   },
   rainbow = {
     enable = true,
-    -- colors = {
-    -- "#cca700",
-    -- "#d16d9e",
-    -- "#4fc1ff",
-    -- "#dcd7ba",
-    -- "#d16969",
-    -- "#a3be8c",
-    -- "Orchid",
-    -- "DodgerBlue",
-    -- "Gold",
-    -- 	"Cornsilk",
-    -- 	"Salmon",
-    -- 	"LawnGreen",
-    -- },
+    colors = {
+      "#68a0b0",
+      "#946EaD",
+      "#c7aA6D",
+      -- "#dcd7ba",
+      -- "#d16969",
+      -- "#a3be8c",
+      -- "Orchid",
+      -- "DodgerBlue",
+      -- "Gold",
+      -- 	"Cornsilk",
+      -- 	"Salmon",
+      -- 	"LawnGreen",
+    },
     disable = { "html" },
   },
   playground = {
@@ -61,5 +67,5 @@ configs.setup {
     },
   },
 }
-local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsername
+local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
 ft_to_parser.ejs = "html"
