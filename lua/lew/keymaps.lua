@@ -81,12 +81,13 @@ keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 
 -- Toggle Diagnostic
-keymap(
-  "n",
-  "<leader>d",
-  "<cmd>lua require('telescope.builtin').diagnostics(require('telescope.themes').get_ivy{previewer = false})<cr>",
-  opts
-)
+keymap("n", "<leader>d", ":Telescope diagnostics<cr>", opts)
+-- keymap(
+--   "n",
+--   "<leader>d",
+--   ":TroubleToggle<cr>",
+--   opts
+-- )
 
 -- PackerSync
 keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
