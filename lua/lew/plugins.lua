@@ -135,26 +135,11 @@ return packer.startup(function(use)
 
   -- Colorizer
   use "NvChad/nvim-colorizer.lua"
-  -- use {
-  --   "RRethy/vim-hexokinase",
-  --   run = "make hexokinase",
-  --   config = function()
-  --     vim.g.Hexokinase_highlighters = { "backgroundfull" }
-  --     vim.g.Hexokinase_optInPatterns = {
-  --       "full_hex",
-  --       "rgb",
-  --       "rgba",
-  --       "hsl",
-  --       "hsla",
-  --       "triple_hex",
-  --       -- "colour_names",
-  --     }
-  --   end,
-  -- }
 
   -- Colorschemes
   use "lewpoly/sherbet.nvim"
   use "lewpoly/onegruv.nvim"
+  use "shaunsingh/nord.nvim"
   -- use "~/colors/onegruv.nvim"
   -- use "LunarVim/onedarker.nvim"
   -- use "LunarVim/darkplus.nvim"
@@ -217,6 +202,23 @@ return packer.startup(function(use)
   }
   use "folke/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- use {
+  --   "RRethy/vim-hexokinase",
+  --   run = "make hexokinase",
+  --   config = function()
+  --     vim.g.Hexokinase_highlighters = { "backgroundfull" }
+  --     vim.g.Hexokinase_optInPatterns = {
+  --       "full_hex",
+  --       "rgb",
+  --       "rgba",
+  --       "hsl",
+  --       "hsla",
+  --       "triple_hex",
+  --       -- "colour_names",
+  --     }
+  --   end,
+  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
