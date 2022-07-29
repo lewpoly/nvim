@@ -145,7 +145,7 @@ cmp.setup {
     { name = "crates", group_index = 1 },
     { name = "nvim_lsp", group_index = 2 },
     { name = "nvim_lua", group_index = 2 },
-    { name = "copilot", group_index = 2 },
+    { name = "copilot", keyword_length = 1, group_index = 2 },
     { name = "luasnip", group_index = 2 },
     { name = "buffer", group_index = 2 },
     { name = "cmp_tabnine", group_index = 2 },
