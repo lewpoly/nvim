@@ -114,6 +114,13 @@ return packer.startup(function(use)
     config = function() end,
   }
 
+  -- Code Running
+  use "is0n/jaq-nvim"
+  use {
+    "0x100101/lab.nvim",
+    run = "cd js && npm ci",
+  }
+
   -- Completion
   use "rafamadriz/friendly-snippets"
   use "hrsh7th/nvim-cmp"
@@ -159,6 +166,7 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
+  use "junegunn/vim-slash"
   use "stevearc/dressing.nvim"
   use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
@@ -180,7 +188,7 @@ return packer.startup(function(use)
   -- use "Pocco81/dap-buddy.nvim"
 
   -- ToggleTerm
-  use { "akinsho/toggleterm.nvim", tag = 'v2.*' }
+  use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Lualine
   use "christianchiarulli/lualine.nvim"

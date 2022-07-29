@@ -114,9 +114,19 @@ cmp.setup {
         vim_item.kind_hl_group = "CmpItemKindEmoji"
       end
 
+      if entry.source.name == "emoji" then
+        vim_item.kind = icons.misc.Smiley
+        vim_item.kind_hl_group = "CmpItemKindEmoji"
+      end
+
       if entry.source.name == "crates" then
         vim_item.kind = icons.misc.Package
         vim_item.kind_hl_group = "CmpItemKindCrate"
+      end
+
+      if entry.source.name == "lab.quick_data" then
+        vim_item.kind = icons.misc.CircuitBoard
+        vim_item.kind_hl_group = "CmpItemKindConstant"
       end
 
       -- NOTE: order matters
@@ -141,6 +151,7 @@ cmp.setup {
     { name = "cmp_tabnine", group_index = 2 },
     { name = "path", group_index = 2 },
     { name = "emoji", group_index = 2 },
+    { name = "lab.quick_data", keyword_length = 4, group_index = 2 },
   },
   sorting = {
     priority_weight = 2,
