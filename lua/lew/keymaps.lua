@@ -108,8 +108,12 @@ keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 keymap("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format ({ async = true })<CR>", opts)
 
--- Run JS
-keymap("n", "<leader>jj", "<cmd>w !node<cr>", opts)
+-- Run Code
+-- keymap("n", "<leader>jj", "<cmd>w !node<cr>", opts)
+keymap("n", "<leader>jj", ":Jaq<CR>", opts)
+keymap("n", "<leader>lr", ":Lab code run<CR>", opts)
+keymap("n", "<leader>ls", ":Lab code stop<CR>", opts)
+keymap("n", "<leader>lp", ":Lab code panel<CR>", opts)
 
 -- Remove Highlight
 keymap("n", "<leader>nh", "<cmd>nohlsearch<cr>", opts)
