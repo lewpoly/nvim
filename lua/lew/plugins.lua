@@ -145,10 +145,12 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lewpoly/sherbet.nvim"
+  -- use "~/colors/sherbet.nvim"
   use "lewpoly/onegruv.nvim"
   use "shaunsingh/nord.nvim"
   use "LunarVim/horizon.nvim"
-  use "~/colors/gruvplus"
+  use "LunarVim/synthwave84.nvim"
+  use "LunarVim/Colorschemes"
   -- use "LunarVim/onedarker.nvim"
   -- use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"

@@ -143,9 +143,29 @@ cmp.setup {
   },
   sources = {
     { name = "crates", group_index = 1 },
-    { name = "nvim_lsp", group_index = 2 },
+    {
+      name = "copilot",
+      -- keyword_length = 1,
+      max_item_count = 3,
+      trigger_characters = {
+        { ".", ":", "(", "'", '"', "[", ",", "#", "*", "@", "|", "=", "-", "{", "/", "\\", "+", "?" },
+      },
+      group_index = 2,
+    },
+    {
+      name = "nvim_lsp",
+      filter = function(entry, ctx)
+        -- vim.pretty_print()
+        local kind = require("cmp.types.lsp").CompletionItemKind[entry:get_kind()]
+        -- vim.bo.filetype
+        if kind == "Snippet" and ctx.prev_context.filetype == "java" then
+          return true
+        end
+      end,
+      group_index = 2,
+    },
     { name = "nvim_lua", group_index = 2 },
-    { name = "copilot", keyword_length = 1, group_index = 2 },
+    -- { name = "copilot", keyword_length = 1, group_index = 2 },
     { name = "luasnip", group_index = 2 },
     { name = "buffer", group_index = 2 },
     { name = "cmp_tabnine", group_index = 2 },

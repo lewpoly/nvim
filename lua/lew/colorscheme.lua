@@ -1,4 +1,5 @@
 local colorscheme = "sherbet"
+
 -- vim.g.transparent_background = true
 
 vim.g.sherbet_italic_keywords = true
