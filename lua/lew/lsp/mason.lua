@@ -85,7 +85,7 @@ for _, server in pairs(servers) do
   end
 
   if server == "tsserver" then
-    local tsserver_opts = require "lew.lsp.settings.typescript"
+    local tsserver_opts = require "lew.lsp.settings.tsserver"
     opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
   end
 

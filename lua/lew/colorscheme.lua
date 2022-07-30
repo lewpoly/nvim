@@ -1,15 +1,15 @@
-local colorscheme = "onegruv"
+local colorscheme = "sherbet"
 -- vim.g.transparent_background = true
 
-vim.g.onegruv_italic_keywords = true
+vim.g.sherbet_italic_keywords = true
 
-vim.g.onegruv_italic_functions = false
+vim.g.sherbet_italic_functions = false
 
-vim.g.onegruv_italic_comments = true
+vim.g.sherbet_italic_comments = true
 
-vim.g.onegruv_italic_loops = true
+vim.g.sherbet_italic_loops = true
 
-vim.g.onegruv_italic_conditionals = true
+vim.g.sherbet_italic_conditionals = true
 
 -- nord
 vim.g.nord_contrast = true

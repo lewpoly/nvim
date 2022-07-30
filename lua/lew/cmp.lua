@@ -179,11 +179,11 @@ cmp.setup {
   window = {
     documentation = {
       border = "rounded",
-      -- winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
+      winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
     },
     completion = {
       border = "rounded",
-      -- winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
+      winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
     },
   },
   experimental = {
