@@ -205,12 +205,13 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
 
   -- Comment
-  use {
-    "terrortylor/nvim-comment",
-    config = function()
-      require("nvim_comment").setup()
-    end,
-  }
+  -- use {
+  --   "terrortylor/nvim-comment",
+  --   config = function()
+  --     require("nvim_comment").setup()
+  --   end,
+  -- }
+  use "numToStr/comment.nvim"
   use "folke/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
