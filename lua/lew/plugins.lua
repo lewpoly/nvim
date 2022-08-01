@@ -81,7 +81,7 @@ return packer.startup(function(use)
       end, 100)
     end,
   }
-  use { "lvimuser/lsp-inlayhints.nvim", branch = "readme" }
+  use "lvimuser/lsp-inlayhints.nvim"
   use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
   -- REST
