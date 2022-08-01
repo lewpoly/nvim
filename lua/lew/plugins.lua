@@ -31,6 +31,8 @@ end
 
 -- Have packer use a popup window
 packer.init {
+  snapshot_path = fn.stdpath "config" .. "/snapshots",
+  max_jobs = 50,
   display = {
     open_fn = function()
       return require("packer.util").float { border = "rounded" }
@@ -147,10 +149,9 @@ return packer.startup(function(use)
   use "lewpoly/sherbet.nvim"
   -- use "~/colors/sherbet.nvim"
   use "lewpoly/onegruv.nvim"
-  use "shaunsingh/nord.nvim"
-  use "LunarVim/horizon.nvim"
-  use "LunarVim/synthwave84.nvim"
-  use "LunarVim/Colorschemes"
+  -- use "shaunsingh/nord.nvim"
+  -- use "LunarVim/horizon.nvim"
+  -- use "LunarVim/synthwave84.nvim"
   -- use "LunarVim/onedarker.nvim"
   -- use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
@@ -205,32 +206,9 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
 
   -- Comment
-  -- use {
-  --   "terrortylor/nvim-comment",
-  --   config = function()
-  --     require("nvim_comment").setup()
-  --   end,
-  -- }
   use "numToStr/comment.nvim"
   use "folke/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
-
-  -- use {
-  --   "RRethy/vim-hexokinase",
-  --   run = "make hexokinase",
-  --   config = function()
-  --     vim.g.Hexokinase_highlighters = { "backgroundfull" }
-  --     vim.g.Hexokinase_optInPatterns = {
-  --       "full_hex",
-  --       "rgb",
-  --       "rgba",
-  --       "hsl",
-  --       "hsla",
-  --       "triple_hex",
-  --       -- "colour_names",
-  --     }
-  --   end,
-  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
