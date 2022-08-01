@@ -80,7 +80,7 @@ keymap("n", "<S-h>", ":CybuPrev<CR>", opts)
 -- keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
 -- keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("v", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
+keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 
 -- Toggle Diagnostic
 keymap("n", "<leader>d", ":Telescope diagnostics<cr>", opts)
