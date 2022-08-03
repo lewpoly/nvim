@@ -95,7 +95,7 @@ local diagnostics = {
   sources = { "nvim_diagnostic" },
   sections = { "error", "warn" },
   symbols = { error = icons.diagnostics.Error .. " ", warn = icons.diagnostics.Warning .. " " },
-  colored = false,
+  colored = true,
   update_in_insert = false,
   always_visible = true,
 }
@@ -339,7 +339,7 @@ lualine.setup {
     lualine_b = { branch },
     lualine_c = { diagnostics },
     -- lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_x = { diff, lanuage_server, spaces, filetype },
+    lualine_x = { lanuage_server, spaces, filetype },
     lualine_y = { progress },
     lualine_z = { location },
   },
