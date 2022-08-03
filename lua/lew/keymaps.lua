@@ -91,6 +91,9 @@ keymap("n", "<leader>d", ":Telescope diagnostics<cr>", opts)
 --   opts
 -- )
 
+-- Inlay-Hints
+keymap("n", "<leader>lh", "<cmd>lua require('lsp-inlayhints').toggle()<CR>", opts)
+
 -- PackerSync
 keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
 
