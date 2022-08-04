@@ -153,7 +153,7 @@ return packer.startup(function(use)
   -- use "LunarVim/horizon.nvim"
   -- use "LunarVim/synthwave84.nvim"
   -- use "LunarVim/onedarker.nvim"
-  -- use "LunarVim/darkplus.nvim"
+  use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
   -- use "ellisonleao/gruvbox.nvim"
 
