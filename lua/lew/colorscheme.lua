@@ -1,5 +1,5 @@
--- local colorscheme = "sherbet"
-local colorscheme = "darkplus"
+local colorscheme = "sherbet"
+-- local colorscheme = "darkplus"
 
 -- vim.g.transparent_background = true
 
