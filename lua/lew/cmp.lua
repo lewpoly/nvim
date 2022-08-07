@@ -8,16 +8,31 @@ if not snip_status_ok then
   return
 end
 
-local tabnine_status_ok, tabnine = pcall(require, "lew.tabnine")
+local tabnine_status_ok, _ = pcall(require, "lew.tabnine")
 if not tabnine_status_ok then
   return
 end
 
+local buffer_fts = {
+  "markdown",
+  "toml",
+  "yaml",
+  "json",
+}
+
+local function contains(t, value)
+  for _, v in pairs(t) do
+    if v == value then
+      return true
+    end
+  end
+  return false
+end
+
 local compare = require "cmp.config.compare"
 
-tabnine.setup()
-
 require("luasnip/loaders/from_vscode").lazy_load()
+
 -- require("luasnip").filetype_extend("javascript", { "javascriptreact" })
 -- require("luasnip").filetype_extend("javascript", { "html" })
 
@@ -40,10 +55,20 @@ vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
 vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
 vim.api.nvim_set_hl(0, "CmpItemKindCrate", { fg = "#F64D00" })
 
+vim.g.cmp_active = true
+
 cmp.setup {
+  enabled = function()
+    local buftype = vim.api.nvim_buf_get_option(0, "buftype")
+    if buftype == "prompt" then
+      return false
+    end
+    return vim.g.cmp_active
+  end,
+  preselect = cmp.PreselectMode.None,
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body) -- For `luasnip` lew.
+      luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
 
@@ -60,7 +85,7 @@ cmp.setup {
     },
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    ["<CR>"] = cmp.mapping.confirm { select = false },
     ["<Right>"] = cmp.mapping.confirm { select = true },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -147,9 +172,9 @@ cmp.setup {
       name = "copilot",
       -- keyword_length = 1,
       max_item_count = 3,
-      trigger_characters = {
-        { ".", ":", "(", "'", '"', "[", ",", "#", "*", "@", "|", "=", "-", "{", "/", "\\", "+", "?" },
-      },
+      -- trigger_characters = {
+      --   { ".", ":", "(", "'", '"', "[", ",", "#", "*", "@", "|", "=", "-", "{", "/", "\\", "+", "?", " ", "\t" }, "\n" }
+      -- },
       group_index = 2,
     },
     {
@@ -165,9 +190,16 @@ cmp.setup {
       group_index = 2,
     },
     { name = "nvim_lua", group_index = 2 },
-    -- { name = "copilot", keyword_length = 1, group_index = 2 },
     { name = "luasnip", group_index = 2 },
-    { name = "buffer", group_index = 2 },
+    {
+      name = "buffer",
+      group_index = 2,
+      filter = function(entry, ctx)
+        if not contains(buffer_fts, ctx.prev_context.filetype) then
+          return true
+        end
+      end,
+    },
     { name = "cmp_tabnine", group_index = 2 },
     { name = "path", group_index = 2 },
     { name = "emoji", group_index = 2 },
