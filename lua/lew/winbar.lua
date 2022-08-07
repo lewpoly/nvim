@@ -16,6 +16,15 @@ M.winbar_filetype_exclude = {
   "DressingSelect",
   "Jaq",
   "harpoon",
+  "dapui_scopes",
+  "dapui_breakpoints",
+  "dapui_stacks",
+  "dapui_watches",
+  "dap-repl",
+  "dap-terminal",
+  "dapui_console",
+  "lab",
+  "Markdown",
   "",
 }
 
@@ -150,5 +159,7 @@ M.create_winbar = function()
     )
   end
 end
+
+M.create_winbar()
 
 return M
