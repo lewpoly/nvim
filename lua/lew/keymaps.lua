@@ -83,13 +83,13 @@ keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewis
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 
 -- Toggle Diagnostic
-keymap("n", "<leader>d", ":Telescope diagnostics<cr>", opts)
--- keymap(
---   "n",
---   "<leader>d",
---   ":TroubleToggle<cr>",
---   opts
--- )
+-- keymap("n", "<leader>d", ":Telescope diagnostics<cr>", opts)
+keymap(
+  "n",
+  "<leader>d",
+  ":TroubleToggle<cr>",
+  opts
+)
 
 -- Inlay-Hints
 keymap("n", "<leader>lh", "<cmd>lua require('lsp-inlayhints').toggle()<CR>", opts)
@@ -125,3 +125,6 @@ keymap("n", "<leader>nh", "<cmd>nohlsearch<cr>", opts)
 
 -- Treesitter
 keymap("n", "<F4>", "<cmd>TSHighlightCapturesUnderCursor<cr>", opts)
+
+-- Notes
+keymap("n", "<c-n>", ":e ~/notes/<cr>", opts)
