@@ -94,7 +94,7 @@ return packer.startup(function(use)
     commit = "e5f68db73276c4d4d255f75a77bbe6eff7a476ef",
   }
 
-  -- Markdown
+  -- Note Taking
   use {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
@@ -103,6 +103,7 @@ return packer.startup(function(use)
     end,
     ft = { "markdown" },
   }
+  use "mickael-menu/zk-nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
