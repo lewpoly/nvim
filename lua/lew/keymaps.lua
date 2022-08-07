@@ -35,8 +35,8 @@ keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
 -- NvimTree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 
--- Lir
--- keymap("n", "-", ":lua require'lir.float'.toggle()<cr>", noremap)
+-- Delete buffer
+keymap("n", "Q", ":Bdelete<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>km", ":Telescope keymaps<CR>", opts)
@@ -73,12 +73,8 @@ keymap("n", "<leader>b", "<cmd>lua require('lew.functions').toggle_tabline()<cr>
 -- cybu
 keymap("n", "<S-l>", ":CybuNext<CR>", opts)
 keymap("n", "<S-h>", ":CybuPrev<CR>", opts)
--- keymap("n", "<TAB>", ":CybuHistoryNext<CR>", opts)
--- keymap("n", "<S-<TAB>>", ":CybuHistoryPrev<CR>", opts)
 
 -- Comment
--- keymap("n", "<leader>/", ":CommentToggle<CR>", opts)
--- keymap("v", "<leader>/", ":CommentToggle<CR>", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 
