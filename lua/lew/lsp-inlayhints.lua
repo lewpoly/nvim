@@ -43,8 +43,8 @@ hints.setup {
     -- padding from the right if right_align is true
     right_align_padding = 7,
     -- highlight group
-    -- highlight = "Comment",
-    -- highlight = "guifg=#d8d8d8 guibg=#3a3a3a",
+    -- highlight = "#569",
+    -- highlight = "vim.cmd(hi LspInlayHint guifg=#d8d8d8 guibg=#3a3a3a )",
   },
   debug_mode = false,
 }
