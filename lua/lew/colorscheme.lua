@@ -7,7 +7,7 @@ local colorscheme = "sherbet"
 --
 -- vim.g.sherbet_italic_functions = false
 --
--- vim.g.sherbet_italic_comments = true
+vim.g.sherbet_italic_comments = true
 --
 -- vim.g.sherbet_italic_loops = true
 --
