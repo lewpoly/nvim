@@ -21,7 +21,6 @@ local hl_str = function(str, hl)
   return "%#" .. hl .. "#" .. str .. "%*"
 end
 
-
 vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#191c24" })
 vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#d4d4d4", bg = "#191c24", bold = false })
 -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#252525" })
@@ -317,7 +316,7 @@ local filename = {
   path = 0,
   shorting_target = 40,
   symbols = {
-    modified = "",
+    modified = " [+]",
     readonly = "",
     unnamed = "",
   },
@@ -337,9 +336,9 @@ lualine.setup {
   sections = {
     lualine_a = { mode },
     lualine_b = { branch },
-    lualine_c = { diagnostics },
+    lualine_c = { diagnostics, filename },
     -- lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_x = { lanuage_server, spaces, filetype },
+    lualine_x = { spaces, filetype },
     lualine_y = { progress },
     lualine_z = { location },
   },
@@ -810,4 +809,3 @@ lualine.setup {
 --   tabline = {},
 --   extensions = {},
 -- }
-
