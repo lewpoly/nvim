@@ -335,8 +335,8 @@ lualine.setup {
   },
   sections = {
     lualine_a = { mode },
-    lualine_b = { branch },
-    lualine_c = { diagnostics, filename },
+    lualine_b = { branch, diagnostics },
+    lualine_c = { "%=", filename },
     -- lualine_x = { diff, spaces, "encoding", filetype },
     lualine_x = { spaces, filetype },
     lualine_y = { progress },
