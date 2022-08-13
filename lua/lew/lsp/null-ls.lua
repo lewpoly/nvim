@@ -13,7 +13,7 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.prettierd,
-    -- diagnostics.tidy,
+    diagnostics.tidy,
     -- formatting.prettier.with({
     -- 	disabled_filetypes = { "html", "css" },
     -- 	extra_args = { "--single-quote", "--jsx-single-quote" },
