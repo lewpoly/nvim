@@ -165,7 +165,7 @@ return packer.startup(function(use)
   -- File Exploration
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
-  use "christianchiarulli/JABS.nvim"
+  --[[ use "christianchiarulli/JABS.nvim" ]]
   use "ThePrimeagen/harpoon"
 
   -- Git
