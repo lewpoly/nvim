@@ -16,7 +16,6 @@ opt.hidden = true
 opt.hlsearch = true
 opt.mouse = "a"
 opt.numberwidth = 4
--- vim.o.pumblend = 20
 opt.scrolloff = 8
 opt.sidescrolloff = 8
 opt.shiftwidth = 2
@@ -33,7 +32,7 @@ opt.swapfile = false
 opt.tabstop = 2
 opt.termguicolors = true
 opt.title = true
-opt.timeoutlen = 150
+opt.timeoutlen = 500
 opt.updatetime = 0
 opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 opt.undofile = true
@@ -41,6 +40,8 @@ opt.wrap = true
 opt.writebackup = false
 opt.shortmess:append "c"
 opt.guifont = "monospace:h17"
+opt.pumblend = 10
+opt.winblend = 10
 
 opt.fillchars.eob = " "
 opt.fillchars = "fold: "
