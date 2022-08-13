@@ -75,17 +75,12 @@ keymap("n", "<S-l>", ":CybuNext<CR>", opts)
 keymap("n", "<S-h>", ":CybuPrev<CR>", opts)
 
 -- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
+keymap("n", "<leader>/", "<cmd>lua require('Comment.api').locked('toggle.linewise.current')()<CR>", opts)
+keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', opts)
 
 -- Toggle Diagnostic
 -- keymap("n", "<leader>d", ":Telescope diagnostics<cr>", opts)
-keymap(
-  "n",
-  "<leader>d",
-  ":TroubleToggle<cr>",
-  opts
-)
+keymap("n", "<leader>d", ":TroubleToggle<cr>", opts)
 
 -- Inlay-Hints
 keymap("n", "<leader>lh", "<cmd>lua require('lsp-inlayhints').toggle()<CR>", opts)
