@@ -152,6 +152,7 @@ return packer.startup(function(use)
   -- use "~/colors/darkplus.nvim"
   -- use "lewpoly/onegruv.nvim"
   use "shaunsingh/nord.nvim"
+  use "Everblush/everblush.nvim"
   -- use "LunarVim/horizon.nvim"
   -- use "LunarVim/synthwave84.nvim"
   -- use "LunarVim/onedarker.nvim"
