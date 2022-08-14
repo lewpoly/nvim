@@ -2,23 +2,26 @@ local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
+
 opt.autoindent = true
--- vim.o.background = "dark"
 opt.backup = false
 opt.clipboard = "unnamedplus"
 opt.cmdheight = 1
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 0
 opt.cursorline = true
+
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
+
 opt.fileencoding = "utf-8"
 opt.hidden = true
 opt.hlsearch = true
 opt.mouse = "a"
-opt.numberwidth = 4
 opt.scrolloff = 8
 opt.sidescrolloff = 8
-opt.shiftwidth = 2
 opt.showmode = false
 opt.showtabline = 0
 opt.signcolumn = "yes"
@@ -29,19 +32,20 @@ opt.spelllang = "en"
 opt.splitbelow = true
 opt.splitright = true
 opt.swapfile = false
-opt.tabstop = 2
 opt.termguicolors = true
+opt.colorcolumn = "80"
 opt.title = true
 opt.timeoutlen = 500
 opt.updatetime = 0
 opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 opt.undofile = true
-opt.wrap = true
+opt.wrap = false
 opt.writebackup = false
 opt.shortmess:append "c"
 opt.guifont = "monospace:h17"
-opt.pumblend = 10
-opt.winblend = 10
+
+-- opt.pumblend = 10
+-- opt.winblend = 10
 
 opt.fillchars.eob = " "
 opt.fillchars = "fold: "
