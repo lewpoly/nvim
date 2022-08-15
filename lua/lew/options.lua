@@ -51,7 +51,7 @@ opt.fillchars.eob = " "
 opt.fillchars = "fold: "
 opt.foldnestmax = 3
 opt.foldminlines = 1
-opt.foldtext =
-  [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+opt.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim
+  (getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
