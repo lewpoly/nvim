@@ -51,7 +51,7 @@ nvim_tree.setup {
       symlink_arrow = " ➛ ",
       show = {
         file = true,
-        folder = true,
+        folder = false,
         folder_arrow = true,
         git = true,
       },
