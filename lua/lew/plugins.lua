@@ -198,7 +198,8 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Lualine
-  use "christianchiarulli/lualine.nvim"
+  use "nvim-lualine/lualine.nvim"
+  -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline
   -- use "akinsho/bufferline.nvim"
