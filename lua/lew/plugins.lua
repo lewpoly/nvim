@@ -177,7 +177,7 @@ return packer.startup(function(use)
   use "stevearc/dressing.nvim"
   use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
-  use "unblevable/quick-scope"
+  -- use "unblevable/quick-scope"
   use "nacro90/numb.nvim"
   use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
