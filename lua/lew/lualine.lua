@@ -313,7 +313,7 @@ local location = {
 
 local filename = {
   "filename",
-  path = 0,
+  path = 1,
   shorting_target = 40,
   symbols = {
     modified = " [+]",
