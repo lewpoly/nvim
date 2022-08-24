@@ -211,7 +211,7 @@ return packer.startup(function(use)
 
   -- Comment
   use "numToStr/comment.nvim"
-  use "folke/todo-comments.nvim"
+  use "b4mbus/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Automatically set up your configuration after cloning packer.nvim
