@@ -33,13 +33,13 @@ opt.splitbelow = true
 opt.splitright = true
 opt.swapfile = false
 opt.termguicolors = true
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 opt.title = true
 opt.timeoutlen = 500
 opt.updatetime = 0
 opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 opt.undofile = true
-opt.wrap = false
+opt.wrap = true
 opt.writebackup = false
 opt.shortmess:append "c"
 opt.guifont = "monospace:h17"
