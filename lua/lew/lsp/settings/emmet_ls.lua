@@ -6,7 +6,7 @@ return {
     "html",
     "css",
     "scss",
-    "javascript",
+    -- "javascript",
     "javascriptreact",
     -- "typescript",
     "typescriptreact",
