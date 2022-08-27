@@ -39,8 +39,9 @@ nvim_tree.setup {
     indent_markers = {
       enable = false,
       icons = {
-        corner = "└ ",
-        edge = "│ ",
+        corner = "└",
+        edge = "│",
+        item = "│",
         none = "  ",
       },
     },
