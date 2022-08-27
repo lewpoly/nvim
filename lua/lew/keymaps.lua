@@ -22,8 +22,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- V-Mode Move Selected Line/Text
-keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("v", "<c-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "<c-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Tabs
 -- keymap("n", "<S-l>", ":bnext<CR>", noremap)
