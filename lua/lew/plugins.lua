@@ -160,6 +160,14 @@ return packer.startup(function(use)
   -- use "lewis6991/github_dark.nvim"
   -- use "ellisonleao/gruvbox.nvim"
 
+  -- Utils
+  use {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup()
+    end,
+  }
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
 
