@@ -65,14 +65,7 @@ return packer.startup(function(use)
   use "windwp/nvim-ts-autotag"
   use "j-hui/fidget.nvim"
   -- use { "christianchiarulli/nvim-gps", branch = "text_hl" }
-  use {
-    "lewis6991/spellsitter.nvim",
-    config = function()
-      require("spellsitter").setup {
-        enable = true,
-      }
-    end,
-  }
+
   -- use "github/copilot.vim"
   use {
     "zbirenbaum/copilot.lua",

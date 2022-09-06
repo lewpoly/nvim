@@ -28,7 +28,10 @@ opt.signcolumn = "yes"
 opt.ignorecase = true
 opt.smartcase = true
 opt.smartindent = true
+
 opt.spelllang = "en"
+opt.spelloptions = "camel"
+
 opt.splitbelow = true
 opt.splitright = true
 opt.swapfile = false
