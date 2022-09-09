@@ -203,7 +203,7 @@ return packer.startup(function(use)
   -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline
-  use "akinsho/bufferline.nvim"
+  use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
   use "moll/vim-bbye"
 
   -- Dashboard/Alpha

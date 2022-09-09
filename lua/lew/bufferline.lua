@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+local icons = require "lew.icons"
+
 bufferline.setup {
   options = {
     numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -15,7 +17,7 @@ bufferline.setup {
     -- as an escape hatch for people who cannot bear it for whatever reason
     buffer_close_icon = "",
     -- buffer_close_icon = '',
-    modified_icon = "●",
+    modified_icon = icons.ui.Circle,
     close_icon = "",
     -- close_icon = '',
     left_trunc_marker = "",
