@@ -13,11 +13,12 @@ if not status_ok then
   return
 end
 
+local status_ok, copilot_cmp = pcall(require, "copilot-cmp")
+if not status_ok then
+  return
+end
+
 copilot.setup {
-  cmp = {
-    enabled = true,
-    method = "getCompletionsCycling",
-  },
   panel = { -- no config options yet
     enabled = true,
   },
@@ -32,4 +33,8 @@ copilot.setup {
       },
     },
   },
+}
+
+copilot_cmp.setup {
+  method = "getCompletionsCycling",
 }

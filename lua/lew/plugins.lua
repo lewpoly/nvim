@@ -72,7 +72,7 @@ return packer.startup(function(use)
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
-        require "lew.copilot"
+        require("copilot").setup()
       end, 100)
     end,
   }
@@ -123,7 +123,14 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
-  use "zbirenbaum/copilot-cmp"
+  -- use "zbirenbaum/copilot-cmp"
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot").setup()
+    end,
+  }
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-emoji"
