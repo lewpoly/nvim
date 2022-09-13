@@ -128,7 +128,7 @@ return packer.startup(function(use)
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
     config = function()
-      require("copilot").setup()
+      require("copilot_cmp").setup()
     end,
   }
   use "hrsh7th/cmp-cmdline"

@@ -8,13 +8,13 @@
 --   let g:copilot_no_tab_map = v:true
 -- ]]
 
-local status_ok, copilot = pcall(require, "copilot")
-if not status_ok then
+local copilot_status_ok, copilot = pcall(require, "copilot")
+if not copilot_status_ok then
   return
 end
 
-local status_ok, copilot_cmp = pcall(require, "copilot-cmp")
-if not status_ok then
+local cmp_status_ok, copilot_cmp = pcall(require, "copilot_cmp")
+if not cmp_status_ok then
   return
 end
 
