@@ -146,14 +146,14 @@ telescope.setup {
   pickers = {
 
     live_grep = {
-      theme = "dropdown",
+      theme = "ivy",
     },
     grep_string = {
-      theme = "dropdown",
+      theme = "ivy",
     },
     find_files = {
-      theme = "dropdown",
-      previewer = false,
+      theme = "ivy",
+      previewer = true,
     },
     buffers = {
       theme = "dropdown",
