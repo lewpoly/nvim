@@ -144,7 +144,7 @@ return packer.startup(function(use)
   use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
 
   -- Colorizer
-  use "Akianonymus/nvim-colorizer.lua"
+  use "NvChad/nvim-colorizer.lua"
 
   -- Colorschemes
   use "lewpoly/sherbet.nvim"
