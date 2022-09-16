@@ -52,9 +52,9 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   use "nvim-lua/lsp_extensions.nvim"
   use "ray-x/lsp_signature.nvim"
-  use "simrat39/symbols-outline.nvim"
+  -- use "simrat39/symbols-outline.nvim"
   use "simrat39/rust-tools.nvim"
-  use "Saecki/crates.nvim"
+  -- use "Saecki/crates.nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
   use "p00f/nvim-ts-rainbow"
@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
-  use "j-hui/fidget.nvim"
+  -- use "j-hui/fidget.nvim"
   -- use { "christianchiarulli/nvim-gps", branch = "text_hl" }
 
   -- use "github/copilot.vim"
@@ -161,13 +161,13 @@ return packer.startup(function(use)
   -- use "ellisonleao/gruvbox.nvim"
 
   -- Utils
-  use {
-    "max397574/colortils.nvim",
-    cmd = "Colortils",
-    config = function()
-      require("colortils").setup()
-    end,
-  }
+  -- use {
+  --   "max397574/colortils.nvim",
+  --   cmd = "Colortils",
+  --   config = function()
+  --     require("colortils").setup()
+  --   end,
+  -- }
   -- Formatting
   use "jose-elias-alvarez/null-ls.nvim"
 
@@ -187,7 +187,7 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
   -- use "unblevable/quick-scope"
   use "nacro90/numb.nvim"
-  use "rcarriga/nvim-notify"
+  -- use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
   use "ghillb/cybu.nvim"
   use {
@@ -206,7 +206,7 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Lualine
-  use "nvim-lualine/lualine.nvim"
+  -- use "nvim-lualine/lualine.nvim"
   -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline

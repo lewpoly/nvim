@@ -10,6 +10,7 @@ opt.cmdheight = 1
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 0
 opt.cursorline = true
+opt.laststatus = 3
 
 opt.tabstop = 2
 opt.softtabstop = 2
@@ -22,7 +23,7 @@ opt.hlsearch = true
 opt.mouse = "a"
 opt.scrolloff = 8
 opt.sidescrolloff = 8
-opt.showmode = false
+opt.showmode = true
 opt.showtabline = 0
 opt.signcolumn = "yes"
 opt.ignorecase = true
