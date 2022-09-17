@@ -11,6 +11,15 @@ keymap("n", "<c-h>", "<c-w>h", opts)
 keymap("n", "<c-k>", "<c-w>k", opts)
 keymap("n", "<c-l>", "<c-w>l", opts)
 
+-- From the Primeagen
+keymap("n", "<c-d>", "<c-d>zz", opts)
+keymap("n", "<c-u>", "<c-u>zz", opts)
+keymap("n", "J", "mzJ`z", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+-- keymap("n", "<leader>y", "\"+y", opts)
+-- keymap("v", "<leader>y", "\"+y", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -22,8 +31,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- V-Mode Move Selected Line/Text
-keymap("v", "<c-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("v", "<c-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Tabs
 -- keymap("n", "<S-l>", ":bnext<CR>", noremap)
