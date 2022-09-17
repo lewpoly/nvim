@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use "ray-x/lsp_signature.nvim"
   -- use "simrat39/symbols-outline.nvim"
   use "simrat39/rust-tools.nvim"
-  -- use "Saecki/crates.nvim"
+  use "Saecki/crates.nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
   use "p00f/nvim-ts-rainbow"
@@ -148,6 +148,8 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lewpoly/sherbet.nvim"
+  use "gruvbox-community/gruvbox"
+  use "folke/tokyonight.nvim"
   -- use "~/colors/sherbet.nvim"
   -- use "~/colors/darkplus.nvim"
   -- use "lewpoly/onegruv.nvim"
@@ -206,7 +208,7 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Lualine
-  -- use "nvim-lualine/lualine.nvim"
+  use "nvim-lualine/lualine.nvim"
   -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline

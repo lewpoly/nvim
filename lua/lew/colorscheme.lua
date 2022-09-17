@@ -1,5 +1,6 @@
 local colorscheme = "sherbet"
--- local colorscheme = "darkplus"
+-- local colorscheme = "gruvbox"
+
 
 -- vim.g.transparent_background = true
 
@@ -23,7 +24,7 @@ if not status_ok then
   return
 end
 -- vim.cmd("hi NormalNC guibg=NONE")
--- vim.cmd("hi Normal guibg=none ctermbg=none")
+-- vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 -- vim.cmd("hi NvimTreeNormal guibg=none ctermbg=none")
 -- vim.cmd("hi NvimTreeVertSplit guibg=none ctermbg=none")
 -- vim.cmd("hi VertSplit ctermfg=1 guibg=none ctermbg=none")
