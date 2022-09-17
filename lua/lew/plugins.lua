@@ -57,7 +57,7 @@ return packer.startup(function(use)
   use "Saecki/crates.nvim"
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use "nvim-treesitter/playground"
-  use "p00f/nvim-ts-rainbow"
+  -- use "p00f/nvim-ts-rainbow"
   use "christianchiarulli/lua-dev.nvim"
   use "folke/trouble.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -180,7 +180,7 @@ return packer.startup(function(use)
   use "ThePrimeagen/harpoon"
 
   -- Git
-  use "lewis6991/gitsigns.nvim"
+  -- use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
   -- use "junegunn/vim-slash"
