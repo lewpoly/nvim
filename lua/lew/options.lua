@@ -19,7 +19,7 @@ opt.expandtab = true
 
 opt.fileencoding = "utf-8"
 opt.hidden = true
-opt.hlsearch = true
+opt.hlsearch = false
 opt.mouse = "a"
 opt.scrolloff = 8
 opt.sidescrolloff = 8
