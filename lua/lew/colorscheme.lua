@@ -1,6 +1,50 @@
-local colorscheme = "sherbet"
--- local colorscheme = "gruvbox"
+vim.g.lewpoly_colorscheme = "sherbet"
 
+function ColorMyPencils()
+  vim.g.sherbet_italic_comments = true
+  vim.g.tokyonight_transparent_sidebar = true
+  vim.g.tokyonight_transparent = true
+  vim.g.nord_contrast = true
+  vim.g.nord_borders = true
+  vim.g.gruvbox_contrast_dark = "hard"
+  vim.g.gruvbox_invert_selection = "0"
+  vim.opt.background = "dark"
+
+  vim.cmd("colorscheme " .. vim.g.lewpoly_colorscheme)
+
+  local hl = function(thing, opts)
+    vim.api.nvim_set_hl(0, thing, opts)
+  end
+
+  -- hl("SignColumn", {
+  --   bg = "none",
+  -- })
+
+  hl("ColorColumn", {
+    ctermbg = 0,
+    bg = "#555555",
+  })
+
+  -- hl("CursorLineNR", {
+  --   bg = "None",
+  -- })
+
+  -- hl("normal", {
+  --   bg = "none",
+  -- })
+
+  -- hl("LineNr", {
+  --   fg = "#5eacd3",
+  -- })
+
+  -- hl("netrwDir", {
+  --   fg = "#5eacd3",
+  -- })
+end
+ColorMyPencils()
+
+-- local colorscheme = "sherbet"
+-- local colorscheme = "gruvbox"
 
 -- vim.g.transparent_background = true
 
@@ -8,21 +52,19 @@ local colorscheme = "sherbet"
 --
 -- vim.g.sherbet_italic_functions = false
 --
-vim.g.sherbet_italic_comments = true
+-- vim.g.sherbet_italic_comments = true
 --
 -- vim.g.sherbet_italic_loops = true
 --
 -- vim.g.sherbet_italic_conditionals = true
 
 -- nord
-vim.g.nord_contrast = true
-vim.g.nord_borders = true
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
+-- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+-- if not status_ok then
   -- vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
-end
+--   return
+-- end
 -- vim.cmd("hi NormalNC guibg=NONE")
 -- vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 -- vim.cmd("hi NvimTreeNormal guibg=none ctermbg=none")
