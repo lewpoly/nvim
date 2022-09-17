@@ -31,7 +31,7 @@ configs.setup {
     disable = { "xml" },
   },
   rainbow = {
-    enable = true,
+    enable = false,
     colors = {
       "#68a0b0",
       "#946EaD",
