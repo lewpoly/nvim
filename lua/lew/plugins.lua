@@ -183,9 +183,9 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
-  use "junegunn/vim-slash"
+  -- use "junegunn/vim-slash"
   use "stevearc/dressing.nvim"
-  use "karb94/neoscroll.nvim"
+  -- use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
   -- use "unblevable/quick-scope"
   use "nacro90/numb.nvim"
@@ -212,7 +212,7 @@ return packer.startup(function(use)
   -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline
-  use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
+  -- use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
   use "moll/vim-bbye"
 
   -- Dashboard/Alpha
