@@ -1,4 +1,4 @@
-vim.g.lewpoly_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "sherbet"
 
 function ColorMyPencils()
   vim.g.sherbet_italic_comments = true
@@ -10,7 +10,7 @@ function ColorMyPencils()
   vim.g.gruvbox_invert_selection = "0"
   vim.opt.background = "dark"
 
-  vim.cmd("colorscheme " .. vim.g.lewpoly_colorscheme)
+  vim.cmd("colorscheme " .. vim.g.lualew_colorscheme)
 
   local hl = function(thing, opts)
     vim.api.nvim_set_hl(0, thing, opts)
@@ -29,7 +29,7 @@ function ColorMyPencils()
   --   bg = "None",
   -- })
 
-  -- hl("normal", {
+  -- hl("Normal", {
   --   bg = "none",
   -- })
 
@@ -40,6 +40,13 @@ function ColorMyPencils()
   -- hl("netrwDir", {
   --   fg = "#5eacd3",
   -- })
+  -- hl("NvimTreeNormal", {
+  --   bg = "None",
+  -- })
+  -- hl("NvimTreeVertSplit", {
+  --   bg = "None",
+  -- })
+-- vim.cmd("hi NvimTreeVertSplit guibg=none ctermbg=none")
 end
 ColorMyPencils()
 
