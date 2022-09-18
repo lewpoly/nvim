@@ -151,7 +151,7 @@ return packer.startup(function(use)
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
   -- use "~/colors/sherbet.nvim"
-  -- use "~/colors/darkplus.nvim"
+  -- use "~/colors/gruvplus"
   -- use "lewpoly/onegruv.nvim"
   use "shaunsingh/nord.nvim"
   use "Everblush/everblush.nvim"
@@ -217,7 +217,7 @@ return packer.startup(function(use)
 
   -- Dashboard/Alpha
   use "goolord/alpha-nvim"
-  use "ahmedkhalf/project.nvim"
+  -- use "ahmedkhalf/project.nvim"
 
   -- Comment
   use "numToStr/comment.nvim"
