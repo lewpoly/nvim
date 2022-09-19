@@ -76,6 +76,13 @@ return packer.startup(function(use)
       end, 100)
     end,
   }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  }
   -- use "lvimuser/lsp-inlayhints.nvim"
   use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
@@ -105,10 +112,10 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
   use "nvim-lua/popup.nvim"
   use "BurntSushi/ripgrep"
-  use {
-    "nvim-telescope/telescope-media-files.nvim",
-    config = function() end,
-  }
+  -- use {
+  --   "nvim-telescope/telescope-media-files.nvim",
+  --   config = function() end,
+  -- }
 
   -- Code Running
   use "is0n/jaq-nvim"
@@ -124,13 +131,6 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   -- use "zbirenbaum/copilot-cmp"
-  use {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  }
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-emoji"
@@ -154,12 +154,12 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   -- use "~/colors/gruvplus"
   -- use "lewpoly/onegruv.nvim"
-  use "shaunsingh/nord.nvim"
-  use "Everblush/everblush.nvim"
+  -- use "shaunsingh/nord.nvim"
+  -- use "Everblush/everblush.nvim"
   -- use "LunarVim/horizon.nvim"
   -- use "LunarVim/synthwave84.nvim"
   -- use "LunarVim/onedarker.nvim"
-  use "LunarVim/darkplus.nvim"
+  -- use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
   -- use "ellisonleao/gruvbox.nvim"
 
@@ -178,7 +178,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   --[[ use "christianchiarulli/JABS.nvim" ]]
-  use "ThePrimeagen/harpoon"
+  -- use "ThePrimeagen/harpoon"
 
   -- Git
   -- use "lewis6991/gitsigns.nvim"

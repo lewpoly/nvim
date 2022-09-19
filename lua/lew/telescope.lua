@@ -9,7 +9,7 @@ if not h_status_ok then
 end
 
 local actions = require "telescope.actions"
-telescope.load_extension "media_files"
+-- telescope.load_extension "media_files"
 telescope.load_extension "harpoon"
 local icons = require "lew.icons"
 
