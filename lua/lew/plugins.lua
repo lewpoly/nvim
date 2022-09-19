@@ -147,10 +147,11 @@ return packer.startup(function(use)
   use "NvChad/nvim-colorizer.lua"
 
   -- Colorschemes
-  use "lewpoly/sherbet.nvim"
+  -- use "lewpoly/sherbet.nvim"
+  use "~/colors/sherbet.nvim"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
-  -- use "~/colors/sherbet.nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
   -- use "~/colors/gruvplus"
   -- use "lewpoly/onegruv.nvim"
   use "shaunsingh/nord.nvim"
@@ -189,7 +190,7 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
   -- use "unblevable/quick-scope"
   use "nacro90/numb.nvim"
-  -- use "rcarriga/nvim-notify"
+  use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
   use "ghillb/cybu.nvim"
   use {

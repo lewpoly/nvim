@@ -34,8 +34,9 @@ nvim_tree.setup {
     add_trailing = false,
     group_empty = false,
     highlight_git = false,
-    highlight_opened_files = "none",
+    highlight_opened_files = "all", -- can be name, icon, none, or all.
     root_folder_modifier = ":t",
+    indent_width = 1,
     indent_markers = {
       enable = false,
       icons = {
@@ -111,7 +112,7 @@ nvim_tree.setup {
   git = {
     enable = true,
     ignore = true,
-    timeout = 500,
+    timeout = 50,
   },
   view = {
     width = 30,

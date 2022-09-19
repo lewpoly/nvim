@@ -3,6 +3,9 @@ local opts = { noremap = true, silent = true }
 
 -- Leader
 vim.g.mapleader = " "
+keymap("n", "<leader>so", ":so %<CR>", opts)
+
+-- Reload Neovim
 
 -- Window Movement
 keymap("n", "<Space>", "<NOP>", opts)
@@ -14,6 +17,8 @@ keymap("n", "<c-l>", "<c-w>l", opts)
 -- From the Primeagen
 keymap("n", "<c-d>", "<c-d>zz", opts)
 keymap("n", "<c-u>", "<c-u>zz", opts)
+keymap("n", "<c-f>", "<c-f>zz", opts)
+keymap("n", "<c-b>", "<c-b>zz", opts)
 keymap("n", "J", "mzJ`z", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
@@ -98,7 +103,7 @@ keymap("n", "<leader>lh", "<cmd>lua require('lsp-inlayhints').toggle()<CR>", opt
 keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
 
 -- SymbolsOutline
-keymap("n", "<leader>s", ":SymbolsOutline<CR>", opts)
+-- keymap("n", "<leader>s", ":SymbolsOutline<CR>", opts)
 
 -- ToggleTerm
 keymap("n", "<leader>t", ":ToggleTerm dir='%:p:h'<CR>", opts)
