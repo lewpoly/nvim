@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "gruvbox"
+vim.g.lualew_colorscheme = "sherbet"
 
 function ColorMyPencils()
   vim.g.catppuccin_flavour = "mocha"
@@ -26,17 +26,17 @@ function ColorMyPencils()
     bg = "#555555",
   })
 
-  hl("CursorLineNR", {
-    fg = "#5eacd3",
-    bg = "None",
-  })
+  -- hl("CursorLineNR", {
+  --   fg = "#5eacd3",
+  --   bg = "None",
+  -- })
 
   -- hl("Normal", {
   --   bg = "none",
   -- })
 
   hl("LineNr", {
-    fg = "#5eacd3",
+    fg = "#458588",
   })
 
   -- hl("netrwDir", {
@@ -134,22 +134,22 @@ ColorMyPencils()
 -- vim.notify("colorscheme " .. colorscheme .. " not found!")
 --   return
 -- end
-vim.cmd "hi NormalNC guibg=NONE"
-vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
-vim.cmd "hi NvimTreeNormal guibg=none ctermbg=none"
-vim.cmd "hi NvimTreeVertSplit guibg=none ctermbg=none"
-vim.cmd "hi VertSplit guibg=none ctermbg=none"
-vim.cmd "hi LineNr guibg=none ctermbg=none"
-vim.cmd "hi Folded guibg=none ctermbg=none"
-vim.cmd "hi NonText guibg=none ctermbg=none"
-vim.cmd "hi SpecialKey guibg=none ctermbg=none"
-vim.cmd "hi VertSplit guibg=none ctermbg=none"
--- vim.cmd "hi Pmenu guibg=none ctermbg=none"
-vim.cmd "hi TelescopeNormal guibg=none ctermbg=none"
-vim.cmd "hi MsgArea guibg=none ctermbg=none"
-vim.cmd "hi SignColumn guibg=none ctermbg=none"
-vim.cmd "hi EndOfBuffer guibg=none ctermbg=none"
-vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
--- vim.cmd "hi NormalFloat guibg=NONE ctermbg=NONE"
-vim.cmd "hi FloatBorder guibg=NONE ctermbg=NONE"
-vim.cmd "hi LineNr guibg=NONE ctermbg=NONE"
+-- vim.cmd "hi NormalNC guibg=NONE"
+-- vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
+-- vim.cmd "hi NvimTreeNormal guibg=none ctermbg=none"
+-- vim.cmd "hi NvimTreeVertSplit guibg=none ctermbg=none"
+-- vim.cmd "hi VertSplit guibg=none ctermbg=none"
+-- vim.cmd "hi LineNr guibg=none ctermbg=none"
+-- vim.cmd "hi Folded guibg=none ctermbg=none"
+-- vim.cmd "hi NonText guibg=none ctermbg=none"
+-- vim.cmd "hi SpecialKey guibg=none ctermbg=none"
+-- vim.cmd "hi VertSplit guibg=none ctermbg=none"
+-- -- vim.cmd "hi Pmenu guibg=none ctermbg=none"
+-- vim.cmd "hi TelescopeNormal guibg=none ctermbg=none"
+-- vim.cmd "hi MsgArea guibg=none ctermbg=none"
+-- vim.cmd "hi SignColumn guibg=none ctermbg=none"
+-- vim.cmd "hi EndOfBuffer guibg=none ctermbg=none"
+-- vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
+-- -- vim.cmd "hi NormalFloat guibg=NONE ctermbg=NONE"
+-- vim.cmd "hi LineNr guibg=NONE ctermbg=NONE"
+-- vim.cmd "hi FloatBorder guibg=NONE ctermbg=NONE"

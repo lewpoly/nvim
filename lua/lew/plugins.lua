@@ -147,8 +147,8 @@ return packer.startup(function(use)
   use "NvChad/nvim-colorizer.lua"
 
   -- Colorschemes
-  -- use "lewpoly/sherbet.nvim"
-  use "~/colors/sherbet.nvim"
+  use "lewpoly/sherbet.nvim"
+  -- use "~/colors/sherbet.nvim"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
