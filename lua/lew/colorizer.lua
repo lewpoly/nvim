@@ -7,6 +7,7 @@ colorizer.setup {
   filetypes = {
     "*",
     css = { css = true },
+    "!packer"
   },
   user_default_options = {
     RGB = true, -- #RGB hex codes
