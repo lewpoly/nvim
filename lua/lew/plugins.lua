@@ -33,11 +33,11 @@ end
 packer.init {
   snapshot_path = fn.stdpath "config" .. "/snapshots",
   max_jobs = 50,
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
+  -- display = {
+  --   open_fn = function()
+  --     return require("packer.util").float { border = "rounded" }
+  --   end,
+  -- },
 }
 
 return packer.startup(function(use)
@@ -60,7 +60,7 @@ return packer.startup(function(use)
   -- use "p00f/nvim-ts-rainbow"
   use "christianchiarulli/lua-dev.nvim"
   use "folke/trouble.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
+  -- use "lukas-reineke/indent-blankline.nvim"
   use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
   -- use "j-hui/fidget.nvim"
@@ -175,6 +175,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim"
 
   -- File Exploration
+  use "mbbill/undotree"
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   --[[ use "christianchiarulli/JABS.nvim" ]]
@@ -190,7 +191,7 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
   -- use "unblevable/quick-scope"
   use "nacro90/numb.nvim"
-  use "rcarriga/nvim-notify"
+  -- use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
   use "ghillb/cybu.nvim"
   use {
@@ -209,7 +210,7 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Lualine
-  use "nvim-lualine/lualine.nvim"
+  -- use "nvim-lualine/lualine.nvim"
   -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline
