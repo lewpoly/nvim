@@ -22,10 +22,9 @@ function ColorMyPencils()
   })
 
   hl("ColorColumn", {
-    ctermbg = 0,
+    -- ctermbg = 0,
     bg = "#555555",
   })
-
   -- hl("CursorLineNR", {
   --   fg = "#5eacd3",
   --   bg = "None",
@@ -35,9 +34,9 @@ function ColorMyPencils()
   --   bg = "none",
   -- })
 
-  hl("LineNr", {
-    fg = "#458588",
-  })
+  -- hl("LineNr", {
+  --   fg = "#458588",
+  -- })
 
   -- hl("netrwDir", {
   --   fg = "#5eacd3",
