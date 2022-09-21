@@ -9,7 +9,7 @@ if not h_status_ok then
 end
 
 local actions = require "telescope.actions"
--- telescope.load_extension "media_files"
+telescope.load_extension "media_files"
 telescope.load_extension "harpoon"
 local icons = require "lew.icons"
 
@@ -144,7 +144,6 @@ telescope.setup {
     },
   },
   pickers = {
-
     live_grep = {
       theme = "ivy",
     },
@@ -163,9 +162,6 @@ telescope.setup {
     planets = {
       show_pluto = true,
       show_moon = true,
-    },
-    colorscheme = {
-      -- enable_preview = true,
     },
     lsp_references = {
       theme = "dropdown",
@@ -186,14 +182,7 @@ telescope.setup {
     diagnostics = {
       theme = "ivy",
       initial_mode = "normal",
-      -- previewer = true,
     },
-    -- ["ui-select"] = {
-    --   require("telescope.themes").get_dropdown {
-    --     -- previewer = true,
-    --     -- even more opts
-    --   },
-    -- },
   },
 }
 
