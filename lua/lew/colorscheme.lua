@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "gruvbox"
 
 function ColorMyPencils()
   vim.g.catppuccin_flavour = "mocha"
@@ -9,6 +9,8 @@ function ColorMyPencils()
   vim.g.nord_borders = true
   vim.g.gruvbox_contrast_dark = "hard"
   vim.g.gruvbox_invert_selection = "0"
+  vim.g.gruvbox_material_background = "hard"
+  vim.g.gruvbox_material_foreground = "original"
   vim.opt.background = "dark"
 
   vim.cmd("colorscheme " .. vim.g.lualew_colorscheme)
@@ -25,18 +27,18 @@ function ColorMyPencils()
     -- ctermbg = 0,
     bg = "#555555",
   })
-  -- hl("CursorLineNR", {
-  --   fg = "#5eacd3",
-  --   bg = "None",
-  -- })
+  hl("CursorLineNR", {
+    fg = "#5eacd3",
+    bg = "None",
+  })
 
   -- hl("Normal", {
   --   bg = "none",
   -- })
 
-  -- hl("LineNr", {
-  --   fg = "#458588",
-  -- })
+  hl("LineNr", {
+    fg = "#5eacd3",
+  })
 
   -- hl("netrwDir", {
   --   fg = "#5eacd3",

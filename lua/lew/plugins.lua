@@ -149,6 +149,7 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lewpoly/sherbet.nvim"
   use "~/colors/sherbet.nvim"
+  -- use "sainnhe/gruvbox-material"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
