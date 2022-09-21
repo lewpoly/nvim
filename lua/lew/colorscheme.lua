@@ -1,14 +1,27 @@
 vim.g.lualew_colorscheme = "gruvbox"
 
 function ColorMyPencils()
+  vim.g.gruvbox_contrast_dark = "hard"
+  vim.g.gruvbox_invert_selection = "0"
+  vim.g.gruvbox_italic = "1"
+  -- vim.g.gruvbox_italicize_comments = "1"
+
   vim.g.catppuccin_flavour = "mocha"
+-- vim.g.transparent_background = true
+
+-- vim.g.sherbet_italic_keywords = true
+-- vim.g.sherbet_italic_functions = false
+-- vim.g.sherbet_italic_comments = true
+-- vim.g.sherbet_italic_loops = true
+-- vim.g.sherbet_italic_conditionals = true
   vim.g.sherbet_italic_comments = true
+
   -- vim.g.tokyonight_transparent_sidebar = true
   -- vim.g.tokyonight_transparent = true
   vim.g.nord_contrast = true
   vim.g.nord_borders = true
-  vim.g.gruvbox_contrast_dark = "hard"
-  vim.g.gruvbox_invert_selection = "0"
+
+
   vim.g.gruvbox_material_background = "hard"
   vim.g.gruvbox_material_foreground = "original"
   vim.opt.background = "dark"
@@ -27,16 +40,21 @@ function ColorMyPencils()
     -- ctermbg = 0,
     bg = "#555555",
   })
-  hl("CursorLineNR", {
-    fg = "#5eacd3",
-    bg = "None",
-  })
+  -- hl("CursorLineNR", {
+  --   fg = "#5eacd3",
+  --   bg = "None",
+  -- })
 
   hl("Normal", {
     bg = "none",
+    fg = "#e9d9b1"
   })
 
-  hl("LineNr", {
+  -- hl("LineNr", {
+  --   fg = "#5eacd3",
+  -- })
+
+  hl("Function", {
     fg = "#5eacd3",
   })
 
@@ -116,17 +134,6 @@ ColorMyPencils()
 -- local colorscheme = "sherbet"
 -- local colorscheme = "gruvbox"
 
--- vim.g.transparent_background = true
-
--- vim.g.sherbet_italic_keywords = true
---
--- vim.g.sherbet_italic_functions = false
---
--- vim.g.sherbet_italic_comments = true
---
--- vim.g.sherbet_italic_loops = true
---
--- vim.g.sherbet_italic_conditionals = true
 
 -- nord
 
