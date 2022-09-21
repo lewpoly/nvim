@@ -112,10 +112,10 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
   use "nvim-lua/popup.nvim"
   use "BurntSushi/ripgrep"
-  -- use {
-  --   "nvim-telescope/telescope-media-files.nvim",
-  --   config = function() end,
-  -- }
+  use {
+    "nvim-telescope/telescope-media-files.nvim",
+    config = function() end,
+  }
 
   -- Code Running
   use "is0n/jaq-nvim"
@@ -147,8 +147,8 @@ return packer.startup(function(use)
   use "NvChad/nvim-colorizer.lua"
 
   -- Colorschemes
-  use "lewpoly/sherbet.nvim"
-  -- use "~/colors/sherbet.nvim"
+  -- use "lewpoly/sherbet.nvim"
+  use "~/colors/sherbet.nvim"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
@@ -210,7 +210,7 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Lualine
-  -- use "nvim-lualine/lualine.nvim"
+  use "nvim-lualine/lualine.nvim"
   -- use "christianchiarulli/lualine.nvim"
 
   -- Bufferline

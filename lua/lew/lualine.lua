@@ -142,7 +142,7 @@ local filetype = {
       return str
     end
   end,
-  icons_enabled = true,
+  icons_enabled = false,
 }
 
 local branch = {
