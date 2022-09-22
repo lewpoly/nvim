@@ -40,23 +40,25 @@ function ColorMyPencils()
     -- ctermbg = 0,
     bg = "#555555",
   })
+
   -- hl("CursorLineNR", {
   --   fg = "#5eacd3",
   --   bg = "None",
   -- })
 
-  hl("Normal", {
-    bg = "none",
-    fg = "#e9d9b1"
-  })
-
-  -- hl("LineNr", {
-  --   fg = "#5eacd3",
-  -- })
-
-  hl("Function", {
+  hl("LineNr", {
     fg = "#5eacd3",
   })
+
+  hl("Normal", {
+    bg = "none",
+    fg = "#ebdbb2"
+  })
+
+
+  -- hl("Function", {
+  --   fg = "#5eacd3",
+  -- })
 
   -- hl("netrwDir", {
   --   fg = "#5eacd3",
