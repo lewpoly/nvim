@@ -92,7 +92,6 @@ telescope.setup {
   pickers = {
     live_grep = {
       theme = "ivy",
-      previewer = true,
     },
     grep_string = {
       theme = "ivy",
