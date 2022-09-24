@@ -254,7 +254,7 @@ cmp.setup {
   window = {
     documentation = {
       border = "none",
-      -- winhighlight = "NormalFloat:Normal,FloatBorder:Type,CursorLine:PmenuSel,Search:None",
+      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:Type,CursorLine:PmenuSel,Search:None",
     },
     completion = {
       border = "none",

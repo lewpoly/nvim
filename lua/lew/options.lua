@@ -19,7 +19,7 @@ opt.expandtab = true
 
 opt.fileencoding = "utf-8"
 opt.hidden = true
-opt.hlsearch = false
+opt.hlsearch = true
 opt.mouse = "a"
 opt.scrolloff = 8
 opt.sidescrolloff = 8
@@ -37,7 +37,7 @@ opt.splitbelow = true
 opt.splitright = true
 opt.swapfile = false
 opt.termguicolors = true
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 opt.title = true
 -- opt.timeoutlen = 500
 opt.updatetime = 50
