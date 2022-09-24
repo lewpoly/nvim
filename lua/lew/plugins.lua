@@ -152,17 +152,13 @@ return packer.startup(function(use)
   -- use "sainnhe/gruvbox-material"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
-  use { "catppuccin/nvim", as = "catppuccin" }
-  -- use "~/colors/gruvplus"
-  -- use "lewpoly/onegruv.nvim"
+  -- use { "catppuccin/nvim", as = "catppuccin" }
+  use "~/colors/gruvplus"
   -- use "shaunsingh/nord.nvim"
   -- use "Everblush/everblush.nvim"
-  -- use "LunarVim/horizon.nvim"
-  -- use "LunarVim/synthwave84.nvim"
   -- use "LunarVim/onedarker.nvim"
   -- use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
-  -- use "ellisonleao/gruvbox.nvim"
 
   -- Utils
   -- use {
@@ -186,7 +182,7 @@ return packer.startup(function(use)
   -- use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
-  -- use "junegunn/vim-slash"
+  use "junegunn/vim-slash"
   use "stevearc/dressing.nvim"
   -- use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
