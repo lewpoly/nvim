@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local status_theme_ok, theme = pcall(require, "lualine.themes.gruvbox")
+local status_theme_ok, theme = pcall(require, "lualine.themes.sherbet")
 if not status_theme_ok then
   return
 end
@@ -25,7 +25,7 @@ vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#3c3836" })
 vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#d4d4d4", bg = "#3c3836", bold = false })
 -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#252525" })
 vim.api.nvim_set_hl(0, "SLProgress", { fg = "#d4d4d4", bg = "#3c3836" })
-vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#6b727f", bg = "#3c3836" })
+vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#6b727f", bg = "#1e2027" })
 vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#1e2027" })
 vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#1e2027" })
 local mode_color = {
