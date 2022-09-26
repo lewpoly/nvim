@@ -92,8 +92,12 @@ local icons = require "lew.icons"
 local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
-  sections = { "error", "warn" },
-  symbols = { error = icons.diagnostics.Error .. " ", warn = icons.diagnostics.Warning .. " " },
+  sections = { "error", "warn", "hint" },
+  symbols = {
+    error = icons.diagnostics.Error .. " ",
+    warn = icons.diagnostics.Warning .. " ",
+    hint = icons.diagnostics.Hint .. " ",
+  },
   colored = true,
   update_in_insert = false,
   always_visible = true,
