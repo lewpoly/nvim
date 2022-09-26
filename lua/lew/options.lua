@@ -48,8 +48,8 @@ opt.writebackup = false
 opt.shortmess:append "c"
 opt.guifont = "monospace:h17"
 
--- opt.pumblend = 10
--- opt.winblend = 10
+opt.pumblend = 10
+opt.winblend = 10
 
 opt.fillchars.eob = " "
 opt.fillchars = "fold: "
