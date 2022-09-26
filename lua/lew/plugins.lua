@@ -63,7 +63,7 @@ return packer.startup(function(use)
   -- use "lukas-reineke/indent-blankline.nvim"
   use "jose-elias-alvarez/typescript.nvim"
   use "windwp/nvim-ts-autotag"
-  -- use "j-hui/fidget.nvim"
+  use "j-hui/fidget.nvim"
   -- use { "christianchiarulli/nvim-gps", branch = "text_hl" }
 
   -- use "github/copilot.vim"
@@ -200,7 +200,7 @@ return packer.startup(function(use)
   -- DAP
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
-  -- use "theHamsta/nvim-dap-virtual-text"
+  use "theHamsta/nvim-dap-virtual-text"
   -- use "Pocco81/dap-buddy.nvim"
 
   -- ToggleTerm
