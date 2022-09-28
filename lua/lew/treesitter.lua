@@ -31,11 +31,12 @@ configs.setup {
     disable = { "xml" },
   },
   rainbow = {
-    enable = false,
-    colors = {
-      "#68a0b0",
-      "#946EaD",
-      "#c7aA6D",
+    enable = true,
+    extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table
+    -- colors = {
+      -- "#68a0b0",
+      -- "#946EaD",
+      -- "#c7aA6D",
       -- "#dcd7ba",
       -- "#d16969",
       -- "#a3be8c",
@@ -45,8 +46,7 @@ configs.setup {
       -- 	"Cornsilk",
       -- 	"Salmon",
       -- 	"LawnGreen",
-    },
-    disable = { "html" },
+    -- },
   },
   playground = {
     enable = true,
