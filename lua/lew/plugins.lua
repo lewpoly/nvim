@@ -153,7 +153,7 @@ return packer.startup(function(use)
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
   -- use { "catppuccin/nvim", as = "catppuccin" }
-  use "~/colors/gruvplus"
+  -- use "~/colors/gruvplus"
   -- use "shaunsingh/nord.nvim"
   -- use "Everblush/everblush.nvim"
   -- use "LunarVim/onedarker.nvim"
