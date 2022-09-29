@@ -19,6 +19,7 @@ colorizer.setup {
     hsl_fn = false, -- CSS hsl() and hsla() functions
     css = false, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
     css_fn = false, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+    tailwind = 'lsp',
     -- Available modes for `mode`: foreground, background,  virtualtext
     mode = "background", -- Set the display mode.
     virtualtext = "■",

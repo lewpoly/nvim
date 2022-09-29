@@ -31,8 +31,8 @@ configs.setup {
     disable = { "xml" },
   },
   rainbow = {
-    enable = true,
-    extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table
+    enable = false,
+    extended_mode = false, -- Highlight also non-parentheses delimiters, boolean or table
     -- colors = {
       -- "#68a0b0",
       -- "#946EaD",
