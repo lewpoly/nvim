@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "gruvbox"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
@@ -66,7 +66,7 @@ function ColorMyPencils()
   })
 
   -- hl("Normal", {
-  --   bg = "none",
+  --   bg = "#181818",
   --   fg = "#ebdbb2"
   -- })
 
