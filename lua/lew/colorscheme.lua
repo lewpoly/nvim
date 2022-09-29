@@ -107,7 +107,7 @@ function ColorMyPencils()
 
   hl("Normal", {
     bg = "#181818",
-  --   fg = "#ebdbb2"
+    fg = "#ebdbb2"
   })
 
   hl("Function", {
