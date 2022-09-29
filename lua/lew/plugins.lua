@@ -144,7 +144,7 @@ return packer.startup(function(use)
   use { "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" }
 
   -- Colorizer
-  use "NvChad/nvim-colorizer.lua"
+  use { "NvChad/nvim-colorizer.lua", commit = "20fd009" }
 
   -- Colorschemes
   -- use "lewpoly/sherbet.nvim"
@@ -152,12 +152,13 @@ return packer.startup(function(use)
   -- use "sainnhe/gruvbox-material"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
-  use "chrisduerr/vim-undead"
+  -- use "chrisduerr/vim-undead"
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "~/colors/gruvplus"
   -- use "shaunsingh/nord.nvim"
-  -- use "Everblush/everblush.nvim"
-  -- use "LunarVim/onedarker.nvim"
+  -- use { "Everblush/everblush.nvim", as = "everblush" }
+  use 'sam4llis/nvim-tundra'
+  use "LunarVim/onedarker.nvim"
   use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
 

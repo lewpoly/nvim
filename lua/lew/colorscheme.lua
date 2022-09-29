@@ -1,5 +1,46 @@
 vim.g.lualew_colorscheme = "gruvbox"
 
+require("nvim-tundra").setup {
+  transparent_background = false,
+  editor = {
+    search = {},
+    substitute = {},
+  },
+  syntax = {
+    booleans = { bold = true, italic = true },
+    comments = { bold = true, italic = true },
+    conditionals = {},
+    constants = { bold = true },
+    functions = {},
+    keywords = {},
+    loops = {},
+    numbers = { bold = true },
+    operators = { bold = true },
+    punctuation = {},
+    strings = {},
+    types = { italic = true },
+  },
+  diagnostics = {
+    errors = {},
+    warnings = {},
+    information = {},
+    hints = {},
+  },
+  plugins = {
+    lsp = true,
+    treesitter = true,
+    cmp = true,
+    context = true,
+    dbui = true,
+    gitsigns = true,
+    telescope = true,
+  },
+  overwrite = {
+    colors = {},
+    highlights = {},
+  },
+}
+
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
   vim.g.gruvbox_invert_selection = "0"
@@ -7,18 +48,17 @@ function ColorMyPencils()
   -- vim.g.gruvbox_italicize_comments = "1"
 
   vim.g.catppuccin_flavour = "mocha"
--- vim.g.transparent_background = true
+  -- vim.g.transparent_background = true
 
--- vim.g.sherbet_italic_keywords = true
--- vim.g.sherbet_italic_functions = false
--- vim.g.sherbet_italic_comments = true
--- vim.g.sherbet_italic_loops = true
--- vim.g.sherbet_italic_conditionals = true
+  -- vim.g.sherbet_italic_keywords = true
+  -- vim.g.sherbet_italic_functions = false
+  -- vim.g.sherbet_italic_comments = true
+  -- vim.g.sherbet_italic_loops = true
+  -- vim.g.sherbet_italic_conditionals = true
   vim.g.sherbet_italic_comments = true
 
   vim.g.nord_contrast = true
   vim.g.nord_borders = true
-
 
   vim.g.gruvbox_material_background = "hard"
   vim.g.gruvbox_material_foreground = "original"
@@ -40,7 +80,7 @@ function ColorMyPencils()
 
   hl("PmenuSel", {
     bg = "#83a598",
-    fg = "#504945"
+    fg = "#504945",
   })
 
   hl("CmpItemAbbrMatch", {
@@ -65,15 +105,18 @@ function ColorMyPencils()
     fg = "#5eacd3",
   })
 
-  -- hl("Normal", {
-  --   bg = "#181818",
+  hl("Normal", {
+    bg = "#181818",
   --   fg = "#ebdbb2"
-  -- })
+  })
 
+  hl("Function", {
+    fg = "#a3be8c",
+  })
 
-  -- hl("Function", {
-  --   fg = "#5eacd3",
-  -- })
+  hl("String", {
+    fg = "#a3be8c",
+  })
 
   -- hl("netrwDir", {
   --   fg = "#5eacd3",
@@ -150,7 +193,6 @@ ColorMyPencils()
 
 -- local colorscheme = "sherbet"
 -- local colorscheme = "gruvbox"
-
 
 -- nord
 
