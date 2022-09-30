@@ -33,22 +33,22 @@ function ColorMyPencils()
   --   bg = "none",
   -- })
 
-  hl("Pmenu", {
-    bg = "#504945",
-  })
+  -- hl("Pmenu", {
+  --   bg = "#504945",
+  -- })
 
-  hl("PmenuSel", {
-    bg = "#83a598",
-    fg = "#504945",
-  })
+  -- hl("PmenuSel", {
+  --   bg = "#83a598",
+  --   fg = "#504945",
+  -- })
 
-  hl("CmpItemAbbrMatch", {
-    fg = "#83a598",
-  })
+  -- hl("CmpItemAbbrMatch", {
+  --   fg = "#83a598",
+  -- })
 
-  hl("CmpItemAbbrMatchFuzzy", {
-    fg = "#83a598",
-  })
+  -- hl("CmpItemAbbrMatchFuzzy", {
+  --   fg = "#83a598",
+  -- })
 
   -- hl("ColorColumn", {
   --   -- ctermbg = 0,
@@ -176,7 +176,7 @@ require("tokyonight").setup {
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "transparent", -- style for sidebars, see below
+    -- sidebars = "transparent", -- style for sidebars, see below
     floats = "transparent", -- style for floating windows
   },
   sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
