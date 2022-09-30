@@ -1,45 +1,4 @@
-vim.g.lualew_colorscheme = "gruvbox"
-
-require("nvim-tundra").setup {
-  transparent_background = false,
-  editor = {
-    search = {},
-    substitute = {},
-  },
-  syntax = {
-    booleans = { bold = true, italic = true },
-    comments = { bold = true, italic = true },
-    conditionals = {},
-    constants = { bold = true },
-    functions = {},
-    keywords = {},
-    loops = {},
-    numbers = { bold = true },
-    operators = { bold = true },
-    punctuation = {},
-    strings = {},
-    types = { italic = true },
-  },
-  diagnostics = {
-    errors = {},
-    warnings = {},
-    information = {},
-    hints = {},
-  },
-  plugins = {
-    lsp = true,
-    treesitter = true,
-    cmp = true,
-    context = true,
-    dbui = true,
-    gitsigns = true,
-    telescope = true,
-  },
-  overwrite = {
-    colors = {},
-    highlights = {},
-  },
-}
+vim.g.lualew_colorscheme = "sherbet"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
@@ -91,32 +50,80 @@ function ColorMyPencils()
     fg = "#83a598",
   })
 
-  hl("ColorColumn", {
-    -- ctermbg = 0,
-    bg = "#555555",
-  })
+  -- hl("ColorColumn", {
+  --   -- ctermbg = 0,
+  --   bg = "#555555",
+  -- })
 
-  hl("CursorLineNR", {
-    fg = "#ffffff",
-    bg = "None",
-  })
+  -- hl("CursorLineNR", {
+  --   fg = "#ffffff",
+  --   bg = "None",
+  -- })
 
   hl("LineNr", {
     fg = "#5eacd3",
   })
 
-  hl("Normal", {
-    bg = "#181818",
-    fg = "#ebdbb2"
-  })
+  -- hl("Normal", {
+  --   bg = "#181818",
+    -- fg = "#ebdbb2",
+  -- })
 
-  hl("Function", {
-    fg = "#a3be8c",
-  })
+  -- hl("Keyword", {
+  --   fg = "#fb4934",
+  -- })
 
-  hl("String", {
-    fg = "#a3be8c",
-  })
+  -- hl("TSKeywordReturn", {
+  --   fg = "#fb4934",
+  -- })
+
+  -- hl("Conditional", {
+  --   fg = "#fb4934",
+  -- })
+
+  -- hl("String", {
+  --   fg = "#88b369",
+  -- })
+
+  -- hl("Function", {
+  --   fg = "#88b369",
+  -- })
+
+  -- hl("TSField", {
+  --   fg = "#83a598",
+  -- })
+
+  -- hl("TSConstructor", {
+  --   fg = "#d65d0e",
+  -- })
+
+  -- hl("TSPunctBracket", {
+  --   fg = "#d65d0e",
+  -- })
+
+  -- hl("Operator", {
+  --   fg = "#d65d0e",
+  -- })
+
+  -- hl("TSVariableBuiltin", {
+  --   fg = "#d65d0e",
+  -- })
+
+  -- hl("Boolean", {
+  --   fg = "#d3869b",
+  -- })
+
+  -- hl("Float", {
+  --   fg = "#d3869b",
+  -- })
+
+  -- hl("Number", {
+  --   fg = "#d3869b",
+  -- })
+
+  -- hl("DiagnosticSignHint", {
+  --   bg = "None",
+  -- })
 
   -- hl("netrwDir", {
   --   fg = "#5eacd3",
