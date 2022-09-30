@@ -29,26 +29,26 @@ function ColorMyPencils()
     vim.api.nvim_set_hl(0, thing, opts)
   end
 
-  -- hl("SignColumn", {
-  --   bg = "none",
-  -- })
+  hl("SignColumn", {
+    bg = "none",
+  })
 
-  -- hl("Pmenu", {
-  --   bg = "#504945",
-  -- })
+  hl("Pmenu", {
+    bg = "#504945",
+  })
 
-  -- hl("PmenuSel", {
-  --   bg = "#83a598",
-  --   fg = "#504945",
-  -- })
+  hl("PmenuSel", {
+    bg = "#83a598",
+    fg = "#504945",
+  })
 
-  -- hl("CmpItemAbbrMatch", {
-  --   fg = "#83a598",
-  -- })
+  hl("CmpItemAbbrMatch", {
+    fg = "#83a598",
+  })
 
-  -- hl("CmpItemAbbrMatchFuzzy", {
-  --   fg = "#83a598",
-  -- })
+  hl("CmpItemAbbrMatchFuzzy", {
+    fg = "#83a598",
+  })
 
   -- hl("ColorColumn", {
   --   -- ctermbg = 0,
