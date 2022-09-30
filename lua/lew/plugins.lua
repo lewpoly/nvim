@@ -152,6 +152,8 @@ return packer.startup(function(use)
   -- use "sainnhe/gruvbox-material"
   use "gruvbox-community/gruvbox"
   use "folke/tokyonight.nvim"
+  use "EdenEast/nightfox.nvim"
+  use "B4mbus/oxocarbon-lua.nvim"
   -- use "chrisduerr/vim-undead"
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "~/colors/gruvplus"

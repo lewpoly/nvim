@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "tokyonight"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
@@ -29,9 +29,9 @@ function ColorMyPencils()
     vim.api.nvim_set_hl(0, thing, opts)
   end
 
-  hl("SignColumn", {
-    bg = "none",
-  })
+  -- hl("SignColumn", {
+  --   bg = "none",
+  -- })
 
   hl("Pmenu", {
     bg = "#504945",
@@ -55,10 +55,10 @@ function ColorMyPencils()
   --   bg = "#555555",
   -- })
 
-  -- hl("CursorLineNR", {
-  --   fg = "#ffffff",
-  --   bg = "None",
-  -- })
+  hl("CursorLineNR", {
+    fg = "#ffffff",
+    bg = "None",
+  })
 
   hl("LineNr", {
     fg = "#5eacd3",
@@ -66,7 +66,7 @@ function ColorMyPencils()
 
   -- hl("Normal", {
   --   bg = "#181818",
-    -- fg = "#ebdbb2",
+  -- fg = "#ebdbb2",
   -- })
 
   -- hl("Keyword", {
@@ -82,11 +82,11 @@ function ColorMyPencils()
   -- })
 
   -- hl("String", {
-  --   fg = "#88b369",
+  --   fg = "#fabd2f",
   -- })
 
   -- hl("Function", {
-  --   fg = "#88b369",
+  --   fg = "#d79921",
   -- })
 
   -- hl("TSField", {
