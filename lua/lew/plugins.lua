@@ -151,19 +151,23 @@ return packer.startup(function(use)
   use "~/colors/sherbet.nvim"
   -- use "sainnhe/gruvbox-material"
   use "gruvbox-community/gruvbox"
+  -- use "ellisonleao/gruvbox.nvim"
   use "folke/tokyonight.nvim"
+  -- use "LunarVim/tokyonight.nvim"
   use "EdenEast/nightfox.nvim"
-  use "B4mbus/oxocarbon-lua.nvim"
+  use "rmehri01/onenord.nvim"
+  use { "srcery-colors/srcery-vim", as = "srcery" }
+  -- use "B4mbus/oxocarbon-lua.nvim"
   -- use "chrisduerr/vim-undead"
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "~/colors/gruvplus"
   -- use "shaunsingh/nord.nvim"
   -- use { "Everblush/everblush.nvim", as = "everblush" }
   -- use 'sam4llis/nvim-tundra'
-  use "LunarVim/onedarker.nvim"
-  use "LunarVim/darkplus.nvim"
+  -- use "LunarVim/onedarker.nvim"
+  -- use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
-  use { "kartikp10/noctis.nvim", requires = { "rktjmp/lush.nvim" } }
+  -- use { "kartikp10/noctis.nvim", requires = { "rktjmp/lush.nvim" } }
 
   -- Utils
   -- use {

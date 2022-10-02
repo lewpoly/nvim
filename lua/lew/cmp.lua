@@ -252,13 +252,13 @@ cmp.setup {
     select = false,
   },
   window = {
-    documentation = {
-      border = "none",
-      winhighlight = "NormalFloat:Pmenu,FloatBorder:Type,CursorLine:PmenuSel,Search:None",
-    },
     completion = {
-      border = "none",
-      -- winhighlight = "NormalFloat:Normal,FloatBorder:Type,CursorLine:PmenuSel,Search:None",
+      border = "rounded",
+      winhighlight = "NormalFloat:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+    },
+    documentation = {
+      border = "rounded",
+      winhighlight = "NormalFloat:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
     },
   },
   experimental = {

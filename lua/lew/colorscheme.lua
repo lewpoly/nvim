@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "tokyonight"
+vim.g.lualew_colorscheme = "sherbet"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
@@ -29,48 +29,58 @@ function ColorMyPencils()
     vim.api.nvim_set_hl(0, thing, opts)
   end
 
-  hl("SignColumn", {
-    bg = "none",
-  })
-
-  hl("Pmenu", {
-    bg = "#504945",
-  })
-
-  hl("PmenuSel", {
-    bg = "#83a598",
-    fg = "#504945",
-  })
-
-  hl("CmpItemAbbrMatch", {
-    fg = "#83a598",
-  })
-
-  hl("CmpItemAbbrMatchFuzzy", {
-    fg = "#83a598",
-  })
-
-  -- hl("ColorColumn", {
-  --   -- ctermbg = 0,
-  --   bg = "#555555",
+  -- hl("SignColumn", {
+  --   bg = "none",
   -- })
 
+  -- hl("Pmenu", {
+  --   bg = "#504945",
+  -- })
+
+  -- hl("PmenuSel", {
+  --   bg = "#83a598",
+  --   fg = "#504945",
+  -- })
+
+  -- hl("CmpItemAbbrMatch", {
+  --   fg = "#83a598",
+  -- })
+
+  -- hl("CmpItemAbbrMatchFuzzy", {
+  --   fg = "#83a598",
+  -- })
+
+  hl("ColorColumn", {
+    -- ctermbg = 0,
+    bg = "#555555",
+  })
+
   hl("CursorLineNR", {
-    fg = "#ffffff",
+    fg = "#fabd2f",
     bg = "None",
   })
 
-  hl("LineNr", {
-    fg = "#5eacd3",
-  })
+  -- hl("LineNr", {
+  --   fg = "#5eacd3",
+  -- })
 
   -- hl("Normal", {
-  --   bg = "#181818",
-  -- fg = "#ebdbb2",
+  --   bg = "None",
+  --   fg = "#ebdbb2",
+  -- })
+
+  -- hl("NvimTreeNormal", {
+  --   bg = "None",
+  --   -- fg = "#ebdbb2",
   -- })
 
   -- hl("Keyword", {
   --   fg = "#fb4934",
+  -- })
+
+  -- hl("Comment", {
+  --   fg = "#808080",
+  --   italic = true,
   -- })
 
   -- hl("TSKeywordReturn", {
@@ -81,15 +91,31 @@ function ColorMyPencils()
   --   fg = "#fb4934",
   -- })
 
+  -- hl("TSKeywordOperator", {
+  --   fg = "#fb4934",
+  -- })
+
   -- hl("String", {
-  --   fg = "#fabd2f",
+  --   fg = "#d0f7a6",
   -- })
 
   -- hl("Function", {
-  --   fg = "#d79921",
+  --   fg = "#d0f7a6",
+  -- })
+
+  -- hl("Type", {
+  --   fg = "#d0f7a6",
   -- })
 
   -- hl("TSField", {
+  --   fg = "#83a598",
+  -- })
+
+  -- hl("TSParameter", {
+  --   fg = "#83a598",
+  -- })
+
+  -- hl("TSProperty", {
   --   fg = "#83a598",
   -- })
 
@@ -110,15 +136,19 @@ function ColorMyPencils()
   -- })
 
   -- hl("Boolean", {
-  --   fg = "#d3869b",
+  --   fg = "#ff9e64",
   -- })
 
   -- hl("Float", {
-  --   fg = "#d3869b",
+  --   fg = "#ff9e64",
   -- })
 
   -- hl("Number", {
-  --   fg = "#d3869b",
+  --   fg = "#ff9e64",
+  -- })
+
+  -- hl("Constant", {
+  --   fg = "#ff9e64",
   -- })
 
   -- hl("DiagnosticSignHint", {
@@ -165,8 +195,8 @@ end
 require("tokyonight").setup {
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
-  transparent = true, -- Enable this to disable setting the background color
+  style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+  transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
@@ -176,7 +206,7 @@ require("tokyonight").setup {
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    -- sidebars = "transparent", -- style for sidebars, see below
+    sidebars = "dark", -- style for sidebars, see below
     floats = "transparent", -- style for floating windows
   },
   sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
@@ -188,7 +218,15 @@ require("tokyonight").setup {
   --- You can override specific color groups to use other groups or a hex color
   --- function will be called with a ColorScheme table
   ---@param colors ColorScheme
-  on_colors = function(colors) end,
+  on_colors = function(colors)
+    colors.bg = "#181818"
+    colors.bg_sidebar = "#202329"
+    colors.comment = "#808080"
+    colors.green = "#d0f7a6"
+    colors.green1 = "#8fbcbb"
+    colors.fg = "#d4d4d4"
+    colors.border_highlight = "#d4d4d4"
+  end,
 
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
