@@ -164,6 +164,7 @@ return packer.startup(function(use)
   -- use "shaunsingh/nord.nvim"
   -- use { "Everblush/everblush.nvim", as = "everblush" }
   -- use 'sam4llis/nvim-tundra'
+  use "LunarVim/horizon.nvim"
   -- use "LunarVim/onedarker.nvim"
   -- use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"

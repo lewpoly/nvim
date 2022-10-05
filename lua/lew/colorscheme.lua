@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "horizon"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = "hard"
@@ -64,10 +64,10 @@ function ColorMyPencils()
   --   fg = "#5eacd3",
   -- })
 
-  -- hl("Normal", {
-  --   bg = "None",
-  --   fg = "#ebdbb2",
-  -- })
+  hl("Normal", {
+    bg = "#25282f",
+    -- fg = "#ebdbb2",
+  })
 
   -- hl("NvimTreeNormal", {
   --   bg = "None",
@@ -78,10 +78,10 @@ function ColorMyPencils()
   --   fg = "#fb4934",
   -- })
 
-  -- hl("Comment", {
-  --   fg = "#808080",
-  --   italic = true,
-  -- })
+  hl("Comment", {
+    fg = "#808080",
+    italic = true,
+  })
 
   -- hl("TSKeywordReturn", {
   --   fg = "#fb4934",
