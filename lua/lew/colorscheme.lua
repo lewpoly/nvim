@@ -29,9 +29,9 @@ function ColorMyPencils()
     vim.api.nvim_set_hl(0, thing, opts)
   end
 
-  -- hl("SignColumn", {
-  --   bg = "none",
-  -- })
+  hl("SignColumn", {
+    bg = "none",
+  })
 
   -- hl("Pmenu", {
   --   bg = "#504945",
@@ -206,7 +206,7 @@ require("tokyonight").setup {
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark", -- style for sidebars, see below
+    sidebars = "transparent", -- style for sidebars, see below
     floats = "transparent", -- style for floating windows
   },
   sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
@@ -219,13 +219,13 @@ require("tokyonight").setup {
   --- function will be called with a ColorScheme table
   ---@param colors ColorScheme
   on_colors = function(colors)
-    colors.bg = "#181818"
-    colors.bg_sidebar = "#202329"
-    colors.comment = "#808080"
-    colors.green = "#d0f7a6"
-    colors.green1 = "#8fbcbb"
-    colors.fg = "#d4d4d4"
-    colors.border_highlight = "#d4d4d4"
+    -- colors.bg = "#181818"
+    -- colors.bg_sidebar = "#202329"
+    -- colors.comment = "#808080"
+    -- colors.green = "#d0f7a6"
+    -- colors.green1 = "#8fbcbb"
+    -- colors.fg = "#d4d4d4"
+    -- colors.border_highlight = "#d4d4d4"
   end,
 
   --- You can override specific highlights to use other groups or a hex color
