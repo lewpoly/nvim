@@ -32,6 +32,7 @@ configs.setup {
   },
   rainbow = {
     enable = true,
+    disable = { "css", "html" },
     extended_mode = false, -- Highlight also non-parentheses delimiters, boolean or table
     colors = {
       "#68a0b0",
