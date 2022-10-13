@@ -198,7 +198,7 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
   -- use "unblevable/quick-scope"
   use "nacro90/numb.nvim"
-  -- use "rcarriga/nvim-notify"
+  use "rcarriga/nvim-notify"
   use "phaazon/hop.nvim"
   use "ghillb/cybu.nvim"
   use {
@@ -230,8 +230,8 @@ return packer.startup(function(use)
 
   -- Comment
   use "numToStr/comment.nvim"
-  use "folke/todo-comments.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "folke/todo-comments.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
