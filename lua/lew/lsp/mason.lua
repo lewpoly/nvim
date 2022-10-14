@@ -1,7 +1,7 @@
 local servers = {
   "cssls",
-  "tailwindcss",
-  "cssmodules_ls",
+  -- "tailwindcss",
+  -- "cssmodules_ls",
   "emmet_ls",
   "html",
   -- "jdtls",
