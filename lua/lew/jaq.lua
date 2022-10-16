@@ -12,7 +12,7 @@ jaq_nvim.setup {
 
     -- Uses external commands such as 'g++' and 'cargo'
     external = {
-      typescript = "deno run %",
+      typescript = "node %",
       javascript = "node %",
       -- markdown = "glow %",
       python = "python %",
