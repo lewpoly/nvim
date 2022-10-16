@@ -19,9 +19,9 @@ dapui.setup {
     repl = "r",
     toggle = "t",
   },
--- Expand lines larger than the window
+  -- Expand lines larger than the window
   -- Requires >= 0.7
-  expand_lines = vim.fn.has("nvim-0.7"),
+  expand_lines = vim.fn.has "nvim-0.7",
   -- Layouts define sections of the screen to place windows.
   -- The position can be "left", "right", "top" or "bottom".
   -- The size specifies the height/width depending on position.
@@ -30,14 +30,14 @@ dapui.setup {
   layouts = {
     {
       elements = {
-      -- Elements can be strings or table with id and size keys.
+        -- Elements can be strings or table with id and size keys.
         { id = "scopes", size = 0.25 },
         "breakpoints",
-        "stacks",
-        "watches",
+        -- "stacks",
+        -- "watches",
       },
       size = 40,
-      position = "left",
+      position = "right",
     },
     {
       elements = {
@@ -59,8 +59,17 @@ dapui.setup {
   windows = { indent = 1 },
   render = {
     max_type_length = nil, -- Can be integer or nil.
-  }
+  },
 }
+-- dap.configurations.java = {
+--   {
+--     type = "java",
+--     request = "attach",
+--     name = "Debug (Attach) - Remote",
+--     hostName = "127.0.0.1",
+--     port = 5005,
+--   },
+-- }
 
 dap.adapters.node2 = {
   type = "executable",
@@ -84,6 +93,31 @@ dap.configurations.javascript = {
     type = "node2",
     request = "attach",
     processId = require("dap.utils").pick_process,
+  },
+}
+dap.configurations.typescript = {
+  {
+    name = "ts-node (Node2 with ts-node)",
+    type = "node2",
+    request = "launch",
+    cwd = vim.loop.cwd(),
+    runtimeArgs = { "-r", "ts-node/register" },
+    runtimeExecutable = "node",
+    args = { "--inspect", "${file}" },
+    sourceMaps = true,
+    skipFiles = { "<node_internals>/**", "node_modules/**" },
+  },
+  {
+    name = "Jest (Node2 with ts-node)",
+    type = "node2",
+    request = "launch",
+    cwd = vim.loop.cwd(),
+    runtimeArgs = { "--inspect-brk", "${workspaceFolder}/node_modules/.bin/jest" },
+    runtimeExecutable = "node",
+    args = { "${file}", "--runInBand", "--coverage", "false" },
+    sourceMaps = true,
+    port = 9229,
+    skipFiles = { "<node_internals>/**", "node_modules/**" },
   },
 }
 
