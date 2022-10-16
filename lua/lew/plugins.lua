@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
+  use "mfussenegger/nvim-jdtls"
   use "nvim-lua/lsp_extensions.nvim"
   use "ray-x/lsp_signature.nvim"
   -- use "simrat39/symbols-outline.nvim"
@@ -189,7 +190,7 @@ return packer.startup(function(use)
   -- use "ThePrimeagen/harpoon"
 
   -- Git
-  -- use "lewis6991/gitsigns.nvim"
+  use "lewis6991/gitsigns.nvim"
 
   -- Miscellaneous
   use "junegunn/vim-slash"
