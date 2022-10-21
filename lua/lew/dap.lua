@@ -61,15 +61,15 @@ dapui.setup {
     max_type_length = nil, -- Can be integer or nil.
   },
 }
--- dap.configurations.java = {
---   {
---     type = "java",
---     request = "attach",
---     name = "Debug (Attach) - Remote",
---     hostName = "127.0.0.1",
---     port = 5005,
---   },
--- }
+dap.configurations.java = {
+  {
+    type = "java",
+    request = "attach",
+    name = "Debug (Attach) - Remote",
+    hostName = "127.0.0.1",
+    port = 5005,
+  },
+}
 
 dap.adapters.node2 = {
   type = "executable",
