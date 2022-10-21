@@ -6,7 +6,7 @@ function ColorMyPencils()
   vim.g.gruvbox_italic = "1"
   -- vim.g.gruvbox_italicize_comments = "1"
 
-  vim.g.catppuccin_flavour = "mocha"
+  vim.g.catppuccin_flavour = "macchiato"
   -- vim.g.transparent_background = true
 
   -- vim.g.sherbet_italic_keywords = true
@@ -50,24 +50,24 @@ function ColorMyPencils()
   --   fg = "#83a598",
   -- })
 
-  hl("ColorColumn", {
-    -- ctermbg = 0,
-    bg = "#555555",
-  })
+  -- hl("ColorColumn", {
+  --   -- ctermbg = 0,
+  --   bg = "#555555",
+  -- })
 
-  hl("CursorLineNR", {
-    fg = "#fabd2f",
-    bg = "None",
-  })
+  -- hl("CursorLineNR", {
+  --   fg = "#fabd2f",
+  --   bg = "None",
+  -- })
 
   -- hl("LineNr", {
   --   fg = "#5eacd3",
   -- })
 
-  hl("Normal", {
-    bg = "#25282f",
-    -- fg = "#ebdbb2",
-  })
+  -- hl("Normal", {
+  --   bg = "#25282f",
+  -- fg = "#ebdbb2",
+  -- })
 
   -- hl("NvimTreeNormal", {
   --   bg = "None",
@@ -160,38 +160,38 @@ function ColorMyPencils()
   -- })
 end
 
--- require("catppuccin").setup {
---   transparent_background = true,
---   term_colors = false,
---   compile = {
---     enabled = false,
---     path = vim.fn.stdpath "cache" .. "/catppuccin",
---   },
---   dim_inactive = {
---     enabled = false,
---     shade = "dark",
---     percentage = 0.15,
---   },
---   styles = {
---     comments = { "italic" },
---     conditionals = { "italic" },
---     loops = {},
---     functions = {},
---     keywords = {},
---     strings = {},
---     variables = {},
---     numbers = {},
---     booleans = {},
---     properties = {},
---     types = {},
---     operators = {},
---   },
---   integrations = {
---     -- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
---   },
---   color_overrides = {},
---   highlight_overrides = {},
--- }
+require("catppuccin").setup {
+  transparent_background = false,
+  term_colors = false,
+  compile = {
+    enabled = false,
+    path = vim.fn.stdpath "cache" .. "/catppuccin",
+  },
+  dim_inactive = {
+    enabled = false,
+    shade = "dark",
+    percentage = 0.15,
+  },
+  styles = {
+    comments = { "italic" },
+    conditionals = { "italic" },
+    loops = {},
+    functions = {},
+    keywords = {},
+    strings = {},
+    variables = {},
+    numbers = {},
+    booleans = {},
+    properties = {},
+    types = {},
+    operators = {},
+  },
+  integrations = {
+    -- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
+  },
+  color_overrides = {},
+  highlight_overrides = {},
+}
 require("tokyonight").setup {
   -- your configuration comes here
   -- or leave it empty to use the default settings

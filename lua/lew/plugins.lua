@@ -160,7 +160,7 @@ return packer.startup(function(use)
   use { "srcery-colors/srcery-vim", as = "srcery" }
   -- use "B4mbus/oxocarbon-lua.nvim"
   -- use "chrisduerr/vim-undead"
-  -- use { "catppuccin/nvim", as = "catppuccin" }
+  use { "catppuccin/nvim", as = "catppuccin" }
   -- use "~/colors/gruvplus"
   -- use "shaunsingh/nord.nvim"
   -- use { "Everblush/everblush.nvim", as = "everblush" }
