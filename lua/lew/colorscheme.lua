@@ -55,10 +55,10 @@ function ColorMyPencils()
   --   bg = "#555555",
   -- })
 
-  -- hl("CursorLineNR", {
-  --   fg = "#fabd2f",
-  --   bg = "None",
-  -- })
+  hl("CursorLineNR", {
+    fg = "#fabd2f",
+    bg = "None",
+  })
 
   -- hl("LineNr", {
   --   fg = "#5eacd3",
