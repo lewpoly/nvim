@@ -6,7 +6,7 @@ function ColorMyPencils()
   vim.g.gruvbox_italic = "1"
   -- vim.g.gruvbox_italicize_comments = "1"
 
-  vim.g.catppuccin_flavour = "macchiato"
+  -- vim.g.catppuccin_flavour = "macchiato"
   -- vim.g.transparent_background = true
 
   -- vim.g.sherbet_italic_keywords = true
@@ -60,9 +60,9 @@ function ColorMyPencils()
     bg = "None",
   })
 
-  -- hl("LineNr", {
-  --   fg = "#5eacd3",
-  -- })
+  hl("LineNr", {
+    fg = "#5eacd3",
+  })
 
   -- hl("Normal", {
   --   bg = "#25282f",
@@ -70,7 +70,7 @@ function ColorMyPencils()
   -- })
 
   -- hl("NvimTreeNormal", {
-  --   bg = "None",
+  --   bg = "#202329",
   --   -- fg = "#ebdbb2",
   -- })
 
@@ -161,12 +161,14 @@ function ColorMyPencils()
 end
 
 require("catppuccin").setup {
-  transparent_background = false,
-  term_colors = false,
-  compile = {
-    enabled = false,
-    path = vim.fn.stdpath "cache" .. "/catppuccin",
+  flavour = "macchiato", -- latte, frappe, macchiato, mocha
+  background = { -- :h background
+    light = "latte",
+    dark = "macchiato",
   },
+  compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
+  transparent_background = true,
+  term_colors = false,
   dim_inactive = {
     enabled = false,
     shade = "dark",
@@ -186,11 +188,28 @@ require("catppuccin").setup {
     types = {},
     operators = {},
   },
-  integrations = {
-    -- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
+  virtual_text = {
+    errors = "italic",
+    hints = "italic",
+    warnings = "italic",
+    information = "italic",
+  },
+  underlines = {
+    errors = "undercurls",
+    hints = "undercurls",
+    warnings = "undercurls",
+    information = "undercurls",
   },
   color_overrides = {},
-  highlight_overrides = {},
+  custom_highlights = {},
+  integrations = {
+    cmp = true,
+    gitsigns = true,
+    nvimtree = true,
+    telescope = true,
+    treesitter = true,
+    -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+  },
 }
 require("tokyonight").setup {
   -- your configuration comes here
