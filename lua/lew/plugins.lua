@@ -155,6 +155,7 @@ return packer.startup(function(use)
   -- use "ellisonleao/gruvbox.nvim"
   use "folke/tokyonight.nvim"
   -- use "LunarVim/tokyonight.nvim"
+  use "LunarVim/lunar.nvim"
   use "EdenEast/nightfox.nvim"
   use "rmehri01/onenord.nvim"
   use { "srcery-colors/srcery-vim", as = "srcery" }
