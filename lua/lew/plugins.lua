@@ -168,7 +168,7 @@ return packer.startup(function(use)
   -- use 'sam4llis/nvim-tundra'
   use "LunarVim/horizon.nvim"
   -- use "LunarVim/onedarker.nvim"
-  -- use "LunarVim/darkplus.nvim"
+  use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
   -- use { "kartikp10/noctis.nvim", requires = { "rktjmp/lush.nvim" } }
 
