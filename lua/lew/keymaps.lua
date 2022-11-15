@@ -6,6 +6,10 @@ vim.g.mapleader = " "
 keymap("n", "<leader>so", ":so %<CR>", opts)
 
 -- Reload Neovim
+vim.keymap.set("n", "<leader>ss", function()
+  vim.o.spell = not vim.o.spell
+  print("spell: " .. tostring(vim.o.spell))
+end)
 
 -- Window Movement
 keymap("n", "<Space>", "<NOP>", opts)
@@ -22,8 +26,8 @@ keymap("n", "<c-b>", "<c-b>zz", opts)
 keymap("n", "J", "mzJ`z", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
-keymap("n", "<leader>y", "\"+y", opts)
-keymap("v", "<leader>y", "\"+y", opts)
+keymap("n", "<leader>y", '"+y', opts)
+keymap("v", "<leader>y", '"+y', opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
