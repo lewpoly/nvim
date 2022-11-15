@@ -30,7 +30,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.smartindent = true
 
-opt.spelllang = "en"
+opt.spelllang = "en_us"
 opt.spelloptions = "camel"
 
 opt.splitbelow = true
