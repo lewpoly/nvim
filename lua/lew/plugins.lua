@@ -155,19 +155,19 @@ return packer.startup(function(use)
   -- use "ellisonleao/gruvbox.nvim"
   use "folke/tokyonight.nvim"
   -- use "LunarVim/tokyonight.nvim"
-  use "LunarVim/lunar.nvim"
+  -- use "LunarVim/lunar.nvim"
   use "EdenEast/nightfox.nvim"
   use "rmehri01/onenord.nvim"
-  use { "srcery-colors/srcery-vim", as = "srcery" }
+  -- use { "srcery-colors/srcery-vim", as = "srcery" }
   -- use "B4mbus/oxocarbon-lua.nvim"
   -- use "chrisduerr/vim-undead"
   use { "catppuccin/nvim", as = "catppuccin" }
-  use "Yazeed1s/oh-lucy.nvim"
+  -- use 'Yazeed1s/oh-lucy.nvim'
   -- use "~/colors/gruvplus"
   -- use "shaunsingh/nord.nvim"
   -- use { "Everblush/everblush.nvim", as = "everblush" }
   -- use 'sam4llis/nvim-tundra'
-  use "LunarVim/horizon.nvim"
+  -- use "LunarVim/horizon.nvim"
   -- use "LunarVim/onedarker.nvim"
   use "LunarVim/darkplus.nvim"
   -- use "lewis6991/github_dark.nvim"
