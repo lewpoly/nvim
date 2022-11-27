@@ -35,7 +35,7 @@ nvim_tree.setup {
     group_empty = false,
     highlight_git = false,
     highlight_opened_files = "all", -- can be name, icon, none, or all.
-    root_folder_modifier = ":t",
+    root_folder_modifier = ":~:s?$?/..?",
     indent_width = 1,
     indent_markers = {
       enable = false,
