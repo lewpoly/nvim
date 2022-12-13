@@ -158,6 +158,7 @@ return packer.startup(function(use)
   -- use "LunarVim/lunar.nvim"
   use "EdenEast/nightfox.nvim"
   use "rmehri01/onenord.nvim"
+  use "sainnhe/edge"
   -- use { "srcery-colors/srcery-vim", as = "srcery" }
   -- use "B4mbus/oxocarbon-lua.nvim"
   -- use "chrisduerr/vim-undead"

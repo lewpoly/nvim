@@ -19,6 +19,9 @@ function ColorMyPencils()
   vim.g.nord_contrast = true
   vim.g.nord_borders = true
 
+  -- Edge
+  vim.g.edge_style = "aura" -- Can be default, aura, neon
+
   vim.g.gruvbox_material_background = "hard"
   vim.g.gruvbox_material_foreground = "original"
   vim.opt.background = "dark"
