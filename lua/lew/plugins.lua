@@ -153,7 +153,7 @@ return packer.startup(function(use)
   -- use "sainnhe/gruvbox-material"
   use "gruvbox-community/gruvbox"
   -- use "ellisonleao/gruvbox.nvim"
-  use "folke/tokyonight.nvim"
+  -- use "folke/tokyonight.nvim"
   -- use "LunarVim/tokyonight.nvim"
   -- use "LunarVim/lunar.nvim"
   use "EdenEast/nightfox.nvim"
