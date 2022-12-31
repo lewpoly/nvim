@@ -151,7 +151,7 @@ return packer.startup(function(use)
   -- use "lewpoly/sherbet.nvim"
   use "~/colors/sherbet.nvim"
   -- use "sainnhe/gruvbox-material"
-  use "gruvbox-community/gruvbox"
+  -- use "gruvbox-community/gruvbox"
   -- use "ellisonleao/gruvbox.nvim"
   -- use "folke/tokyonight.nvim"
   -- use "LunarVim/tokyonight.nvim"
