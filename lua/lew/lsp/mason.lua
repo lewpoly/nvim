@@ -5,7 +5,7 @@ local servers = {
   "emmet_ls",
   "html",
   "jdtls",
-  "csharp_ls",
+  -- "csharp_ls",
   "jsonls",
   -- "solc",
   "sumneko_lua",
