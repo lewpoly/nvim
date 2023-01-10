@@ -1,9 +1,9 @@
 vim.g.lualew_colorscheme = "sherbet"
 
 function ColorMyPencils()
-  vim.g.gruvbox_contrast_dark = "hard"
-  vim.g.gruvbox_invert_selection = "0"
-  vim.g.gruvbox_italic = "1"
+  -- vim.g.gruvbox_contrast_dark = "hard"
+  -- vim.g.gruvbox_invert_selection = "0"
+  -- vim.g.gruvbox_italic = "1"
   -- vim.g.gruvbox_italicize_comments = "1"
 
   -- vim.g.catppuccin_flavour = "macchiato"
