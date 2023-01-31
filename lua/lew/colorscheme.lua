@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "nordic"
 
 function ColorMyPencils()
   -- vim.g.gruvbox_contrast_dark = "hard"
