@@ -20,10 +20,8 @@ nvim_tree.setup {
   hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
-  ignore_buffer_on_setup = false,
-  open_on_setup = false,
-  open_on_setup_file = false,
-  open_on_tab = false,
+  -- ignore_buffer_on_setup = false,
+  -- open_on_tab = false,
   sort_by = "name",
   root_dirs = {},
   prefer_startup_root = false,
@@ -91,11 +89,11 @@ nvim_tree.setup {
     update_root = false,
     ignore_list = {},
   },
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
+  -- ignore_ft_on_setup = {
+  --   "startify",
+  --   "dashboard",
+  --   "alpha",
+  -- },
   filters = {
     custom = { ".git" },
     -- exclude = { ".gitignore" },
@@ -130,17 +128,3 @@ nvim_tree.setup {
     relativenumber = false,
   },
 }
-local function open_nvim_tree(data)
-  -- buffer is a directory
-  local directory = vim.fn.isdirectory(data.file) == 1
-
-  if not directory then
-    return
-  end
-
-  -- change to the directory
-  vim.cmd.cd(data.file)
-
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
