@@ -8,7 +8,7 @@ local servers = {
   -- "csharp_ls",
   "jsonls",
   -- "solc",
-  "sumneko_lua",
+  "lua_ls",
   "tflint",
   "terraformls",
   "tsserver",
