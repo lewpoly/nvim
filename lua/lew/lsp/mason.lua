@@ -21,9 +21,12 @@ local servers = {
   "zk@v0.10.1",
 }
 
+local u = require "lew.borders"
+
 local settings = {
   ui = {
-    border = "rounded",
+    border = u.border_chars_outer_thin,
+    winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
     icons = {
       package_installed = "◍",
       package_pending = "◍",
@@ -97,8 +100,8 @@ for _, server in pairs(servers) do
   end
 
   -- if server == "solc" then
-    -- local solc_opts = require "lew.lsp.settings.solc"
-    -- opts = vim.tbl_deep_extend("force", solc_opts, opts)
+  -- local solc_opts = require "lew.lsp.settings.solc"
+  -- opts = vim.tbl_deep_extend("force", solc_opts, opts)
   -- end
 
   if server == "emmet_ls" then
@@ -112,7 +115,7 @@ for _, server in pairs(servers) do
   end
 
   -- if server == "jdtls" then
-    -- goto continue
+  -- goto continue
   -- end
 
   if server == "rust_analyzer" then

@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local icons = require "lew.icons"
+local u = require "lew.borders"
 
 local cfg = {
   debug = false, -- set to true to enable debug logging
@@ -33,7 +34,8 @@ local cfg = {
   -- to view the hiding contents
   max_width = 120, -- max_width of signature floating_window, line will be wrapped if exceed max_width
   handler_opts = {
-    border = "rounded", -- double, rounded, single, shadow, none
+    border = u.border_chars_outer_thin, -- double, rounded, single, shadow, none
+    winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuDocBorder,CursorLine:PmenuSel,Search:None",
   },
 
   always_trigger = false, -- sometime show signature on new line or in middle of parameter can be confusing, set it to false for #58

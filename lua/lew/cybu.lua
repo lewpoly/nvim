@@ -2,7 +2,7 @@ local status_ok, cybu = pcall(require, "cybu")
 if not status_ok then
   return
 end
-
+local u = require "lew.borders"
 cybu.setup {
   position = {
     relative_to = "win", -- win, editor, cursor
@@ -17,7 +17,7 @@ cybu.setup {
   },
   style = {
     path = "relative", -- absolute, relative, tail (filename only)
-    border = "rounded", -- single, double, rounded, none
+    border = u.border_chars_outer_thin, -- single, double, rounded, none
     separator = " ", -- string used as separator
     prefix = "…", -- string used as prefix for truncated paths
     padding = 1, -- left & right padding in number of spaces
@@ -28,7 +28,7 @@ cybu.setup {
     },
     highlights = { -- see highlights via :highlight
       current_buffer = "CursorLine", -- used for the current buffer
-      adjacent_buffers = "Comment", -- used for buffers not in focus
+      adjacent_buffers = "Normal", -- used for buffers not in focus
       background = "Normal", -- used for the window background
     },
   },

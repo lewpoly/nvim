@@ -1,4 +1,4 @@
-vim.g.lualew_colorscheme = "sherbet"
+vim.g.lualew_colorscheme = "nordic"
 
 function ColorMyPencils()
   -- vim.g.gruvbox_contrast_dark = "hard"
@@ -16,8 +16,8 @@ function ColorMyPencils()
   -- vim.g.sherbet_italic_conditionals = true
   vim.g.sherbet_italic_comments = true
 
-  vim.g.nord_contrast = true
-  vim.g.nord_borders = true
+  -- vim.g.nord_contrast = true
+  -- vim.g.nord_borders = true
 
   -- Edge
   vim.g.edge_style = "aura" -- Can be default, aura, neon
@@ -32,9 +32,9 @@ function ColorMyPencils()
     vim.api.nvim_set_hl(0, thing, opts)
   end
 
-  hl("SignColumn", {
-    bg = "none",
-  })
+  -- hl("SignColumn", {
+  --   bg = "none",
+  -- })
 
   -- hl("Pmenu", {
   --   bg = "#504945",
@@ -58,14 +58,14 @@ function ColorMyPencils()
   --   bg = "#555555",
   -- })
 
-  hl("CursorLineNR", {
-    fg = "#fabd2f",
-    bg = "None",
-  })
+  -- hl("CursorLineNR", {
+  --   fg = "#fabd2f",
+  --   bg = "None",
+  -- })
 
-  hl("LineNr", {
-    fg = "#5eacd3",
-  })
+  -- hl("LineNr", {
+  --   fg = "#5eacd3",
+  -- })
 
   -- hl("Normal", {
   --   bg = "#25282f",
@@ -163,57 +163,57 @@ function ColorMyPencils()
   -- })
 end
 
-require("catppuccin").setup {
-  flavour = "macchiato", -- latte, frappe, macchiato, mocha
-  background = { -- :h background
-    light = "latte",
-    dark = "macchiato",
-  },
-  compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
-  transparent_background = true,
-  term_colors = false,
-  dim_inactive = {
-    enabled = false,
-    shade = "dark",
-    percentage = 0.15,
-  },
-  styles = {
-    comments = { "italic" },
-    conditionals = { "italic" },
-    loops = {},
-    functions = {},
-    keywords = {},
-    strings = {},
-    variables = {},
-    numbers = {},
-    booleans = {},
-    properties = {},
-    types = {},
-    operators = {},
-  },
-  virtual_text = {
-    errors = "italic",
-    hints = "italic",
-    warnings = "italic",
-    information = "italic",
-  },
-  underlines = {
-    errors = "undercurls",
-    hints = "undercurls",
-    warnings = "undercurls",
-    information = "undercurls",
-  },
-  color_overrides = {},
-  custom_highlights = {},
-  integrations = {
-    cmp = true,
-    gitsigns = true,
-    nvimtree = true,
-    telescope = true,
-    treesitter = true,
-    -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-  },
-}
+-- require("catppuccin").setup {
+--   flavour = "macchiato", -- latte, frappe, macchiato, mocha
+--   background = { -- :h background
+--     light = "latte",
+--     dark = "macchiato",
+--   },
+--   compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
+--   transparent_background = true,
+--   term_colors = false,
+--   dim_inactive = {
+--     enabled = false,
+--     shade = "dark",
+--     percentage = 0.15,
+--   },
+--   styles = {
+--     comments = { "italic" },
+--     conditionals = { "italic" },
+--     loops = {},
+--     functions = {},
+--     keywords = {},
+--     strings = {},
+--     variables = {},
+--     numbers = {},
+--     booleans = {},
+--     properties = {},
+--     types = {},
+--     operators = {},
+--   },
+--   virtual_text = {
+--     errors = "italic",
+--     hints = "italic",
+--     warnings = "italic",
+--     information = "italic",
+--   },
+--   underlines = {
+--     errors = "undercurls",
+--     hints = "undercurls",
+--     warnings = "undercurls",
+--     information = "undercurls",
+--   },
+--   color_overrides = {},
+--   custom_highlights = {},
+--   integrations = {
+--     cmp = true,
+--     gitsigns = true,
+--     nvimtree = true,
+--     telescope = true,
+--     treesitter = true,
+--     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+--   },
+-- }
 -- require("tokyonight").setup {
 --   -- your configuration comes here
 --   -- or leave it empty to use the default settings

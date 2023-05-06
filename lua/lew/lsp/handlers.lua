@@ -11,6 +11,7 @@ M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
   local icons = require "lew.icons"
+  local u = require "lew.borders"
   local signs = {
     -- { name = "DiagnosticSignError", text = "" },
     -- { name = "DiagnosticSignWarn", text = "" },
@@ -40,7 +41,8 @@ M.setup = function()
     float = {
       focusable = true,
       style = "minimal",
-      border = "rounded",
+      winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuDocBorder,CursorLine:PmenuSel,Search:None",
+      border = u.border_chars_outer_thin,
       source = "if_many", -- or "always"
       header = "",
       prefix = "",
@@ -50,12 +52,12 @@ M.setup = function()
   vim.diagnostic.config(config)
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
+    border = u.border_chars_outer_thin,
     -- width = 60,
   })
 
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded",
+    border = u.border_chars_outer_thin,
     -- width = 60,
   })
 end

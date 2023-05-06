@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+local u = require "lew.borders"
+
 dressing.setup {
   input = {
     -- Set to false to disable the vim.ui.input implementation
@@ -19,7 +21,7 @@ dressing.setup {
 
     -- These are passed to nvim_open_win
     anchor = "SW",
-    border = "rounded",
+    border = u.border_chars_outer_thin,
     -- 'editor' and 'win' will default to being centered
     relative = "cursor",
 
@@ -52,7 +54,7 @@ dressing.setup {
 
     -- Priority list of preferred vim.select implementations
     -- backend = { "telescope", "fzf_lua", "fzf", "builtin", "nui" },
-    backend = { "builtin", "telescope", "nui" },
+    backend = { "builtin", "nui" },
 
     -- Trim trailing `:` from prompt
     trim_prompt = true,
@@ -67,9 +69,7 @@ dressing.setup {
       position = "50%",
       size = nil,
       relative = "editor",
-      border = {
-        style = "rounded",
-      },
+      border = u.border_chars_outer_thin,
       buf_options = {
         swapfile = false,
         filetype = "DressingSelect",
@@ -87,15 +87,15 @@ dressing.setup {
     builtin = {
       -- These are passed to nvim_open_win
       anchor = "NW",
-      border = "rounded",
+      border = u.border_chars_outer_thin,
       -- 'editor' and 'win' will default to being centered
       relative = "editor",
 
       -- Window transparency (0-100)
-      win_options = {
-        winblend = 10,
-        winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
-      },
+      -- win_options = {
+      --   winblend = 10,
+      --   winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
+      -- },
       -- Change default highlight groups (see :help winhl)
 
       -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)

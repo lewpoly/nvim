@@ -33,6 +33,8 @@ local compare = require "cmp.config.compare"
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
+local u = require "lew.borders"
+
 -- require("luasnip").filetype_extend("javascript", { "javascriptreact" })
 -- require("luasnip").filetype_extend("javascript", { "html" })
 
@@ -252,13 +254,18 @@ cmp.setup {
     select = false,
   },
   window = {
-    completion = {
-      border = "rounded",
-      winhighlight = "NormalFloat:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+    completion = cmp.config.window.bordered {
+      border = u.border_chars_outer_thin,
+      winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
+      col_offset = -1,
+      side_padding = 0,
+      scrollbar = true,
     },
-    documentation = {
-      border = "rounded",
-      winhighlight = "NormalFloat:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+    documentation = cmp.config.window.bordered {
+      border = u.border_chars_outer_thin,
+      winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuDocBorder,CursorLine:PmenuSel,Search:None",
+      side_padding = 1,
+      scrollbar = true,
     },
   },
   experimental = {

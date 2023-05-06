@@ -199,7 +199,8 @@ return packer.startup(function(use)
 
   -- Miscellaneous
   use "junegunn/vim-slash"
-  use "stevearc/dressing.nvim"
+  use "folke/noice.nvim"
+  -- use "stevearc/dressing.nvim"
   -- use "karb94/neoscroll.nvim"
   use "RRethy/vim-illuminate"
   -- use "unblevable/quick-scope"

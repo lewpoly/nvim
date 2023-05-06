@@ -71,13 +71,8 @@ keymap("n", "<leader>fr", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
 keymap("n", "<leader>fp", "<cmd>lua require('telescope').extensions.projects.projects()<CR>", opts)
 keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", opts)
-keymap("n", "<leader>fc", ":Telescope colorscheme theme=dropdown<CR>", opts)
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>ff",
-  "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-  opts
-)
+keymap("n", "<leader>fc", ":Telescope colorscheme<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>:Telescope find_files<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>ha", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
 
 -- Rest
