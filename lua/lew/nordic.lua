@@ -65,11 +65,14 @@ local override = {
     fg = p.grey1,
     bg = p.bg_dark,
   },
-  -- TelescopeNormal = {
-  --   link = "PopupBorder",
-  -- },
-  -- TelescopeBorder = {
-  --   fg = p.cyan.base,
+  Visual = {
+    bg = p.gray2,
+  },
+  Comment = {
+    fg = p.gray5,
+  },
+  -- NavicText = {
+  --   fg = p.gray4,
   -- },
   NoiceCmdlineIcon = {
     bg = p.bg_dark,
