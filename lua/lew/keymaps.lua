@@ -98,8 +98,8 @@ keymap("n", "<leader>d", ":TroubleToggle<cr>", opts)
 -- Inlay-Hints
 keymap("n", "<leader>lh", "<cmd>lua require('lsp-inlayhints').toggle()<CR>", opts)
 
--- PackerSync
-keymap("n", "<leader>ps", ":PackerSync<CR>", opts)
+-- Lazy sync
+keymap("n", "<leader>ps", ":Lazy sync<CR>", opts)
 
 -- SymbolsOutline
 -- keymap("n", "<leader>s", ":SymbolsOutline<CR>", opts)
