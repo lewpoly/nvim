@@ -33,6 +33,7 @@ copilot.setup {
       },
     },
   },
+  -- copilot_node_command = vim.fn.expand "$HOME" .. "~/.nvm/versions/node/v16.20.0/bin/node",
 }
 
 copilot_cmp.setup {
