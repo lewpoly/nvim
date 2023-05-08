@@ -62,11 +62,11 @@ local function footer()
   return "lewpoly" .. nvim_version_info
 end
 
-dashboard.section.footer.val = footer()
+-- dashboard.section.footer.val = footer()
 
-dashboard.section.footer.opts.hl = "String"
-dashboard.section.header.opts.hl = "String"
-dashboard.section.buttons.opts.hl = "Function"
+-- dashboard.section.footer.opts.hl = "String"
+-- dashboard.section.header.opts.hl = "String"
+-- dashboard.section.buttons.opts.hl = "Function"
 
 dashboard.opts.opts.noautocmd = true
 -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
