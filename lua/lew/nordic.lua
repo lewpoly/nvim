@@ -71,6 +71,9 @@ local override = {
   Comment = {
     fg = p.gray5,
   },
+  NvimTreeOpenedFile = {
+    bg = "NONE",
+  },
   -- NavicText = {
   --   fg = p.gray4,
   -- },
