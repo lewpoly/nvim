@@ -109,12 +109,12 @@ nvim_tree.setup {
     root_folder_modifier = ":~:s?$?/..?",
     indent_width = 1,
     indent_markers = {
-      enable = false,
+      enable = true,
       icons = {
-        corner = "└",
-        edge = "│",
-        item = "│",
-        none = "  ",
+        corner = "╰",
+        -- edge = "│",
+        -- item = "│",
+        -- none = "  ",
       },
     },
     icons = {
@@ -124,7 +124,7 @@ nvim_tree.setup {
       symlink_arrow = " ➛ ",
       show = {
         file = true,
-        folder = false,
+        folder = true,
         folder_arrow = true,
         git = true,
       },
