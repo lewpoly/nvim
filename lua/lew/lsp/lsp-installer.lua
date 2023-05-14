@@ -22,11 +22,14 @@ local servers = {
   "zk@v0.10.1",
 }
 
+local u = require "lew.borders"
+
 local settings = {
   ensure_installed = servers,
   -- automatic_installation = false,
   ui = {
-    border = "rounded",
+    border = u.border_chars_outer_thin,
+    winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
     icons = {
       -- server_installed = "◍",
       -- server_pending = "◍",
