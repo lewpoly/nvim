@@ -28,6 +28,7 @@ null_ls.setup {
     diagnostics.shellcheck,
     formatting.shfmt,
     formatting.stylua,
+    formatting.clang_format,
     formatting.black.with { extra_args = { "--fast" } },
   },
 }
