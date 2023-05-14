@@ -74,6 +74,10 @@ local override = {
   NvimTreeOpenedFile = {
     bg = "NONE",
   },
+  NvimTreeEndOfBuffer = {
+    fg = p.bg_dark,
+    bg = "NONE",
+  },
   -- NavicText = {
   --   fg = p.gray4,
   -- },
