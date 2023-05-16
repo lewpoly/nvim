@@ -25,8 +25,8 @@ local u = require "lew.borders"
 
 local settings = {
   ui = {
-    border = u.border_chars_outer_thin,
-    winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
+    -- border = u.border_chars_outer_thin,
+    -- winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
     icons = {
       package_installed = "◍",
       package_pending = "◍",
