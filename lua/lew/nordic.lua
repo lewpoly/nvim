@@ -30,7 +30,7 @@ local override = {
     link = "PopupNormal",
   },
   PmenuSel = {
-    bg = p.grey0,
+    bg = p.grey1,
     bold = true,
   },
   PmenuBorder = {
@@ -45,6 +45,7 @@ local override = {
   },
   FloatBorder = {
     bg = p.grey1,
+    fg = "NONE"
   },
   TelescopeBorder = {
     fg = p.grey1,
@@ -78,9 +79,6 @@ local override = {
     fg = p.bg_dark,
     bg = "NONE",
   },
-  -- NavicText = {
-  --   fg = p.gray4,
-  -- },
   NoiceCmdlineIcon = {
     bg = p.bg_dark,
   },
@@ -94,6 +92,26 @@ local override = {
   SagaNormal = {
     bg = p.bg_dark,
   },
+  Winbar = {
+    bg = "NONE",
+    fg = p.white0,
+  },
+  WinbarNC = {
+    bg = "NONE",
+    fg = p.fg,
+  },
+  NavicText = {
+    bg = "NONE",
+    fg = p.white0,
+  },
+  NavicTextNC = {
+    bg = "NONE",
+    fg = p.fg,
+  },
+  PmenuSbar = {
+    fg = "NONE",
+    bg = p.gray5,
+  }
 }
 
 require("nordic").setup {

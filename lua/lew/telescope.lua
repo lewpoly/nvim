@@ -120,7 +120,7 @@ telescope.setup {
     --   },
     buffers = {
       theme = "dropdown",
-      initial_mode = "insert",
+      initial_mode = "normal",
       previewer = false,
       borderchars = {
         prompt = u.border_chars_outer_thin_telescope,
@@ -138,15 +138,15 @@ telescope.setup {
         preview = u.border_chars_outer_thin_telescope,
       },
     },
-    find_files = {
-      theme = "dropdown",
-      initial_mode = "insert",
-      previewer = false,
-      borderchars = {
-        prompt = u.border_chars_outer_thin_telescope,
-        results = u.border_chars_outer_thin_telescope,
-        preview = u.border_chars_outer_thin_telescope,
-      },
+    -- colorscheme = {
+    --   theme = "dropdown",
+    --   initial_mode = "insert",
+    --   previewer = false,
+    --   borderchars = {
+    --     prompt = u.border_chars_outer_thin_telescope,
+    --     results = u.border_chars_outer_thin_telescope,
+    --     preview = u.border_chars_outer_thin_telescope,
+    --   },
     },
     --   planets = {
     --     show_pluto = true,
@@ -172,7 +172,6 @@ telescope.setup {
     --     theme = "ivy",
     --     initial_mode = "normal",
     --   },
-  },
   file_ignore_patterns = {
     ".git/",
     "target/",

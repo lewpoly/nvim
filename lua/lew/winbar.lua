@@ -45,8 +45,8 @@ M.get_filename = function()
       file_icon_color = ""
     end
 
-    local navic_text = vim.api.nvim_get_hl_by_name("StatusLine", true)
-    vim.api.nvim_set_hl(0, "Winbar", { fg = navic_text.foreground })
+    local navic_text = vim.api.nvim_get_hl_by_name("Winbar", true)
+    vim.api.nvim_set_hl(0, "Winbar", { fg = navic_text.foreground, bg = "NONE" })
 
     return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. "%#Winbar#" .. filename .. "%*"
   end
