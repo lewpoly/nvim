@@ -124,7 +124,6 @@ local plugins = {
   -- "lewpoly/sherbet.nvim",
   -- "~/colors/sherbet.nvim",
   "AlexvZyl/nordic.nvim",
-  "ChristianChiarulli/onedark.nvim",
 
   -- Formatting
   "jose-elias-alvarez/null-ls.nvim",
