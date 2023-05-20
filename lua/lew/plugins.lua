@@ -123,7 +123,7 @@ local plugins = {
   -- Colorschemes
   -- "lewpoly/sherbet.nvim",
   -- "~/colors/sherbet.nvim",
-  "AlexvZyl/nordic.nvim",
+  "sainnhe/gruvbox-material",
 
   -- Formatting
   "jose-elias-alvarez/null-ls.nvim",

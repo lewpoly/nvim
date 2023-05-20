@@ -255,15 +255,15 @@ cmp.setup {
   },
   window = {
     completion = cmp.config.window.bordered {
-      border = u.border_chars_outer_thin,
-      winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
+      -- border = u.border_chars_outer_thin,
+      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuBorder,CursorLine:PmenuSel,Search:None",
       col_offset = -1,
       side_padding = 0,
       scrollbar = true,
     },
     documentation = cmp.config.window.bordered {
-      border = u.border_chars_outer_thin,
-      winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuDocBorder,CursorLine:PmenuSel,Search:None",
+      -- border = u.border_chars_outer_thin,
+      -- winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuDocBorder,CursorLine:PmenuSel,Search:None",
       side_padding = 1,
       scrollbar = true,
     },

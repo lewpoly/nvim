@@ -26,11 +26,11 @@ telescope.setup {
     layout_config = {
       prompt_position = "top",
     },
-    borderchars = {
-      prompt = u.border_chars_outer_thin_telescope,
-      results = u.border_chars_outer_thin_telescope,
-      preview = u.border_chars_outer_thin_telescope,
-    },
+    -- borderchars = {
+    --   prompt = u.border_chars_outer_thin_telescope,
+    --   results = u.border_chars_outer_thin_telescope,
+    --   preview = u.border_chars_outer_thin_telescope,
+    -- },
     border = true,
     multi_icon = "",
     entry_prefix = "   ",
@@ -122,21 +122,21 @@ telescope.setup {
       theme = "dropdown",
       initial_mode = "normal",
       previewer = false,
-      borderchars = {
-        prompt = u.border_chars_outer_thin_telescope,
-        results = u.border_chars_outer_thin_telescope,
-        preview = u.border_chars_outer_thin_telescope,
-      },
+      -- borderchars = {
+      --   prompt = u.border_chars_outer_thin_telescope,
+      --   results = u.border_chars_outer_thin_telescope,
+      --   preview = u.border_chars_outer_thin_telescope,
+      -- },
     },
     colorscheme = {
       theme = "dropdown",
       initial_mode = "insert",
       previewer = false,
-      borderchars = {
-        prompt = u.border_chars_outer_thin_telescope,
-        results = u.border_chars_outer_thin_telescope,
-        preview = u.border_chars_outer_thin_telescope,
-      },
+      -- borderchars = {
+      --   prompt = u.border_chars_outer_thin_telescope,
+      --   results = u.border_chars_outer_thin_telescope,
+      --   preview = u.border_chars_outer_thin_telescope,
+      -- },
     },
     -- colorscheme = {
     --   theme = "dropdown",

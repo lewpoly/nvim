@@ -3,10 +3,10 @@ if not status_ok then
   return
 end
 
-local status_theme_ok, theme = pcall(require, "lualine.themes.nordic")
-if not status_theme_ok then
-  return
-end
+-- local status_theme_ok, theme = pcall(require, "lualine.themes.nordic")
+-- if not status_theme_ok then
+--   return
+-- end
 
 local function contains(t, value)
   for _, v in pairs(t) do
@@ -21,43 +21,42 @@ local hl_str = function(str, hl)
   return "%#" .. hl .. "#" .. str .. "%*"
 end
 
-vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#3c3836" })
-vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#d4d4d4", bg = "#3c3836", bold = false })
--- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#252525" })
-vim.api.nvim_set_hl(0, "SLProgress", { fg = "#d4d4d4", bg = "#3c3836" })
-vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#6b727f", bg = "#1e2027" })
-vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#1e2027" })
-vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#1e2027" })
-local mode_color = {
-  -- n = "#519fdf",
-  n = "#8fbcbb",
-  -- i = "#d05c65",
-  i = "#ce9178",
-  -- v = "#b668cd",
-  -- [""] = "#b668cd",
-  -- V = "#b668cd",
-  v = "#a3ba8c",
-  [""] = "#a3ba8c",
-  V = "#a3ba8c",
-  -- c = '#B5CEA8',
-  -- c = '#D7BA7D',
-  -- c = "#46a6b2",
-  c = "#d4d4d4",
-  no = "#519fdf",
-  s = "#c18a56",
-  S = "#c18a56",
-  [""] = "#c18a56",
-  ic = "#d05c65",
-  R = "#d05c65",
-  Rv = "#d05c65",
-  cv = "#519fdf",
-  ce = "#519fdf",
-  r = "#d05c65",
-  rm = "#46a6b2",
-  ["r?"] = "#46a6b2",
-  ["!"] = "#46a6b2",
-  t = "#88b369",
-}
+vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#838994", bg = "#252829" })
+vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#838994", bg = "#252829", bold = false })
+vim.api.nvim_set_hl(0, "SLProgress", { fg = "#838994", bg = "#252829" })
+vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#838994", bg = "#252829" })
+-- vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#1e2027" })
+-- vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#1e2027" })
+-- local mode_color = {
+--   -- n = "#519fdf",
+--   n = "#8fbcbb",
+--   -- i = "#d05c65",
+--   i = "#ce9178",
+--   -- v = "#b668cd",
+--   -- [""] = "#b668cd",
+--   -- V = "#b668cd",
+--   v = "#a3ba8c",
+--   [""] = "#a3ba8c",
+--   V = "#a3ba8c",
+--   -- c = '#B5CEA8',
+--   -- c = '#D7BA7D',
+--   -- c = "#46a6b2",
+--   c = "#d4d4d4",
+--   no = "#519fdf",
+--   s = "#c18a56",
+--   S = "#c18a56",
+--   [""] = "#c18a56",
+--   ic = "#d05c65",
+--   R = "#d05c65",
+--   Rv = "#d05c65",
+--   cv = "#519fdf",
+--   ce = "#519fdf",
+--   r = "#d05c65",
+--   rm = "#46a6b2",
+--   ["r?"] = "#46a6b2",
+--   ["!"] = "#46a6b2",
+--   t = "#88b369",
+-- }
 
 local mode = {
   -- mode component
@@ -69,7 +68,7 @@ local mode = {
   end,
   color = function()
     -- auto change color according to neovims mode
-    return { bg = mode_color[vim.fn.mode()], fg = "#0d1117" }
+    -- return { bg = mode_color[vim.fn.mode()], fg = "#0d1117" }
   end,
   -- padding = { right = 1 },
   padding = 0,
@@ -311,7 +310,7 @@ local location = {
   color = function()
     -- darkerplus
     -- return { fg = "#252525", bg = mode_color[vim.fn.mode()] }
-    return { fg = "#1E232A", bg = mode_color[vim.fn.mode()] }
+    -- return { fg = "#1E232A", bg = mode_color[vim.fn.mode()] }
   end,
 }
 
@@ -326,21 +325,42 @@ local filename = {
   },
 }
 
+local colors = {
+  bg = "#252829",
+  fg = "#838994",
+}
+
 lualine.setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
     -- theme = "auto",
-    theme = theme,
+    theme = {
+      normal = {
+        a = { fg = colors.fg, bg = colors.bg },
+        b = { fg = colors.fg, bg = colors.bg },
+        c = { fg = colors.fg, bg = colors.bg },
+      },
+      insert = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
+      visual = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
+      command = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
+      replace = { a = { fg = colors.fg, bg = colors.bg }, b = { fg = colors.fg, bg = colors.bg } },
+
+      inactive = {
+        a = { fg = colors.fg, bg = colors.bg },
+        b = { fg = colors.fg, bg = colors.bg },
+        c = { fg = colors.fg, bg = colors.bg },
+      },
+    },
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard" },
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = { mode },
-    lualine_b = { branch, diagnostics },
-    lualine_c = { "%=", filename },
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = { filename, branch, diagnostics },
     -- lualine_x = { diff, spaces, "encoding", filetype },
     lualine_x = { spaces, filetype },
     lualine_y = { progress },
