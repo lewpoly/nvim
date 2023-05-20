@@ -21,12 +21,6 @@ local hl_str = function(str, hl)
   return "%#" .. hl .. "#" .. str .. "%*"
 end
 
-vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#838994", bg = "#252829" })
-vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#838994", bg = "#252829", bold = false })
-vim.api.nvim_set_hl(0, "SLProgress", { fg = "#838994", bg = "#252829" })
-vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#838994", bg = "#252829" })
--- vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#1e2027" })
--- vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#1e2027" })
 -- local mode_color = {
 --   -- n = "#519fdf",
 --   n = "#8fbcbb",
@@ -326,9 +320,16 @@ local filename = {
 }
 
 local colors = {
-  bg = "#252829",
+  bg = "#313a40",
   fg = "#838994",
 }
+
+vim.api.nvim_set_hl(0, "SLGitIcon", { fg = colors.fg, bg = colors.bg })
+vim.api.nvim_set_hl(0, "SLBranchName", { fg = colors.fg, bg = colors.bg, bold = false })
+vim.api.nvim_set_hl(0, "SLProgress", { fg = colors.fg, bg = colors.bg })
+vim.api.nvim_set_hl(0, "SLSeparator", { fg = colors.fg, bg = colors.bg })
+-- vim.api.nvim_set_hl(0, "SLLSP", { fg = "#8fbcbb", bg = "#1e2027" })
+-- vim.api.nvim_set_hl(0, "SLCopilot", { fg = "#6CC644", bg = "#1e2027" })
 
 lualine.setup {
   options = {
