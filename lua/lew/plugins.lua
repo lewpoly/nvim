@@ -123,6 +123,7 @@ local plugins = {
   -- "~/colors/sherbet.nvim",
   "sainnhe/gruvbox-material",
   "sainnhe/everforest",
+  -- "rebelot/kanagawa.nvim",
 
   -- Formatting
   "jose-elias-alvarez/null-ls.nvim",
