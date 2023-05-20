@@ -8,3 +8,5 @@ vim.g.gruvbox_material_foreground = "material" -- material, mix, original
 vim.g.everforest_background = "hard" -- hard, medium, soft
 
 vim.cmd.colorscheme "everforest"
+
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#1d2021" })
