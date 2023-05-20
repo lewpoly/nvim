@@ -17,7 +17,8 @@ cybu.setup {
   },
   style = {
     path = "relative", -- absolute, relative, tail (filename only)
-    border = u.border_chars_outer_thin, -- single, double, rounded, none
+    -- border = u.border_chars_outer_thin, -- single, double, rounded, none
+    border = "rounded",
     separator = " ", -- string used as separator
     prefix = "…", -- string used as prefix for truncated paths
     padding = 1, -- left & right padding in number of spaces

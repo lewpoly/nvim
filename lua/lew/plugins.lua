@@ -12,10 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-  --Plugin Manager
-  "nvim-lua/plenary.nvim",
-
   -- LSP
+  "nvim-lua/plenary.nvim",
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
@@ -121,9 +119,10 @@ local plugins = {
   { "NvChad/nvim-colorizer.lua", commit = "20fd009" },
 
   -- Colorschemes
-  -- "lewpoly/sherbet.nvim",
+  "lewpoly/sherbet.nvim",
   -- "~/colors/sherbet.nvim",
   "sainnhe/gruvbox-material",
+  "sainnhe/everforest",
 
   -- Formatting
   "jose-elias-alvarez/null-ls.nvim",
@@ -168,8 +167,8 @@ local plugins = {
   -- "christianchiarulli/lualine.nvim",
 
   -- Bufferline
-  { "akinsho/bufferline.nvim", version = "v2.*", dependencies = "kyazdani42/nvim-web-devicons" },
-  "moll/vim-bbye",
+  -- { "akinsho/bufferline.nvim", version = "v2.*", dependencies = "kyazdani42/nvim-web-devicons" },
+  -- "moll/vim-bbye",
 
   -- Dashboard/Alpha
   "goolord/alpha-nvim",

@@ -41,8 +41,9 @@ M.setup = function()
     float = {
       focusable = true,
       style = "minimal",
-      winhighlight = "NormalFloat:Pmenu,FloatBorder:PmenuDocBorder,CursorLine:PmenuSel,Search:None",
-      border = u.border_chars_outer_thin,
+      winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
+      -- border = u.border_chars_outer_thin,
+      border = "rounded",
       source = "if_many", -- or "always"
       header = "",
       prefix = "",
@@ -52,12 +53,16 @@ M.setup = function()
   vim.diagnostic.config(config)
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = u.border_chars_outer_thin,
+    -- border = u.border_chars_outer_thin,
+    border = "rounded",
+    winhighlight = "NormalFloat:Pmenu,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
     -- width = 60,
   })
 
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = u.border_chars_outer_thin,
+    -- border = u.border_chars_outer_thin,
+    border = "rounded",
+    winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
     -- width = 60,
   })
 end

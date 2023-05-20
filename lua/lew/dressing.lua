@@ -21,7 +21,8 @@ dressing.setup {
 
     -- These are passed to nvim_open_win
     anchor = "SW",
-    border = u.border_chars_outer_thin,
+    -- border = u.border_chars_outer_thin,
+    border = "rounded",
     -- 'editor' and 'win' will default to being centered
     relative = "cursor",
 
@@ -69,7 +70,8 @@ dressing.setup {
       position = "50%",
       size = nil,
       relative = "editor",
-      border = u.border_chars_outer_thin,
+      -- border = u.border_chars_outer_thin,
+      border = "rounded",
       buf_options = {
         swapfile = false,
         filetype = "DressingSelect",
@@ -87,14 +89,15 @@ dressing.setup {
     builtin = {
       -- These are passed to nvim_open_win
       anchor = "NW",
-      border = u.border_chars_outer_thin,
+      -- border = u.border_chars_outer_thin,
+      border = "rounded",
       -- 'editor' and 'win' will default to being centered
       relative = "editor",
 
       -- Window transparency (0-100)
       -- win_options = {
       --   winblend = 10,
-      --   winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
+      winhighlight = "NormalFloat:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
       -- },
       -- Change default highlight groups (see :help winhl)
 

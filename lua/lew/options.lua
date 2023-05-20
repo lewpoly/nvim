@@ -18,7 +18,7 @@ opt.shiftwidth = 2
 opt.expandtab = true
 
 opt.fileencoding = "utf-8"
-opt.hidden = true
+-- opt.hidden = true
 opt.hlsearch = true
 opt.mouse = "a"
 opt.scrolloff = 8
