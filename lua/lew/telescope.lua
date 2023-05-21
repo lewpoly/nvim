@@ -120,7 +120,7 @@ telescope.setup {
     --   },
     buffers = {
       theme = "dropdown",
-      initial_mode = "normal",
+     initial_mode = "normal",
       previewer = false,
       -- borderchars = {
       --   prompt = u.border_chars_outer_thin_telescope,

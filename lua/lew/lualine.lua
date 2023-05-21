@@ -118,7 +118,7 @@ local filetype = {
       "help",
       "packer",
       "neogitstatus",
-      "NvimTree",
+      "nvimtree",
       "Trouble",
       "lir",
       "Outline",
@@ -333,7 +333,7 @@ vim.api.nvim_set_hl(0, "SLSeparator", { fg = colors.fg, bg = colors.bg })
 
 lualine.setup {
   options = {
-    globalstatus = true,
+    globalstatus = false,
     icons_enabled = true,
     -- theme = "auto",
     theme = {
@@ -368,7 +368,7 @@ lualine.setup {
     lualine_z = { location },
   },
   inactive_sections = {
-    lualine_a = {},
+    lualine_a = { filename, branch },
     lualine_b = {},
     lualine_c = {},
     lualine_x = {},

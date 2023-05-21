@@ -85,6 +85,11 @@ local plugins = {
     config = function() end,
   },
 
+  -- Git
+  "TimUntersberger/neogit",
+  "sindrets/diffview.nvim",
+  "lewis6991/gitsigns.nvim",
+
   -- Code Running
   "is0n/jaq-nvim",
   {
@@ -133,9 +138,6 @@ local plugins = {
   "kyazdani42/nvim-tree.lua",
   "kyazdani42/nvim-web-devicons",
   -- "ThePrimeagen/harpoon",
-
-  -- Git
-  "lewis6991/gitsigns.nvim",
 
   -- Miscellaneous
   "junegunn/vim-slash",

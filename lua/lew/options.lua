@@ -10,7 +10,7 @@ opt.cmdheight = 1
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 0
 opt.cursorline = true
-opt.laststatus = 3
+opt.laststatus = 2
 
 opt.tabstop = 2
 opt.softtabstop = 2
