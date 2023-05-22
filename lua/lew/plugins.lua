@@ -141,7 +141,7 @@ local plugins = {
 
   -- Miscellaneous
   "junegunn/vim-slash",
-  "folke/noice.nvim",
+  -- "folke/noice.nvim",
   -- "stevearc/dressing.nvim",
   -- "karb94/neoscroll.nvim",
   "RRethy/vim-illuminate",
