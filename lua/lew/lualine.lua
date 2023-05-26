@@ -320,7 +320,10 @@ local filename = {
 }
 
 local colors = {
-  bg = "#313a40",
+  -- everforest
+  -- bg = "#313a40",
+  -- gbox material
+  bg = "#252829",
   fg = "#838994",
 }
 
