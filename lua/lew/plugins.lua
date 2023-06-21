@@ -31,7 +31,7 @@ local plugins = {
   -- "lukas-reineke/indent-blankline.nvim",
   "jose-elias-alvarez/typescript.nvim",
   "windwp/nvim-ts-autotag",
-  "j-hui/fidget.nvim",
+  { "j-hui/fidget.nvim", branch = "legacy" },
   -- { "christianchiarulli/nvim-gps", branch = "text_hl" },
 
   -- "github/copilot.vim",
